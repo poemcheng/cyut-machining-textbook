@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+<title id="title">實機照片導覽：WINHO 威赫車床</title><desc id="desc">使用者提供之現場照片；僅標註可見要素，未確認型號、手柄功能與設定。</desc>
+<rect width="1200" height="790" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">實機照片導覽：WINHO 威赫車床</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">使用者提供之現場照片；僅標註可見要素，未確認型號、手柄功能與設定。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<image href="site-lathe.jpg" xlink:href="site-lathe.jpg" x="45" y="125" width="750" height="562.5" preserveAspectRatio="xMidYMid meet"/>
+<line x1="653" y1="284" x2="462.9079214624238" y2="362.5902527075812" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="653" cy="284" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="653" y="292" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">1</text>
+<line x1="556" y1="420" x2="434.9796885578876" y2="434.67960288808666" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="556" cy="420" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="556" y="428" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">2</text>
+<line x1="711" y1="456" x2="573.0974949221395" y2="434.67960288808666" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="711" cy="456" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="711" y="464" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">3</text>
+<line x1="127" y1="550" x2="183.62559241706163" y2="513.8763537906137" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="127" cy="550" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="127" y="558" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">4</text>
+<line x1="739" y1="221" x2="737.1123899796886" y2="349.3907942238267" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="739" cy="221" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="739" y="229" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">5</text>
+<line x1="711" y1="551" x2="727.4644549763033" y2="556.5207581227437" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="711" cy="551" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="711" y="559" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">6</text>
+<line x1="674" y1="647" x2="719.3398781313473" y2="622.5180505415162" stroke="#ed8b3a" stroke-width="3"/>
+<circle cx="674" cy="647" r="19" fill="white" stroke="#ed8b3a" stroke-width="3"/>
+<text x="674" y="655" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">7</text>
+<circle cx="837" cy="156" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="164" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">1</text>
+<text x="867" y="164" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">WINHO 威赫銘牌</text>
+<circle cx="837" cy="224" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="232" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">2</text>
+<text x="867" y="232" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">主軸轉速表</text>
+<circle cx="837" cy="292" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="300" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">3</text>
+<text x="867" y="300" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">停機變速警示</text>
+<circle cx="837" cy="360" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="368" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">4</text>
+<text x="867" y="368" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">螺紋／進給表</text>
+<circle cx="837" cy="428" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="436" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">5</text>
+<text x="867" y="436" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">夾頭</text>
+<circle cx="837" cy="496" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="504" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">6</text>
+<text x="867" y="504" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">床身導軌</text>
+<circle cx="837" cy="564" r="18" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<text x="837" y="572" font-size="24" fill="#163249" text-anchor="middle" font-weight="bold">7</text>
+<text x="867" y="572" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">可見絲桿</text>
+<rect x="40" y="706" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="733" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">照片上散放的工具並非可開機配置；啟動前先清空機台與工作台。</text>
+<text x="60" y="764" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">操作程序仍須由現場教師核對；照片不能用來推定未知手柄功能。</text>
+</svg>

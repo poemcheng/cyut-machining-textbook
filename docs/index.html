@@ -1,0 +1,1743 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="朝陽工管車床與銑床圖解操作教材，含實機照片、完整步驟、實作與量測。">
+<title>車床與銑床：圖解操作教科書</title>
+<style>
+:root{--ink:#163249;--teal:#087f8c;--paper:#faf9f5;--line:#d9e3e6;--orange:#ed8b3a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;line-height:1.9}
+aside{width:285px;height:100vh;position:fixed;inset:0 auto 0 0;overflow:auto;background:var(--ink);color:white;padding:28px 22px}aside .brand{font-size:14px;color:#9fd9dc;letter-spacing:2px}aside h2{font-size:22px;line-height:1.5;margin:12px 0 22px}nav a{display:block;color:#d8e6eb;text-decoration:none;font-size:13px;line-height:1.7;padding:10px 9px;border-left:2px solid transparent}nav a:hover,nav a.active{background:#224459;border-color:#72d1d5;color:white}aside label{font-size:12px;color:#d8e6eb}input[type=search]{width:100%;padding:10px;border:1px solid #507080;border-radius:5px;background:#224459;color:white;margin:5px 0 15px}input::placeholder{color:#c6d4da}.search-note{font-size:12px;color:#afdbde;margin:0 0 12px}
+main{margin-left:285px;max-width:1150px;padding:42px 60px 90px}.eyebrow{color:var(--teal);font-size:12px;letter-spacing:3px;font-weight:bold}.hero{padding-bottom:35px;border-bottom:1px solid var(--line)}.hero h1{font-size:44px;line-height:1.4;letter-spacing:1px;margin:14px 0}.hero p{max-width:700px;color:#526873}.hero .meta{font-size:13px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.actions a,.actions button{border:1px solid var(--teal);color:var(--teal);background:white;font:inherit;font-size:13px;border-radius:5px;padding:9px 16px;text-decoration:none;cursor:pointer}.actions a:first-child{background:var(--teal);color:white}.note{border-left:4px solid var(--orange);padding:15px 20px;background:#fff1df;margin:24px 0;font-size:14px}.chapter{padding:42px 0;border-bottom:1px solid var(--line)}.chapter>h1{font-size:29px;line-height:1.5;margin:0 0 26px}.chapter h2{font-size:22px;color:var(--teal);line-height:1.5;margin-top:36px}.chapter h3{font-size:18px}p,li{font-size:16px}a{color:var(--teal);text-underline-offset:3px}strong{font-weight:700}figure{margin:28px 0;padding:14px;background:white;border:1px solid var(--line);border-radius:8px}figure img{width:100%;display:block;max-height:620px;object-fit:contain}figcaption{font-size:12px;color:#576b75;text-align:center;margin:10px 0 0}blockquote{background:#eaf4f4;border-left:4px solid var(--teal);margin:20px 0;padding:13px 20px}blockquote p{font-size:14px;margin:3px 0}.table-wrap{overflow:auto;margin:24px 0}table{border-collapse:collapse;width:100%;background:white;font-size:14px}th{background:var(--ink);color:white;text-align:left}th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:80px}tr:nth-child(even) td{background:#eff4f5}pre{overflow:auto;background:#eaf4f4;border:1px solid var(--line);border-radius:6px;padding:18px;font-size:14px;line-height:1.7}code{font-family:Consolas,"Microsoft JhengHei",monospace}.progress{position:fixed;top:0;left:285px;height:3px;background:var(--orange);z-index:4;width:0}.calc{padding:24px;background:white;border:1px solid var(--line);border-radius:8px;margin:25px 0}.calc h2{margin:0;font-size:22px;color:var(--teal)}.calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.calc label{display:block;font-size:13px}.calc input{width:100%;border:1px solid #99b5bf;border-radius:5px;font:inherit;padding:7px}.calc output{display:block;color:var(--teal);font-size:20px;font-weight:bold;padding-top:15px}.calc p{font-size:13px;color:#536471}.hidden{display:none}footer{font-size:13px;color:#536471;margin-top:40px}
+@media(max-width:1050px){aside{width:245px}main{margin-left:245px;padding:32px}.progress{left:245px}.hero h1{font-size:36px}}
+@media(max-width:740px){aside{position:static;width:auto;height:auto;padding:20px}aside h2{margin:6px 0 10px}nav{display:grid;grid-template-columns:1fr 1fr}nav a{font-size:12px}main{margin:0;padding:26px 18px}.hero h1{font-size:30px}.chapter>h1{font-size:25px}.chapter h2{font-size:20px}.progress{left:0}p,li{font-size:15px}.calc-grid{grid-template-columns:1fr}th,td{padding:9px;font-size:13px}}
+@media print{aside,.progress,.actions,.calc,.note.search-note{display:none}main{margin:0;max-width:none;padding:0}.hero h1{font-size:28px}.chapter{break-before:page;padding:0;border:0}.hidden{display:block}body{background:white}figure{break-inside:avoid}a{color:inherit}th{color:#163249;background:#eaf4f4}h1,h2,h3{break-after:avoid}}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<aside><div class="brand">MANUFACTURING LAB</div><h2>看懂機台<br>再把尺寸做好</h2><label for="book-search">搜尋教材內容</label><input id="book-search" type="search" placeholder="例如：回隙、裝夾、尋邊"><p id="search-note" class="search-note" aria-live="polite">10 章 · 實機照片與原創圖解</p><nav aria-label="章節目錄"><a href="#01-start">01 從照片認識朝陽工管的切削實習</a>
+<a href="#02-safety">02 每次加工都走同一個安全迴圈</a>
+<a href="#03-lathe">03 車床：讓工件旋轉，讓刀具走出形狀</a>
+<a href="#04-lathe-practice">04 車床實作：從毛胚到階級軸</a>
+<a href="#05-milling">05 立式膝式銑床：依照片辨識與操作原理</a>
+<a href="#06-milling-practice">06 銑床實作：從方塊到有槽、有孔的零件</a>
+<a href="#07-parameters-measurement">07 轉速、進給與量測：把數字變成尺寸</a>
+<a href="#08-troubleshooting">08 異常與品質：先停機，再找原因</a>
+<a href="#09-checklists-assessment">09 課前檢核、學習單與自我評量</a>
+<a href="#10-site-appendix">10 現場核對與名詞索引</a></nav></aside>
+<main>
+<header class="hero"><div class="eyebrow">CYUT · INDUSTRIAL ENGINEERING & MANAGEMENT</div><h1>車床與銑床<br>圖解操作教科書</h1><p>朝陽工管製造程序實習 · 科普入門與受監督操作</p><p class="meta">繁體中文 · 版本 1.0 · 2026-10-11</p><p>從你提供的實機照片開始，用原理、圖解與步驟認識裝夾、切削及量測。每個操作都有目的、檢查點與停機時機。</p><div class="actions"><a href="textbook.pdf">下載完整 PDF</a><a href="textbook.md">閱讀 Markdown</a><a href="https://github.com/poemcheng/cyut-machining-textbook">GitHub 原始教材</a><button type="button" id="print-book">列印教材</button></div></header>
+<div class="note">本書供課前學習與教師監督下實作。照片可確認 WINHO 威赫車床品牌與立式膝式銑床構造；完整型號、控制與切削設定仍依現場原廠手冊和教師確認。算例不作直接上機參數。</div>
+<section class="calc" aria-labelledby="calc-title"><h2 id="calc-title">先練算式，再由教師確認設定</h2><p>輸入假設數值，理解直徑、切削速度與轉速關係。計算器不會選機台檔位或判定裝夾安全。</p><div class="calc-grid"><div><label for="diameter">切削直徑 D（mm）</label><input id="diameter" type="number" value="25" min="0.001" step="any"></div><div><label for="speed">假設切削速度 vc（m/min）</label><input id="speed" type="number" value="25" min="0.001" step="any"></div><div><label for="feed">假設每轉進給 fn（mm/rev）</label><input id="feed" type="number" value="0.1" min="0.001" step="any"></div></div><output id="calc-result" aria-live="polite"></output><p>n = 1000 × vc / (π × D)；車削 vf = fn × n。銑削每齒進給的計算另見第 7 章。</p></section>
+<article id="01-start" class="chapter"><h1>01 從照片認識朝陽工管的切削實習</h1>
+<h2>這本書怎麼用</h2>
+<p>車床把圓棒變成階級軸；銑床把方塊變成平面、槽與孔。兩者都把多餘材料切成切屑，但旋轉的東西不同：車床通常是工件旋轉，銑床是刀具旋轉。理解這件事，才能看懂進給方向、尺寸變化與危險區域。</p>
+<p>本書為朝陽科技大學工業工程與管理系製造程序實習情境編寫的科普教材，版本 1.0，編製日期 2026-10-11。系上公開設施資料列有製造程序實習工廠 E-101；本書不是校方核定的機台操作規程。閱讀後，應能說明原理、辨認部位、規劃加工與量測，在教師監督下執行已核准的練習。</p>
+<p><strong>閱讀順序：</strong>先讀第 1、2 章，再依課程讀車床第 3、4 章或銑床第 5、6 章；第 7 章用於算式與量測，第 8 章用於停機後判斷，第 9、10 章供課前確認與課後評量。沒有完成現場部位辨識、停機示範與裝夾確認之前，不進入切削步驟。</p>
+<h2>照片能證實什麼</h2>
+<figure><img alt="圖 1-1 使用者提供的現場銑床照片與部位索引" src="assets/site-mill-callouts.png" /><figcaption>圖 1-1 使用者提供的現場銑床照片與部位索引</figcaption></figure>
+<p>圖 1-1 是使用者提供的現場照片，可見立式主軸、套筒、虎鉗、長形工作台與膝座。依可見構造，本書稱它為「立式膝式銑床」。是否屬砲塔式、品牌、型號、主軸錐度與各手柄功能，仍需現場銘牌和原廠手冊確認。照片上的手柄位置不是加工設定。</p>
+<figure><img alt="圖 1-2 使用者提供的現場車床照片與部位索引" src="assets/site-lathe-callouts.png" /><figcaption>圖 1-2 使用者提供的現場車床照片與部位索引</figcaption></figure>
+<p>圖 1-2 可讀出 <strong>WINHO 威赫車床</strong>品牌，主軸箱面板有速度表、進給／螺紋表，並有「運轉中請勿變速」警示。照片沒有完整呈現刀架、尾座與啟停裝置；品牌不等於型號，也不能由刻度表推定一套可直接照做的手柄組合。</p>
+<p>兩張照片用來認識部位。照片中桌面或機台頂部有散放工具，<strong>不能當作已完成開機檢查的示範</strong>。實作前須清空會震落、捲入或干涉的物件，依教師確認的護罩位置操作。照片與本書其他圖解分開標示；線條圖都是原創通用示意，沒有按比例複製現場設備。</p>
+<h2>車床與銑床，哪一台適合這個形狀</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>問題</th>
+<th>車床</th>
+<th>立式銑床</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>誰旋轉？</td>
+<td>夾頭與工件</td>
+<td>主軸與刀具</td>
+</tr>
+<tr>
+<td>誰進給？</td>
+<td>刀架、溜板或尾座套筒</td>
+<td>工作台或主軸套筒，依工法選用</td>
+</tr>
+<tr>
+<td>最自然的形狀</td>
+<td>同軸外圓、端面、階級、軸向孔</td>
+<td>平面、直角、台階、槽、定位孔</td>
+</tr>
+<tr>
+<td>最常用的尺寸觀念</td>
+<td>直徑、軸向長度、同軸度</td>
+<td>長寬高、基準、孔位、平行與垂直</td>
+</tr>
+<tr>
+<td>主要裝夾</td>
+<td>夾頭、頂心、專用治具</td>
+<td>虎鉗、壓板、專用治具</td>
+</tr>
+<tr>
+<td>首要危險</td>
+<td>旋轉夾頭與工件捲入、工件甩出</td>
+<td>旋轉刀刃、刀具斷裂、工作台夾傷</td>
+</tr>
+</tbody>
+</table></div>
+<p>加工不是「把數字轉到某格」而已。尺寸來自基準，品質來自剛性、刀具、切削條件與量測，安全來自裝夾、護罩、間隙與正確停機。</p>
+<h2>材料、刀具與切屑的科普</h2>
+<p>金屬切削可想成刀刃把薄層材料剪下來。刀刃不是靠蠻力刮擦，而是以適合的角度、速度與進給形成切屑。刀具比工件硬，仍可能因撞擊、振動與過熱崩裂。</p>
+<p>鋁合金較容易切削，也可能黏刀；低碳鋼切削力通常較大；不鏽鋼容易加工硬化，不能把鋁材的設定直接套用。高速鋼與硬質合金刀具也有不同的切削速度範圍。本書的材料與數值都是教學設計；實際選材須先確認牌號、刀具規格及課程設備能力。</p>
+<p>切屑很燙、很尖，長條切屑更可能纏住旋轉物。觀察切屑可協助判斷加工狀態，但不能用手抓，也不能僅憑顏色決定是否安全。出現異常先停機，由教師檢查。</p>
+<h2>先把現場資料填完整</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>現場核對項目</th>
+<th>車床紀錄</th>
+<th>銑床紀錄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品牌／型號／設備編號</td>
+<td>品牌可見 WINHO；其餘待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>原廠手冊與版本</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>正常停止／急停／隔離電源位置</td>
+<td>待填並示範</td>
+<td>待填並示範</td>
+</tr>
+<tr>
+<td>護罩、聯鎖與禁止使用情況</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>速度與進給選擇的正式程序</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>手輪每轉／每格、毫米或英制</td>
+<td>待填，註記半徑或直徑</td>
+<td>待填，註記軸與方向</td>
+</tr>
+<tr>
+<td>夾頭／刀柄／主軸介面與限制</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+<tr>
+<td>清屑、冷卻液與課後保養規定</td>
+<td>待填</td>
+<td>待填</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>現場規程優先：</strong>原廠手冊、校內核准的作業程序與教師指導，決定啟停、換檔、換刀及護罩操作。本書不替未知的現場手柄編造功能。CNC 車床與 CNC 加工中心的程式、刀具補正、回原點與自動循環，另需專門訓練，不套用本書手動步驟。</p>
+<p>來源：<a href="https://iem.cyut.edu.tw/p/404-1032-61732.php?Lang=en">朝陽工管官方設施資料</a>；兩張現場照片由使用者於本次教材製作提供。品牌與構造辨識僅依照片可見內容。</p></article>
+<article id="02-safety" class="chapter"><h1>02 每次加工都走同一個安全迴圈</h1>
+<h2>看懂三種停止狀態</h2>
+<p><strong>正常停止</strong>用於結束切削與例行量測；等待旋轉和自動進給完全停止，不能用手、布或工件摩擦煞停。<strong>緊急停止</strong>用於工件鬆動、碰撞、異常動作或人員危險；按現場已辨識的急停並通報教師。<strong>能源隔離</strong>用於換刀、維修、清理危險區及其他可能意外啟動的作業，按原廠和校內程序隔離並確認。</p>
+<p>急停不等於能源隔離，按下急停也不代表轉動慣性已消失。解除急停後，不能直接重啟；先確認人員、裝夾、刀具、檔位與故障原因，取得教師確認。</p>
+<figure><img alt="圖 2-1 安全加工迴圈：裝夾、確認、試轉、切削、停機、量測" src="assets/safety-workflow.svg" /><figcaption>圖 2-1 安全加工迴圈：裝夾、確認、試轉、切削、停機、量測</figcaption></figure>
+<h2>上機前的穿著與環境</h2>
+<p>戴合適的護目鏡；有飛濺需求時，面罩搭配護目鏡。穿包覆式鞋，依實習工廠規定使用安全鞋與聽力防護。長髮束起並收妥，衣袖扣緊，移除戒指、手錶、項鍊、垂掛繩帶。操作旋轉機台時不戴手套，不把抹布帶到旋轉區。</p>
+<p>停止且完成必要隔離後，搬運鋒利刀具或處理切屑可依校內規定使用適當防割保護；恢復運轉前脫下手套、收走抹布與工具。照片中的銑床標有「嚴禁戴手套」，操作及換刀均遵守該現場規定，以核准護套或承接工具處理刀具。防割措施不能增加捲入風險。</p>
+<p>照明要能看清刻度與切削區，地面不得有油水與障礙，逃生與走道保持暢通。兩人一組時，一人操作，一人只在安全位置核對；只有指定操作者控制啟停，不同時伸手調整。</p>
+<h2>開機前必查</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>檢查</th>
+<th>做法</th>
+<th>不合格時</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人員狀態</td>
+<td>穿著合格，明白本次刀路與停止方法</td>
+<td>先整理或請教師再示範</td>
+</tr>
+<tr>
+<td>機台</td>
+<td>看有無鬆動、破損、漏油與異常；確認護罩及聯鎖正常</td>
+<td>停用、標示、通報</td>
+</tr>
+<tr>
+<td>工件</td>
+<td>材料無明顯裂損，夾持面乾淨，夾持與支撐足夠</td>
+<td>重新規劃裝夾</td>
+</tr>
+<tr>
+<td>刀具</td>
+<td>刀具規格與材料相符，刀柄正確、鎖緊，伸出適當</td>
+<td>更換正確工具</td>
+</tr>
+<tr>
+<td>工具收納</td>
+<td>夾頭扳手取下，虎鉗柄與量具不在刀路，清空主軸箱與桌面</td>
+<td>全部收走再檢查</td>
+</tr>
+<tr>
+<td>檔位與進給</td>
+<td>依現場程序選速，自動進給處於確認的安全狀態</td>
+<td>由教師確認手柄功能</td>
+</tr>
+<tr>
+<td>干涉</td>
+<td>停機依核准方式檢查全程間隙：夾爪、刀架、尾座、虎鉗、壓板、墊鐵</td>
+<td>縮短刀具、重夾或改刀路</td>
+</tr>
+<tr>
+<td>設定紀錄</td>
+<td>記材料、刀具、目標尺寸、留量、速度、進給與基準</td>
+<td>先完成加工計畫</td>
+</tr>
+</tbody>
+</table></div>
+<p>手動轉動主軸作間隙檢查，只能在原廠允許、隔離且不會意外啟動的條件下進行，不能以刀刃、鑽頭或夾爪作手柄。禁止自行拆護罩、解除聯鎖或修改電路。</p>
+<h2>從試轉到停機量測</h2>
+<ol>
+<li><strong>教師確認裝夾與刀路。</strong>逐一指認旋轉區、行程終點、刀具退離方向與急停。目的在於把可能的撞擊位置先說清楚。</li>
+<li><strong>人員退到操作位置，護罩依規程就位。</strong>保持視線，手只握指定操縱件，量具、清屑刷與抹布都離開機台。</li>
+<li><strong>依程序空載試轉。</strong>刀具與工件保持間隙，確認旋向與轉速，觀察是否有偏擺、振動或異音。不適合便正常停機；迫切危險使用急停。</li>
+<li><strong>做經核准的輕切試刀。</strong>以穩定進給完成短距離切削，不邊切邊改裝夾、換檔或量測。切屑纏繞或視線受阻時停止，不伸手拉開。</li>
+<li><strong>退刀、停止進給與主軸。</strong>按照現場順序操作，確認所有運動完全停止。量測前刀刃要退離，讓量具不會碰刀。</li>
+<li><strong>清除量測面的切屑，待溫度穩定再量。</strong>使用核准刷具、鉤具或吸屑設備；雙手不接近仍在轉動的零件。記錄尺寸與實際切入量。</li>
+<li><strong>決定下一刀。</strong>比較目標、餘量及公差，調整前再確認刻度與回隙。每次重夾、換刀、改基準，都重新走裝夾檢查與試轉流程。</li>
+</ol>
+<h2>危險出現時</h2>
+<p>若工件晃動、刀具碎裂、工作台自行衝向刀具、出現劇烈撞擊或人員被捲入風險，立即採現場緊急停止並通報。不要抓工件、擋刀具、拉旋轉切屑或用身體抵住工作台。人員受傷時，由現場負責人依校內緊急應變程序求援；不要為了救工具而重新開機。</p>
+<h2>收工步驟</h2>
+<p>依規程停機與隔離，待刀具和工件冷卻後卸下；使用合適工具去除毛邊。先清切屑，再擦拭與依指定油品保養；不以壓縮空氣把切屑吹向人、軸承、導軌與電器。切屑分類回收，刀具與量具分開歸位，冷卻液按校內規定處理。最後交回設備，記錄鬆動、磨耗或異常，不能把未解決的故障留給下一位同學。</p>
+<p>來源：<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/general.html">CCOHS 金屬加工機台通則</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/lathes.html">車床安全</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html">銑床安全</a>。本章依通則編成原創檢核流程；各機台能源隔離方式須由現場規程補齊。</p></article>
+<article id="03-lathe" class="chapter"><h1>03 車床：讓工件旋轉，讓刀具走出形狀</h1>
+<p>本章適用於教師帶領的傳統中心車床入門。讀者應先完成安全章，再由教師在實機確認啟動、正常停止、緊急停止、主軸方向、換檔與進給控制。<strong>書中的箭頭、手輪名稱與流程是通用示意；未確認的控制桿不得憑圖操作。</strong></p>
+<h2>3.1 從朝陽現場照片開始認識</h2>
+<figure><img alt="朝陽現場提供的 WINHO 威赫車床主軸箱照片；工具尚待收妥" src="assets/site-lathe.jpg" /><figcaption>朝陽現場提供的 WINHO 威赫車床主軸箱照片；工具尚待收妥</figcaption></figure>
+<p>提供的照片可辨識「WINHO 威赫車床」品牌、主軸箱、夾頭及面板上的停機換速提醒。照片沒有提供足以核對的完整型號與原廠操作手冊，因此本書不推定各手柄位置、轉速組合、夾頭安裝形式或安全連鎖。面板上的轉速數字必須與該機正確的換檔表一起使用。</p>
+<p>照片中主軸箱上方散放刀柄與工具。<strong>這張照片用來辨識設備，不代表可以開機的整理狀態。</strong> 開機前應將鬆散物品移到指定工具盤，清空會掉落、碰撞或滑向旋轉區的位置。照片的校名或財產貼紙只能確認圖片情境，不能代替設備檢查紀錄。</p>
+<figure><img alt="車床現場照片部位標示" src="assets/site-lathe-callouts.png" /><figcaption>車床現場照片部位標示</figcaption></figure>
+<p>現場依據：使用者提供的實機照片。停機調整與清除機床上工具的原則可核對 <a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/lathes.html">CCOHS 車床安全</a>。</p>
+<h2>3.2 一台車床如何工作</h2>
+<figure><img alt="傳統中心車床構造示意" src="assets/lathe-anatomy.svg" /><figcaption>傳統中心車床構造示意</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部位</th>
+<th>功能與初學者應辨認的事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主軸箱、主軸</td>
+<td>提供旋轉與傳動；工件軸線由主軸決定，換檔不是改變刀具位置。</td>
+</tr>
+<tr>
+<td>夾頭</td>
+<td>夾持工件並帶動旋轉。夾爪、夾頭外緣與突出物都形成危險旋轉範圍。</td>
+</tr>
+<tr>
+<td>床身與導軌</td>
+<td>提供移動基準；工具掉落、切屑壓傷與砂粒會損害精度。</td>
+</tr>
+<tr>
+<td>鞍座、拖板</td>
+<td>使刀具沿工件軸線移動，主要用於外圓加工。</td>
+</tr>
+<tr>
+<td>橫向滑座</td>
+<td>使刀具靠近或離開軸線；控制外圓直徑，也用於端面進給。</td>
+</tr>
+<tr>
+<td>複式滑座、刀架</td>
+<td>固定刀具，並提供短距離或角度移動。刀架鎖緊後仍須確認刀具方向與淨空。</td>
+</tr>
+<tr>
+<td>尾座、尾座套筒</td>
+<td>可裝頂心支撐工件，或裝鑽夾頭沿軸線鑽孔；尾座本體須可靠鎖在床身。</td>
+</tr>
+<tr>
+<td>進給桿、導螺桿</td>
+<td>將運動傳到拖板。一般進給與螺紋同步進給功能不同，半螺帽不得當成任意的自動進給開關。</td>
+</tr>
+</tbody>
+</table></div>
+<p>依據與延伸：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/chapter-unit-1-the-engine-lathe/">Open Oregon《Manufacturing Processes 4–5》車床構造</a>。圖為本教材原創簡化圖，並非 WINHO 原廠尺寸圖。</p>
+<h2>3.3 三種運動與三個切削量</h2>
+<figure><img alt="車削主運動、軸向與徑向進給" src="assets/lathe-motion.svg" /><figcaption>車削主運動、軸向與徑向進給</figcaption></figure>
+<p>車削的主運動是工件旋轉。刀具沿軸線進給，就得到圓柱；刀具沿半徑方向進給，就得到端面。刀具既沿軸線又改變離軸距離，才可能得到斜面或錐面。操作前先在紙上畫出「起點、終點、退刀方向」，比只記手輪順逆方向更可靠。</p>
+<ul>
+<li><strong>轉速 (n)</strong>：主軸每分鐘轉幾圈，單位 rpm。</li>
+<li><strong>切削速度 (v_c)</strong>：工件表面掠過刀刃的速度，單位 m/min。同一轉速下，大直徑的表面走得較快；端面越接近中心，表面速度越小。</li>
+<li><strong>每轉進給 (f_n)</strong>：工件轉一圈，刀具走多遠，單位 mm/rev；不是每分鐘進給量。</li>
+<li><strong>切深 (a_p)</strong>：外圓車削時沿半徑去除的厚度，單位 mm；直徑減少量為 (2a_p)。端面切深則沿軸向計。</li>
+</ul>
+<p>計算關係為 <strong><code>n = 1000 × v_c / (π × D)</code></strong>，其中 (D) 必須用毫米。例如<strong>僅作算術練習</strong>，若給定 (v_c=20) m/min、(D=25) mm，算得約 255 rpm。這不是本校材料的開機建議：實際數值須由教師根據材質、刀具資料、夾持、刀具突出量與機台可用檔位確認，並受夾頭與附件額定轉速限制。不能因為算出 255，就自行組合換檔手柄。</p>
+<p>公式來源：<a href="https://cdn.sandvik.coromant.com/files/sitecollectiondocuments/services/metal-cutting-e-learning/formulas-and-definitions/formulas-and-deinitions-for-turning-metric-enu.pdf">Sandvik Coromant 車削公制公式表</a>。運動辨識可核對 <a href="https://cdn0.grizzly.com/manuals/g0600_m.pdf">Grizzly G0600 原廠手冊的 Manual Feed</a>，該機控制位置不套用到現場設備。</p>
+<h2>3.4 裝夾：先建立剛性，再開始切削</h2>
+<figure><img alt="工件夾持、刀具突出量與刀尖中心高" src="assets/lathe-setup.svg" /><figcaption>工件夾持、刀具突出量與刀尖中心高</figcaption></figure>
+<p>三爪夾頭的夾爪一起移動，適合圓棒的入門裝夾；它會使圓棒大致置中，但<strong>取下再夾不能保證回到原來軸線</strong>。四爪獨立夾頭需要逐爪校正；筒夾有自己的直徑範圍。新手不得自行換夾頭、反裝夾爪或加裝非標準延長爪。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>順序／目的</th>
+<th>動作</th>
+<th>通過條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1　防止誤啟動</td>
+<td>依現場規程停止並禁止啟動；確認主軸完全靜止。刀具先移到不妨礙裝料的位置。</td>
+<td>操作者與教師確認裝夾期間不會啟動；換車刀、換鑽頭、維修、拆護罩或換夾頭須依第 2 章與現場規程執行能源隔離。</td>
+</tr>
+<tr>
+<td>2　讓接觸面可靠</td>
+<td>用刷具清除夾爪接觸面與工件上的切屑，檢查毛胚是否彎曲、開裂或有明顯毛邊。</td>
+<td>三爪接觸的是完整圓柱面，不是斜端、肩部或毛邊。</td>
+</tr>
+<tr>
+<td>3　決定伸出長度</td>
+<td>依工序只露出必要加工長度，保留教師確認的夾持長度。長細件另評估頂心或支承。</td>
+<td>夾爪處於允許範圍；所有爪都能有效接觸，工件不靠一小段邊緣勉強夾住。</td>
+</tr>
+<tr>
+<td>4　夾緊並移除扳手</td>
+<td>使用正確夾頭扳手夾緊，隨即拔出並放回固定位置。不可加套管暴力增力。</td>
+<td>工件固定；夾頭扳手已離開旋轉區。</td>
+</tr>
+<tr>
+<td>5　裝刀與校高度</td>
+<td>清潔刀座，使用規定刀柄與最短可行突出量；以教師確認對準的尾座頂心或專用高度規對刀尖。調整後鎖緊，再校一次。</td>
+<td>刀尖在主軸中心高；刀柄、刀架都不鬆動；刀刃適合預定進給方向。</td>
+</tr>
+<tr>
+<td>6　查全程淨空</td>
+<td>在禁止啟動的狀態，按原廠允許方法手動檢查轉動與刀具全程；不能手轉時由教師改用核准檢查法，勿硬扳。</td>
+<td>夾爪最大掃掠範圍不碰刀架、滑座、尾座或護罩，退刀也有空間。</td>
+</tr>
+</tbody>
+</table></div>
+<p>刀尖偏高或偏低會改變刃口的工作角度；端面中心留下凸點時，要停機查高度與刀尖狀態，不能一直強壓到中心。尾座頂心若本身未對準主軸，只能作粗略參考，應由教師校核。</p>
+<p>夾頭種類依據：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-3-chucks/">Open Oregon 夾頭單元</a>。中心高核對：<a href="https://www.sherline.com/wp-content/uploads/2014/07/5326_instructions_v9_web.pdf">Sherline 原廠操作說明，Leveling the Cutting Tool</a>。本表為本教材編排的通用檢查流程，夾持長度必須現場驗證。</p>
+<h2>3.5 刻度、背隙與量測：尺寸差兩倍常出在這裡</h2>
+<p>橫向手輪可能採「半徑讀值」，也可能採「直徑讀值」；數位尺亦可能切換模式。<strong>不能只看單位 mm 就認定是哪一種。</strong> 先讀本機手冊，再由教師用量表檢查實際滑座位移；不可用猜測進行試切。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>想將直徑從 20.80 車到 20.40 mm</th>
+<th style="text-align: right;">刀具實際往中心移動</th>
+<th style="text-align: right;">應讀取的變化量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>半徑式刻度</td>
+<td style="text-align: right;">0.20 mm</td>
+<td style="text-align: right;">0.20 mm</td>
+</tr>
+<tr>
+<td>直徑式刻度／直徑模式數位尺</td>
+<td style="text-align: right;">0.20 mm</td>
+<td style="text-align: right;">0.40 mm</td>
+</tr>
+</tbody>
+</table></div>
+<p>轉動手輪反向時，螺桿與螺帽的間隙會造成手輪動了、滑座尚未動的<strong>背隙</strong>。定位須由同一方向接近目標；若超過，先退到足以消除間隙的位置，再從原方向靠近。不可把反轉後的刻度變化全部當成切深。此方法不能消除工件撓曲、刀具磨耗或機床幾何誤差。</p>
+<p>量測流程是「退刀、停機、確認靜止、刷除妨礙量測的屑、清潔量面、量測、記錄」。卡尺適合粗略檢查與長度；外徑分厘卡適合較細的直徑檢查，使用棘輪或定力裝置，不靠手勁硬夾。沿圓柱前、中、後測量，並在同一位置換方向再測，可以找出錐度與不圓的跡象。工件過熱時先讓溫度穩定；顯示到 0.01 mm 不等於量測一定準到 0.01 mm。</p>
+<p>刻度案例依據：<a href="https://cdn0.grizzly.com/manuals/g4000_m.pdf">Grizzly G4000 原廠手冊，Cross Slide</a>；數位尺模式可核對 <a href="https://makerworkshop.mit.edu/wp-content/uploads/2015/03/LatheRefresherGuide.pdf">MIT Lathe Refresher Guide</a>。定力量測依據：<a href="https://www.mitutoyo.com/products/small-tool-instruments-and-data-management/micrometers/digimatic-micrometers/coolant-proof-micrometer/">Mitutoyo 外徑分厘卡說明</a>。表內毫米算例為本教材原創。</p>
+<h2>3.6 基本加工：每次都從檢查開始</h2>
+<figure><img alt="端面加工：軸向設定切深、徑向進給" src="assets/lathe-facing.svg" /><figcaption>端面加工：軸向設定切深、徑向進給</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>工序</th>
+<th>目的、動作與停機檢查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>試運轉</td>
+<td>教師確認護罩就位、鬆散工具收妥、刀具不接觸工件、自動進給與半螺帽在本機規定的解除狀態。按核准方向與檔位啟動，觀察偏擺與異常聲響，再正常停止。若工件滑動或劇烈振動，立即停止並請教師處理。</td>
+</tr>
+<tr>
+<td>車端面</td>
+<td>使用適合的端面刀。刀尖先位於外徑以外，按核准的少量軸向切深設定位置，再平穩由外向中心進給。接近中心時不越過到刀具不適用的方向；完成後退出接觸、停止，再看平面與中心是否殘留凸點。用完成端面建立軸向長度基準。</td>
+</tr>
+<tr>
+<td>車外圓</td>
+<td>從端面外側的安全起點開始，設定徑向切深；按刀具適用方向沿軸線走到預定終點。接近夾頭或肩部前提早減緩；到終點解除進給、徑向退刀，再回起點。首次先車一小段，停機量徑核對刻度，確認後才加工全長。</td>
+</tr>
+<tr>
+<td>車階級與肩面</td>
+<td>從完成端面設定肩部位置，粗車時同時留下直徑與軸向精加工餘量。最後以適合刀具修正肩面，避免側刃與肩壁干涉。刀尖圓弧會留下角部半徑，不得宣稱天然得到完全尖銳的內角。</td>
+</tr>
+<tr>
+<td>倒角</td>
+<td>停機換用適合刀具或由教師設定刀具角度，確認刀尖與工件稜邊的相對位置。以少量進刀去掉端邊尖角，退刀停機後檢查寬度；C0.5 的 45° 倒角指兩個方向各約 0.5 mm，不是沿斜面量 0.5 mm。</td>
+</tr>
+</tbody>
+</table></div>
+<p>一般練習先採手動進給；自動進給僅在教師已示範本機接合、解除與終點控制後使用。不要假設機械擋塊一定能停止主軸或阻止撞車。正常切削完成可以先解除進給並退刀；遇到捲入、鬆脫或碰撞徵兆則優先立即停止，勿冒險繼續退刀。</p>
+<p>端面原理核對：<a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/resources/lathe/">MIT OCW 車床教材</a>。肩部與精車延伸：<a href="https://www.sandvik.coromant.com/api/publications/view?fileName=C-1020-18.pdf&amp;url=92df68b7-b8c0-494d-b290-e27f540b5885.pdf">Sandvik Coromant Turning Handbook</a>。本表不是上述任一機型的按鍵操作表。</p>
+<h2>3.7 尾座鑽孔：鑽頭不轉，工件轉</h2>
+<figure><img alt="尾座定點、鑽孔與排屑" src="assets/lathe-drilling.svg" /><figcaption>尾座定點、鑽孔與排屑</figcaption></figure>
+<ol>
+<li><strong>先定義深度。</strong> 圖面須說明盲孔深度是到鑽尖，還是完整圓柱孔底；兩者相差鑽尖長度。教師先選擇鑽徑、定位刀、轉速、進給與適用切削液。</li>
+<li><strong>停機裝刀與鎖尾座。</strong> 清潔錐孔及錐柄，按本機規定裝入鑽夾頭；鑽頭夾在直柄，不夾螺旋槽，拔下鑽夾頭扳手。鎖定尾座本體，保留套筒工作行程，刀架移出鑽頭路線。錐柄未坐實時不得用手扶住開機。</li>
+<li><strong>建立孔口。</strong> 已車平的端面是起點。用合適的定位鑽／中心鑽做起始孔；其角度與深度由教師配合後續鑽頭選定，不把中心鑽的 60° 支承錐孔一律深鑽作任何鑽頭的定位孔。</li>
+<li><strong>停機換鑽頭並重查。</strong> 將定位刀退離工件、停止主軸，再換正式鑽頭。確認夾持、尾座鎖定與軸線對準；新刀具伸出量不同，須重做淨空檢查及表面零點設定。</li>
+<li><strong>平穩鑽進與排屑。</strong> 啟動後，以尾座套筒手輪受控進刀；按教師核准的分段深度退鑽排屑。正常狀況先將鑽頭退離孔，再停機清屑；不可徒手拉掉旋轉中的切屑。套筒接近行程界限前停止，不為追求深度讓錐柄退出。</li>
+<li><strong>完成與檢驗。</strong> 鑽至核准深度後退鑽、停機，確認全靜止，再檢查孔口毛邊與深度。發生鑽頭卡住、鑽夾頭轉動或工件鬆動，立即停止並交教師排除，勿手抓鑽夾頭抗轉。</li>
+</ol>
+<p>尾座功能核對：<a href="https://haascnc.com/service/online-manuals/hml-manual-lathe-operators-service-manual/manual-lathe-operation">Haas 傳統車床操作手冊，Tailstock Operation</a>。定位孔的角度與細鑽對準問題：<a href="https://sherline.com/wp-content/uploads/2018/05/lathe_align.pdf">Sherline Lathe Alignment and Micro-Drilling</a>。夾頭型式及退錐方法須依現場手冊，不照搬他機。</p>
+<h2>3.8 哪些留給教師示範</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>加工</th>
+<th>看懂的科普重點</th>
+<th>本書的操作界線</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>車螺紋</td>
+<td>主軸每轉一圈，刀具同步前進一個導程；導程與螺距在多線螺紋中不相同。</td>
+<td>涉及換齒輪、半螺帽、退刀及再入刀同步；教師示範，不提供新手獨做流程。</td>
+</tr>
+<tr>
+<td>切斷</td>
+<td>窄刀向中心切入，剩餘截面越來越小；排屑與刀具側向受力很敏感。</td>
+<td>本書階級軸使用預切毛胚，不需切斷；不得用尾座頂心硬頂住即將分離的切斷段。</td>
+</tr>
+<tr>
+<td>滾花</td>
+<td>壓花型滾花以滾輪讓金屬塑性變形，形成止滑紋；另有切削型滾花。</td>
+<td>壓力可能使長細件撓曲，教師選刀具與支承。</td>
+</tr>
+<tr>
+<td>偏心／面盤加工</td>
+<td>工件質量與旋轉軸不重合，會出現不平衡與較大的掃掠範圍。</td>
+<td>配重、夾持與額定轉速由教師評估；新手不自行試轉。</td>
+</tr>
+</tbody>
+</table></div>
+<p>延伸來源：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-4-turning/">Open Oregon 車削單元</a>、<a href="https://cdn.sandvik.coromant.com/files/sitecollectiondocuments/downloads/global/technical%20guides/en-gb/c-2920-031.pdf">Sandvik 螺紋加工指南</a>。</p>
+<h2>3.9 停機、清理與異常處理</h2>
+<p>每段加工完成後先解除進給、讓刀具離開工件，依本機規定停止，確認夾頭完全靜止才量測或取件。班末依規程禁止啟動，將尖銳刀具收妥，再用刷具、屑鉤或夾具收集切屑；不戴手套接近有旋轉可能的區域，不用手抓屑，也不用壓縮空氣把屑吹進導軌或吹向他人。按指定油品與位置保養，擦除地面油液，記錄刀具與設備異常。</p>
+<p>若看到工件位移、刀架轉動、持續尖叫、劇烈振動、長屑纏繞或冷卻液異常，不以增加手力壓住工件。先停止、確認靜止，再由教師檢查夾持、刀具、支承與切削條件。緊急停止後也不自動重啟；必須排除原因、收妥工具並重新完成檢查。</p>
+<p>清理原則：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/chapter-unit-1-the-engine-lathe/">Open Oregon 車床安全與清理</a>；捲入與停機量測原則：<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/lathes.html">CCOHS 車床安全</a>。</p>
+<p>下一章：<a href="#04-lathe-practice">階級軸的完整練習</a>。</p></article>
+<article id="04-lathe-practice" class="chapter"><h1>04 車床實作：從毛胚到階級軸</h1>
+<p>本章是一份<strong>原創教學練習設計，尚非朝陽現場實測工序或校方認證標準</strong>。它把第 3 章的裝夾、端面、外圓、肩部、倒角與量測串成可檢查的工作流程。教師須先用實際材料、刀具、夾頭及機台試做，確認夾持、可用轉速與刀具全程淨空，才讓學生分步操作。尾座鑽孔另作短料練習，避免任意改變這份軸件圖面。</p>
+<h2>4.1 讀圖與準備</h2>
+<figure><img alt="φ25×75 毛胚、階級軸尺寸與兩次裝夾示意" src="assets/lathe-project.svg" /><figcaption>φ25×75 毛胚、階級軸尺寸與兩次裝夾示意</figcaption></figure>
+<p>所有尺寸單位為 mm。以小徑端面命名 <strong>A</strong>，另一端命名 <strong>B</strong>。從 A 沿軸向量 (s)，A 為 (s=0)，肩面位於 (s=20)，B 位於 (s=60)。這個 (s) 是教材座標，不是宣稱實機必有同名數位尺。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>教學目標</th>
+<th>量測與判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛胚</td>
+<td>約 φ25 × 75，圓直且無明顯缺陷的教師核准材料</td>
+<td>卡尺實測原始直徑與總長；鋸口不能直接當精密基準。</td>
+</tr>
+<tr>
+<td>總長 A–B</td>
+<td>60 ± 0.30</td>
+<td>兩端面清潔、去除妨礙量測的毛邊，停機取下後量測。</td>
+</tr>
+<tr>
+<td>A 端小徑</td>
+<td>φ16 ± 0.20，軸向長度 20 ± 0.30</td>
+<td>外徑分厘卡量直徑；卡尺量 A 至肩面。</td>
+</tr>
+<tr>
+<td>大徑</td>
+<td>φ20 ± 0.20</td>
+<td>在可量區的多個軸向位置與方向量測。</td>
+</tr>
+<tr>
+<td>大徑長度</td>
+<td>40，參考尺寸</td>
+<td>由總長減小徑長度得到，避免重複且互相矛盾的長度公差。</td>
+</tr>
+<tr>
+<td>端部外稜</td>
+<td>示範 C0.5，即約 0.5 × 45°</td>
+<td>去尖角，不讓倒角侵蝕肩面定位長度；是否保留更小倒角由教師定。</td>
+</tr>
+<tr>
+<td>同軸度、粗糙度</td>
+<td>本練習未指定正式幾何公差或 Ra</td>
+<td>記錄目視接刀痕、直徑差與教師量表檢查；不可用尺寸合格代替同軸度合格。</td>
+</tr>
+</tbody>
+</table></div>
+<p>上述公差是本教材設定的練習目標，並非量具、機台或學生能力的保證。材料牌號、硬度、刀具與切削液不確定時，先由教師確認，不能把「看起來像鋁／鋼」當作選速依據。準備外圓刀、端面／肩部適用刀具、倒角刀、刷具、屑鉤、卡尺、0–25 mm 外徑分厘卡，以及教師核准的二次裝夾保護裝置。</p>
+<p>讀圖及加工概念核對：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-4-turning/">Open Oregon 車削單元</a>。尺寸、命名、公差與工序安排為本教材原創。</p>
+<h2>4.2 先畫兩次裝夾，才知道哪些面現在不能車</h2>
+<p>第一次夾住 B 側未加工的 φ25 原料約 25 mm，A 側外露約 50 mm。車平 A 後，預定加工 A 起約 44 mm 的外圓；其餘原材留到第二次加工。<strong>外露 50 與夾持 25 是這個工序的規劃值，不是通用安全比例</strong>；教師須核對該夾頭、材料、切深及工件剛性。若 A 端面去除量過多，44 mm 加工段與夾爪之間的預留淨空會變小，須重新規劃。</p>
+<p>第一次先將 (s=0) 到約 (s=44) 車為 φ20，再將 (s=0) 到 (s=20) 車為 φ16，留下 (s=20) 到 (s=44) 的 φ20 段。第二次<strong>夾持已完成 φ20 上的 (s=20) 到 (s=40) 區間</strong>，夾持長約 20 mm；不把只有 20 mm 長的 φ16 段當作唯一夾持面，再讓整段 φ20 懸伸。</p>
+<p>反夾後，A 側朝向夾頭內部；實際夾頭孔徑、內部空間和爪形必須容得下 φ16 段，且夾爪不能壓在肩部或倒角上。B 側原材朝外，原先加工到 (s=44) 的 φ20 保留約 4 mm 外露作接續參考；車平 B 至 (s=60)，再補車 (s=44) 到 (s=60) 約 16 mm 的 φ20。</p>
+<p>使用配合 φ20 的合格軟爪、筒夾或教師設計核准的保護夾套，避免夾傷成品。<strong>不得塞紙片、布條或鬆散墊片臨時替代夾套。</strong> 軟爪或夾套還會改變有效接觸長度與定位精度，教師需重新驗證。若現場無法可靠完成這種反夾，就先調整工序或工件尺寸，不直接照做。</p>
+<p>夾持附件概念：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-3-chucks/">Open Oregon 夾頭單元</a>。原廠的裝夾與停機要求可核對 <a href="https://haascnc.com/service/online-manuals/hml-manual-lathe-operators-service-manual/manual-lathe-operation">Haas 傳統車床操作手冊，Chuck Operation</a>，不可將其夾頭形式視為 WINHO 現場配置。</p>
+<h2>4.3 第一次裝夾：建立 A 基準，完成小徑與反夾面</h2>
+<p>每次重新裝刀、調整角度或換檔，都在主軸完全停止且依現場規程禁止啟動時進行；換車刀或鑽頭另須按第 2 章與該機規程完成能源隔離。學生每完成一道就讓教師確認下一道起點與終點；下表不省略第 3 章的護罩、扳手與淨空檢查。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>目的與實際動作</th>
+<th>停機檢查／下一步門檻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1　原料檢查</td>
+<td>實測毛胚；指定 A、B，確認至少有加工與夾持餘量。把預定肩部、第一次終點和反夾區畫在工序圖上。</td>
+<td>無彎曲、裂縫；教師確認材料與刀具。尺寸不足時換料或改圖，不強行使用。</td>
+</tr>
+<tr>
+<td>2　停機裝料</td>
+<td>清潔爪面與毛胚；依 4.2 夾 B 側，設定外露長度後夾緊，立即收回夾頭扳手。</td>
+<td>夾持完整圓柱面，爪位在允許範圍；教師檢查偏擺與夾持。</td>
+</tr>
+<tr>
+<td>3　裝刀試轉</td>
+<td>校中心高、刀柄突出量與全程淨空；收妥工具，解除自動進給及半螺帽，護罩就位。用教師核准檔位作不接觸工件的試轉，再停止。</td>
+<td>無明顯偏擺、鬆動與異音。主軸方向配合刀刃；現場警示要求停機換檔。</td>
+</tr>
+<tr>
+<td>4　車平 A</td>
+<td>用端面刀少量去除鋸切面，按第 3 章端面步驟車到形成完整平面。退刀停機。</td>
+<td>A 面完整，中心無異常凸點；剩餘外露仍足夠加工 44 mm 並保持夾爪淨空。</td>
+</tr>
+<tr>
+<td>5　建立軸向零點</td>
+<td>以完成 A 面建立教師核准的軸向讀值或量表基準，記錄肩部 20 mm 和第一加工終點 44 mm。</td>
+<td>讀值單位、方向與零點有紀錄；實機沒有可靠拖板刻度時由教師用量表／行程量測，不估算手輪圈數。</td>
+</tr>
+<tr>
+<td>6　外圓試切</td>
+<td>在 A 側先車一小段，使用教師核准的小切深。退刀停機，量直徑，核對半徑／直徑刻度及背隙。</td>
+<td>計算的直徑減少量與實測相符；否則停止釐清，不連續進刀猜答案。</td>
+</tr>
+<tr>
+<td>7　粗車 φ20</td>
+<td>從 A 側外端起刀，分次車到約 44 mm 終點，提早停止進給，退刀再回程。粗車留直徑精加工餘量，例如留至約 φ20.4；實際值由教師配合刀具確認。</td>
+<td>每次停機記錄直徑，不只量一端；未車到夾爪附近。粗車餘量是直徑值，不可直接當半徑切深。</td>
+</tr>
+<tr>
+<td>8　精車 φ20</td>
+<td>量測後算所需徑向切深，從相同方向消除背隙並設定刀位；先試一短段再量測，確認後完成全段。</td>
+<td>直徑符合目標；(s=20) 到 (s=40) 保留無倒角、無肩部干涉的完整反夾面。</td>
+</tr>
+<tr>
+<td>9　粗車 φ16</td>
+<td>依 A 零點設定小徑長度；粗車到肩部前留軸向餘量，不先越過 20 mm 再想補回。分次車小徑並保留直徑餘量。</td>
+<td>肩部位置仍可修正；刀刃與肩面有淨空，沒有長屑纏繞。</td>
+</tr>
+<tr>
+<td>10　完成 φ16 與肩面</td>
+<td>按量測結果精車小徑，並用適合刀具將肩面收至 A 起 20 mm。需要換刀時重新校刀位，不能沿用舊刀尖零點。</td>
+<td>停機量 φ16、A–肩面長度，檢查肩面、刀尖圓角與兩段直徑。</td>
+</tr>
+<tr>
+<td>11　A 邊倒角與取件</td>
+<td>用核准倒角刀少量去掉 A 外稜，退刀停止。依規程禁止啟動，移開刀具，托住工件再鬆爪取下。</td>
+<td>工件冷卻後再量測；A–B 剩餘總長記為 (L_1)，保留第一裝夾紀錄。</td>
+</tr>
+</tbody>
+</table></div>
+<p>上述 φ20.4 是原創練習的餘量示例，不能推定特定刀片在 0.2 mm 半徑切深必然得到良好切屑。切削參數須符合刀具適用範圍，過小切深也可能摩擦或形成不良表面。公式核對：<a href="https://cdn.sandvik.coromant.com/files/sitecollectiondocuments/services/metal-cutting-e-learning/formulas-and-definitions/formulas-and-deinitions-for-turning-metric-enu.pdf">Sandvik 車削公式</a>；試切、停機量測概念核對：<a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/resources/lathe/">MIT 車床教材</a>。</p>
+<h2>4.4 第二次裝夾：控制總長，補完大徑</h2>
+<p>三爪反夾會引入徑向偏心與軸向定位變化。此練習接受由教師評估的教學接續效果，<strong>不宣稱兩次裝夾就能取得精密同軸階級軸</strong>。有正式同軸度要求時，應改由教師規劃兩頂心、校正四爪或其他可控工法。</p>
+<p>反夾後，A 可能位於夾頭內，不能用旋轉中的卡尺跨過夾頭量總長，也不能假想 A 面仍然可見。本練習提供兩種由教師選用的長度控制方式：有可靠軸向定位裝置時，用其設定 B 的加工量；沒有可靠裝置時，採<strong>停機取件量總長、重新裝夾校正</strong>，每次只修少量，並保留重夾所需校正時間。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>目的與實際動作</th>
+<th>通過條件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12　計算端面餘量</td>
+<td>根據第一次取件實測的 (L_1)，算 B 端尚需去除量 (L_1-60)。先規劃收至約 60.5 mm，再量測，不一刀按鋸料公稱 75 mm 減去 15 mm。</td>
+<td>有實測值、目標值和待去除量，單位一致。</td>
+</tr>
+<tr>
+<td>13　保護反夾與校正</td>
+<td>停機，清潔 φ20 夾持段與保護裝置；夾在 (s=20) 至 (s=40)，避免肩面與倒角。教師以量表、允許的手動轉動檢查外露 φ20 的偏擺，再確認夾緊。</td>
+<td>φ16 可安全容入夾頭內部；有效接觸、剛性與刀具路線合格。量表及其支架在啟動前移開。</td>
+</tr>
+<tr>
+<td>14　重查刀位與試轉</td>
+<td>反夾後重新確認中心高、端面刀位置、轉向及全程淨空，再作不接觸工件試轉。</td>
+<td>工件無晃動；原先 φ20 的外露接續帶可辨認。</td>
+</tr>
+<tr>
+<td>15　B 端粗修長度</td>
+<td>以當前 B 表面為相對起點，按本機確認的軸向位移少量車端面，先保留總長約 0.5 mm 的修整餘量。</td>
+<td>停機取下後量總長；若未用可靠定位裝置，每次重夾都重新校正，不能沿用取件前零點。</td>
+</tr>
+<tr>
+<td>16　精修至總長 60</td>
+<td>以取件實測與剩餘餘量決定下一次端面切除量；由教師確認後再夾、校正、修面，直到公差內。</td>
+<td>記錄最終 A–B 長度；尺寸已短於下限時不能再靠車削補救，需記錄不合格原因。</td>
+</tr>
+<tr>
+<td>17　補車 B 側 φ20</td>
+<td>從 B 外側車向已有 φ20 接續帶，粗車留餘量；停機量測後精車至目標。只接到原加工面，不越過夾爪掃掠範圍。</td>
+<td>在 B 側、接續帶、可量的原 φ20 區間量測；直徑差與接刀痕如實記錄。接刀痕不可靠在旋轉工件上纏砂布處理。</td>
+</tr>
+<tr>
+<td>18　B 邊倒角</td>
+<td>停機設定倒角刀，檢查與爪的距離，再少量加工 B 外稜；退刀停機取下。</td>
+<td>端面有效量測面仍存在；倒角無明顯尖稜，總長與直徑複驗合格。</td>
+</tr>
+</tbody>
+</table></div>
+<p>裝夾精度與夾具原理可核對 <a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-3-chucks/">Open Oregon 夾頭單元</a>。再裝夾及長度控制方案為本教材針對本練習設計，須現場試做。</p>
+<h2>4.5 品質紀錄與常見錯誤</h2>
+<p>取件後待溫度穩定，清潔量面，以同一量具與定力方式重複量測。大徑前、中、後測量後再轉向量一次；小徑同樣量至少兩個軸向位置。把實測值寫下來，再比較公差，不能只記「合格」。長度以原本的端面與肩面為基準，避開倒角及刀尖圓角。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>檢查項目</th>
+<th>記錄格式</th>
+<th>如何判讀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>φ20</td>
+<td>B 側／接續處／近肩部，各量 0°、90° 方向</td>
+<td>軸向差異可能為錐度、接刀差或撓曲；方向差異提示不圓，但不足以代替正式圓度量測。</td>
+</tr>
+<tr>
+<td>φ16</td>
+<td>近 A、近肩部，各量兩方向</td>
+<td>比較平均大小與最大差；不能只量剛好合格的位置。</td>
+</tr>
+<tr>
+<td>長度</td>
+<td>總長、A 至肩面，至少重複兩次</td>
+<td>由總長減小徑長度得到大徑參考長度。</td>
+</tr>
+<tr>
+<td>表面與邊緣</td>
+<td>接刀痕、振紋、毛邊、夾傷；必要時拍照</td>
+<td>外觀只能找異常，不能由照片判定 Ra 或同軸度。</td>
+</tr>
+<tr>
+<td>過程</td>
+<td>毛胚、夾持位置、刀具、核准轉速／進給／切深、量具、教師確認</td>
+<td>同樣尺寸出現不同結果時，這些紀錄才可用來分析原因。</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>問題</th>
+<th>常見原因</th>
+<th>下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直徑一次少了兩倍預期</td>
+<td>把半徑刻度當成直徑，或計算後又重複除／乘 2</td>
+<td>停機，用實際滑座位移和量測結果重新核對模式。已車小無法補回。</td>
+</tr>
+<tr>
+<td>肩部長度超過目標</td>
+<td>未建立 A 基準、換刀未重設或接近終點未提前減速</td>
+<td>記錄誤差；下件先留下軸向精加工餘量。</td>
+</tr>
+<tr>
+<td>B 面越修越短</td>
+<td>使用公稱毛胚長度，或重夾後沿用舊零點</td>
+<td>使用每次取件實測總長與新定位基準。</td>
+</tr>
+<tr>
+<td>兩次加工的 φ20 有台階</td>
+<td>反夾偏心、刀具位移或重設刻度失誤</td>
+<td>教師停機校正夾持與刀位；不盲目再車到最小直徑。</td>
+</tr>
+<tr>
+<td>振紋、尖叫、錐度</td>
+<td>工件／刀具突出過長、鎖緊不足、刀刃狀態或切削條件不合</td>
+<td>停機查剛性與刀具，請教師決定支承和參數；勿徒手扶工件。</td>
+</tr>
+<tr>
+<td>量測重複性差</td>
+<td>毛邊、切屑、工件熱、量具未歸零或測力不一致</td>
+<td>清潔、穩溫、校核量具及定力方式後再量。</td>
+</tr>
+</tbody>
+</table></div>
+<p>定力與量具規格核對：<a href="https://www.mitutoyo.com/products/small-tool-instruments-and-data-management/micrometers/digimatic-micrometers/coolant-proof-micrometer/">Mitutoyo 分厘卡說明</a>。刻度差異核對：<a href="https://cdn0.grizzly.com/manuals/g4000_m.pdf">Grizzly G4000 手冊</a>。振動原因的延伸閱讀：<a href="https://www.sandvik.coromant.com/api/publications/view?fileName=C-1020-18.pdf&amp;url=92df68b7-b8c0-494d-b290-e27f540b5885.pdf">Sandvik Turning Handbook</a>。</p>
+<h2>4.6 分開練習尾座鑽孔</h2>
+<p>教師另提供短而可靠夾持的圓棒，先車平端面，再按第 3 章尾座流程練習定位與鑽孔。例如可設計「φ6 盲孔、鑽尖深度 12 mm」的<strong>原創練習題</strong>；材料、定位刀角度、分段排屑深度、鑽速與鑽頭尖角由教師確認。這個 12 mm 已明定到鑽尖，完整 φ6 圓柱孔的有效深度會較小，不能寫成完整孔深 12 mm。</p>
+<p>學生須先把端面接觸點設為深度起點，記錄套筒初始讀值及可用行程；完成定位後停機換刀並重設接觸點。逐段鑽進、正常退鑽、停機清屑，到深度後退刀、停機、取件。孔深需使用合適量具與教師指定測量法；一般卡尺深度桿碰到錐面時，不一定量到鑽尖的最深點。若要練習有明確圓柱深度的孔，應另設圖面並計入鑽尖長度。</p>
+<p>定位與鑽尖角度核對：<a href="https://sherline.com/wp-content/uploads/2018/05/lathe_align.pdf">Sherline Lathe Alignment and Micro-Drilling</a>。尾座動作核對：<a href="https://haascnc.com/service/online-manuals/hml-manual-lathe-operators-service-manual/manual-lathe-operation">Haas Tailstock Operation</a>。</p>
+<h2>4.7 下課前完成交接</h2>
+<p>停機確認夾頭靜止，依規程禁止啟動；取件與量具收妥、尖銳刀具移開後，用刷具和屑鉤清屑。切屑依材料分類，油液與地面擦淨，按教師指定位置保養。最後交付成品、工序紀錄與不合格說明，並口頭指出本機正常停止、緊急停止與換速限制。</p>
+<p>學生應能回答：為什麼先車 φ20 再車 φ16？為什麼反夾選 φ20 的完整圓柱段？為什麼取件再夾須重建基準？為什麼直徑公差合格仍不能保證同軸度？能說明這些問題，才表示理解了「夾持—基準—加工—量測」的關係。</p>
+<p>停機、清理與不碰旋轉工件的原則：<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/lathes.html">CCOHS 車床安全</a>。回看：<a href="#03-lathe">車床原理與基本操作</a>。</p></article>
+<article id="05-milling" class="chapter"><h1>05 立式膝式銑床：依照片辨識與操作原理</h1>
+<blockquote>
+<p>適用範圍：使用者提供照片中的立式膝式銑床，以及同家族機台的入門原理與受監督實習。照片可辨識主軸、套筒、虎鉗、工作台與膝座；廠牌、型號、夾頭規格、變速方式及控制功能尚待現場確認。砲塔與滑枕未清楚入鏡，不能判定該機就是砲塔式。先完成本書的現場機台確認表，再由教師示範啟停、變速、軸鎖及停機方法。</p>
+</blockquote>
+<figure><img alt="使用者提供的朝陽實習銑床照片：僅作部位辨識" src="assets/site-mill.jpg" /><figcaption>使用者提供的朝陽實習銑床照片：僅作部位辨識</figcaption></figure>
+<figure><img alt="現場照片的可見部位標註；控制功能待教師確認" src="assets/site-mill-callouts.png" /><figcaption>現場照片的可見部位標註；控制功能待教師確認</figcaption></figure>
+<p>照片是部位辨識資料，不是完整合格的開機狀態示範：台面可見散放刀柄、工具與兩側護屏，開機前須清空散放物並確認護罩位置及功能。機台上「嚴禁戴手套」的標示清楚可見，操作與換刀均遵守現場規定。不能由手柄外形或按鈕顏色猜測功能。</p>
+<h2>5.1 認識構造與加工方式</h2>
+<p>銑床用多刃刀具旋轉，讓被夾住的材料依指定方向移動，逐層形成平面、側面、台階、槽或孔。工件固定在虎鉗內仍會跟隨工作台移動；「固定」表示工件不能在夾具內滑動。</p>
+<figure><img alt="通用立式銑床構造；主軸、套筒、工作台、鞍座與升降台；砲塔構造待現場確認" src="assets/mill-anatomy.svg" /><figcaption>通用立式銑床構造；主軸、套筒、工作台、鞍座與升降台；砲塔構造待現場確認</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>功能與要看懂的事</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主軸與刀柄</td>
+<td>傳遞旋轉與切削力；刀柄、筒夾及拉桿必須彼此匹配</td>
+</tr>
+<tr>
+<td>主軸套筒（quill）</td>
+<td>短行程上下移動，常供鑽孔與微調；伸出越長，系統越容易撓曲</td>
+</tr>
+<tr>
+<td>銑頭；部分機型另有滑枕、砲塔</td>
+<td>砲塔式家族可調整主軸位置與方向；照片不足以確認本機具備哪些調整，初學者由教師處理</td>
+</tr>
+<tr>
+<td>工作台、鞍座</td>
+<td>工作台左右走，鞍座前後走；T 型槽用於固定虎鉗或夾具</td>
+</tr>
+<tr>
+<td>膝座／升降台</td>
+<td>使整個工作台升降；切削前依機台程序鎖住不需運動的部分</td>
+</tr>
+<tr>
+<td>手輪、刻度環、DRO</td>
+<td>顯示移動量；DRO 是位置顯示器，不能消除螺桿回隙造成的機械危險</td>
+</tr>
+</tbody>
+</table></div>
+<p>辨識延伸：CNC 加工中心另有程式、刀長補正、工作座標及快速移動。本章的手輪流程不可搬到 CNC 面板；CNC 必須另受訓。</p>
+<p>來源：<a href="https://cdn0.grizzly.com/manuals/g9901_m.pdf">Grizzly 砲塔式銑床官方手冊（G9901 系列，僅作構造參考）</a>、<a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/69ddc43986801c51a7fbfa97d6b5b63f_mill.pdf">MIT《Introduction to the Mill》</a>。</p>
+<h2>5.2 軸向：先分清楚誰在動</h2>
+<figure><img alt="實體工作台移動與刀具相對工件移動的方向相反" src="assets/mill-axes.svg" /><figcaption>實體工作台移動與刀具相對工件移動的方向相反</figcaption></figure>
+<p>圖中的 +X／+Y／+Z 描述工作台實體移動；以下工件座標描述刀具相對工件位置。兩套位置的正負號須分開辨認，不把台面移動符號直接當成工件加工座標讀值。</p>
+<p>本書工件座標定義為：從操作者看，X 向右、Y 向機台後方、Z 向上。這是<strong>刀具相對工件</strong>的位置。例如刀具要在工件座標往右 10 mm，固定銑頭的機台必須讓工作台往左 10 mm。套筒向下或工作台向上都會使刀具切得更深。現場 DRO 可設定不同符號，先在安全空間做小量試移，核對「手輪—實體台面—讀值—刀具相對位置」四者，再記在操作卡；不能只背順時針或逆時針。</p>
+<p>換向時，螺桿可能先空轉才帶動工作台，這段失去運動稱為<strong>回隙</strong>。用手輪刻度定位，要依教師核可方法先消除定位方向的空程，最後從同一方向接近目標；超過目標後不可只反轉一小格假定工件已退回。用 DRO 也要確認實際進給與夾持穩定。</p>
+<p>來源：<a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/69ddc43986801c51a7fbfa97d6b5b63f_mill.pdf">MIT 銑床教材：手輪刻度與回隙</a>。上述座標與小量試移記錄為本教材的原創教學約定。</p>
+<h2>5.3 虎鉗校正、平行墊鐵與夾持</h2>
+<figure><img alt="虎鉗固定鉗口校正、墊鐵支承及刀具淨空" src="assets/mill-workholding.svg" /><figcaption>虎鉗固定鉗口校正、墊鐵支承及刀具淨空</figcaption></figure>
+<ol>
+<li><strong>停機並依程序隔離動力。</strong> 清潔台面、虎鉗底部及固定面，移走毛邊；目的是讓接觸面真正貼合。</li>
+<li><strong>裝上銑削用虎鉗。</strong> 以適配的 T 型螺帽、螺柱及壓板固定，校正階段保留可微調阻力；不可用未核可的桌上虎鉗或鑽床虎鉗替代。</li>
+<li><strong>主軸不轉，用量表掃固定鉗口。</strong> 讓探頭沿可靠平面讀取兩端差值，以手輪移動工作台，微調虎鉗方向，直到符合教師指定容許值。鎖緊底座後重掃一次，避免鎖緊時跑位。</li>
+<li><strong>放入等高、潔淨的平行墊鐵與工件。</strong> 墊鐵提供支承與加工高度，不能懸空偏擺。依核可方法讓工件坐實，再夾緊；確認接觸與支承，不用手晃著試夾力。</li>
+<li><strong>檢查整條刀路。</strong> 刀刃、刀柄、鑽尖及退刀都須避開鉗口、螺栓與墊鐵。需要露出的加工面越多，夾持面通常越少；不能為了銑到邊而把工件只夾一小條。</li>
+</ol>
+<p>來源：<a href="https://cdn0.grizzly.com/manuals/g9959_m.pdf">Grizzly 官方手冊：銑削虎鉗安裝與校正</a>、<a href="https://www.sherline.com/product/3551-milling-vise/">Sherline 銑床虎鉗的支承與鉗口設計</a>。上述檢查順序是原創整理，不代表朝陽的現場 SOP。</p>
+<h2>5.4 裝刀與換刀</h2>
+<p>立銑刀會承受側向力與拔出力，應用規格相符的銑削筒夾或專用刀柄；<strong>鑽夾頭不得夾立銑刀作側銑</strong>。刀柄要夾在有效刀柄部位，不能夾刀刃；伸出長度以完成刀路及淨空所需為限。</p>
+<p>換刀前停止進給、停主軸、等待完全停止，再按該機廠商與現場程序隔離動力。整理安全的取放空間，使用教師核可的刀具護套或承接方法，手避開裸露刀刃並遵守「嚴禁戴手套」。放鬆拉桿時持續支承刀具；自解錐式、敲擊退錐式、動力拉刀裝置的步驟不同，敲擊方式、鬆開程度及扭矩由該機手冊決定，不能混用。<strong>未承接刀具，不可把拉桿完全旋出；刀具可能突然落下。</strong></p>
+<p>裝回前清潔接合面，核對規格與夾持長度，依手冊鎖緊，取下扳手、鑽夾頭鑰匙、刀具護套及換刀工具後才可恢復動力。換刀後重新確認刀長／Z 基準，不能沿用上一把刀的高度。</p>
+<p>來源：<a href="https://cdn0.grizzly.com/manuals/g9902_m.pdf">Grizzly 官方手冊：拉桿裝卸刀具</a>、<a href="https://cdn0.grizzly.com/manuals/g0876_m.pdf">Grizzly 官方手冊：禁止鑽夾頭銑削</a>、<a href="https://www.haascnc.com/haas-tooling/mill_toolholding/milling_chucks_colle.html">Haas 銑削夾頭與筒夾說明</a>。</p>
+<h2>5.5 尋邊、基準與 Z 零點</h2>
+<figure><img alt="左前上角作原點；尋邊器半徑補正與槽深" src="assets/mill-datum.svg" /><figcaption>左前上角作原點；尋邊器半徑補正與槽深</figcaption></figure>
+<p>先選已加工、可重複接觸的表面作基準。尋邊器接觸的是側邊，主軸中心離該邊還有尋邊器半徑，必須補正；例如接觸頭直徑 10 mm，半徑就是 5 mm。接觸左側邊時，依本書座標，刀具中心在 X = −5 mm；不能把那個位置直接當 X = 0。</p>
+<p>機械旋轉尋邊器只有在規格、轉速、裝夾及操作方法由教師確認後，才能按其廠商程序使用；探頭接觸後退開並重複確認，不把身體伸近觀看。電子探頭是否需轉動依其說明，兩者不能混用。<strong>禁止拿紙片靠近旋轉刀具測間隙。</strong></p>
+<p>Z 基準可用核可的量塊、設定器或停轉刀具的接觸程序建立。若設定器厚 h、上表面定 Z = 0，刀端接觸設定器頂面時刀端位於 Z = +h，必須處理厚度偏移。定位後移走設定器，核對已移除，再在工件外安全位置確認 Z 正負與淨空。重夾、移動銑頭或改變基準後，重新建立相關零點。</p>
+<p>來源：<a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/69ddc43986801c51a7fbfa97d6b5b63f_mill.pdf">MIT：尋邊器與半徑補正</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html">CCOHS 銑床安全</a>。座標數例為原創例子。</p>
+<h2>5.6 順銑、逆銑與回隙</h2>
+<figure><img alt="順逆銑以接觸處切向速度與工件進給比較，並示意回隙拉入" src="assets/mill-direction.svg" /><figcaption>順逆銑以接觸處切向速度與工件進給比較，並示意回隙拉入</figcaption></figure>
+<p>看刀刃接觸工件處的切向速度，與<strong>工件實體進給方向</strong>比較：同向是順銑（climb/down），相反是逆銑（conventional/up）。不可只看刀具轉向或只說「向左就是逆銑」，換到刀具另一側就會改變。</p>
+<p>順銑的切屑由厚變薄，但切削力可能把台面拉向刀具；有回隙時會突然吃刀。逆銑的切屑由薄變厚，也可能把工件抬起，因此兩種都要求可靠支承與夾持。傳統機台的初學者先使用教師核可的逆銑刀路；順銑須確認廠商允許、進給系統能控制回隙、夾持與參數已驗證才選用。把刻度的空程取完，不等於機台具備消除回隙裝置。滿槽切削兩側同時受切，不能把它當成單一側面的順逆銑。</p>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/down-milling-vs-up-milling">Sandvik：Down milling vs. up milling</a>。</p>
+<h2>5.7 轉速與進給：理解單位再設定</h2>
+<p>以有效切削直徑 D（mm）、切削速度 Vc（m/min）、主軸轉速 n（r/min）、每齒進給 fz（mm/齒）、有效齒數 z 計算：</p>
+<pre><code class="language-text">n = 1000 × Vc ÷ (π × D)
+工作台進給 vf = fz × z × n    [mm/min]
+</code></pre>
+<p><strong>原創算式例，不能直接用於朝陽現場：</strong> 假設 D = 10、Vc = 25、fz = 0.02、z = 4，則 n ≈ 796 r/min，vf ≈ 63.7 mm/min。這只是四個假設數的換算，並非任何材質或刀具的建議值。實際需查材料、刀具廠商資料與機台限制，再由教師核可轉速、進給、軸向切深 ap 及徑向吃刀 ae；滿槽、面銑及鑽孔不能共用一組設定。</p>
+<p>皮帶式變速須先隔離動力並按手冊處理；部分變速銑頭的調速要求主軸運轉，齒輪檔位又可能要求停轉。<strong>先辨識現場機型及程序，不猜操作。</strong></p>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/milling-formulas-definitions">Sandvik 銑削公式與符號</a>、<a href="https://cdn1.grizzly.com/manuals/g0730_m.pdf">Grizzly G0728–31 官方手冊的皮帶變速例</a>。</p></article>
+<article id="06-milling-practice" class="chapter"><h1>06 銑床實作：從方塊到有槽、有孔的零件</h1>
+<blockquote>
+<p>以下是原創教學工件與流程，不是朝陽現場已核准的考題或參數表。先取得教師對材料、刀具、夾持、每刀切深、切削方向及檢驗公差的確認。任何一項不能確認，停在裝夾／規劃階段。</p>
+</blockquote>
+<h2>6.1 本次要做什麼</h2>
+<figure><img alt="方塊成品、長槽、兩通孔與尺寸基準" src="assets/mill-project.svg" /><figcaption>方塊成品、長槽、兩通孔與尺寸基準</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>原創練習尺寸（mm）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>毛胚</td>
+<td>65 × 45 × 18；須有足夠餘量清除鋸切面</td>
+</tr>
+<tr>
+<td>完成外形</td>
+<td>X 長 60、Y 寬 40、厚 15</td>
+</tr>
+<tr>
+<td>原點</td>
+<td>完成方塊的左前上角；向右 X+、向後 Y+、向上 Z+</td>
+</tr>
+<tr>
+<td>長槽</td>
+<td>寬 8、總長 30、深 3；兩端 R4；X = 15～45、Y = 16～24、底面 Z = −3</td>
+</tr>
+<tr>
+<td>通孔</td>
+<td>2 個直徑 6；中心 (X,Y) = (10,10)、(50,30)</td>
+</tr>
+</tbody>
+</table></div>
+<p>槽總長含兩端半圓；用名義直徑 8 的刀，中心從 X = 19 到 41，行程為 22 mm，Y = 20。刀具偏擺及彈性會讓實際槽寬與名義刀徑不同，不能宣稱單刀即可達到精密公差。尺寸表未指定配合公差；教師應先填入各項允收範圍。毛胚總去除餘量分別為 5、5、3 mm，不能預設每側平均切除，必須先做基準。</p>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/groove-or-slot-milling">Sandvik 槽銑原理</a>。設計、尺寸及刀具中心座標為本教材原創。</p>
+<h2>6.2 第一停點：加工計畫與刀路淨空</h2>
+<ol>
+<li><strong>檢查材料與毛胚。</strong> 確認材質、缺陷、毛邊及實際尺寸，決定先建立哪個大平面；餘量不足就改料，不能硬做。</li>
+<li><strong>確認工具清單。</strong> 面銑刀／合適立銑刀、核可的中心切削槽刀、點鑽與直徑 6 鑽頭、尋邊工具、量表、銑削虎鉗、墊鐵及量具。刀柄規格與每道參數寫入操作卡。</li>
+<li><strong>畫每次裝夾。</strong> 註明靠固定鉗口的面、支承面、外露加工面與最少有效夾持高度；六面加工需翻面，不能一次把所有邊都銑到。</li>
+<li><strong>規劃通孔出口。</strong> 鑽尖必須越過底面，才能使全孔徑貫通。由教師確認墊鐵位置、刀尖掃掠區、必要的犧牲墊板及過鑽淨空；不可讓鑽頭撞墊鐵、虎鉗或工作台。</li>
+<li><strong>刀具離料、動力隔離時手輪試走。</strong> 查整條行程、刀柄淨空與軸限位。開機前取走量具、扳手與設定器，護罩就位，教師確認後才能進入切削。</li>
+</ol>
+<p>來源：<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html">CCOHS：銑床開機前檢查</a>。本節的計畫欄位與停點為原創安排。</p>
+<h2>6.3 面銑：建立第一個平面</h2>
+<figure><img alt="面銑分層、跨距覆蓋與離料退刀" src="assets/mill-face.svg" /><figcaption>面銑分層、跨距覆蓋與離料退刀</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>順序／動作</th>
+<th>目的</th>
+<th>完成後檢查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 依第 5 章校正虎鉗，毛胚坐實夾緊</td>
+<td>阻止工件移位</td>
+<td>接觸、夾持高度、刀路與螺栓淨空</td>
+</tr>
+<tr>
+<td>2. 裝核可面銑刀，設定高度與試切位置</td>
+<td>以最少必要切除建立平面 A</td>
+<td>刀具在料外、旋向及設定符合操作卡</td>
+</tr>
+<tr>
+<td>3. 開主軸，按核可刀路穩定進給</td>
+<td>均勻去料，避免停留磨擦</td>
+<td>在正常站位觀察聲音與排屑，手保持離刀</td>
+</tr>
+<tr>
+<td>4. 刀刃完全離料後退到安全間隙，再停主軸</td>
+<td>避免擦傷表面與停在料內</td>
+<td>主軸完全停止才量測或刷屑</td>
+</tr>
+<tr>
+<td>5. 停轉、清屑、量測，決定下一層</td>
+<td>留下可檢驗的平面，控制餘量</td>
+<td>不能因尚未銑平就直接加大切深</td>
+</tr>
+</tbody>
+</table></div>
+<p>面積大於單次有效覆蓋時，依核可跨距分道加工。回程先離料並確認淨空，避免在切削中任意反向；手動機台的刀路需維持已核可的切削方向。加工中的切屑不徒手抓、不吹向同學，刷子只在刀具停轉後使用。</p>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/face-milling">Sandvik：面銑刀具與加工面</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html">CCOHS 銑床安全</a>。表內順序為通用原理的原創教學整理。</p>
+<h2>6.4 側銑與六面成形</h2>
+<ol>
+<li><strong>建立相鄰基準 B。</strong> 主軸停轉並隔離動力後重新裝夾，使已加工面 A 靠可靠基準；以教師核可的直角定位方法讓待加工相鄰面外露。清屑、校正、夾緊，試走後銑平 B。目的：得到可重複靠位的直角。</li>
+<li><strong>建立第三基準 C。</strong> 以 A、B 定位，再加工相鄰面；停轉用直角量具檢查，若有偏斜先找裝夾原因。不能以多銑一刀掩蓋不直角。</li>
+<li><strong>加工三個對面。</strong> 分別靠 A、B、C 重新裝夾，逐一加工至厚 15、寬 40、長 60。各次先量實際餘量，粗加工保留精加工餘量，再停轉量測，最後完成尺寸。</li>
+<li><strong>側銑每刀先設定徑向吃刀及軸向切深。</strong> 用立銑刀側刃加工外側面，刀柄須避開鉗口；分層切削後停轉檢查錐度、刀痕與尺寸。基準改變後重建零點。</li>
+</ol>
+<p>台階是「部分平面下降、留下垂直肩部」。若另練台階，先確認寬與深的兩個基準，從開放邊分層進入，以核可刀路加工底面與肩面，停轉分別量寬、量深及檢查直角。本次成品選長槽，不另加台階，以免混淆尺寸。</p>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/shoulder-milling">Sandvik：Shoulder milling</a>、<a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/69ddc43986801c51a7fbfa97d6b5b63f_mill.pdf">MIT：Squaring stock</a>。基準 A/B/C 與六面順序為原創規劃，現場定位夾具由教師確認。</p>
+<h2>6.5 第二停點：方塊合格後才能開槽</h2>
+<p>停主軸並等完全停止，清屑，記錄三個方向的尺寸，在不同位置量厚度、寬度與長度，檢查平行與直角。將工件夾在適合上表面加工的姿態，教師確認有效夾持與上方淨空。以完成左邊、前邊重新尋邊，建立 X、Y；換上槽刀後重新建立 Z。原點不能沿用毛胚外皮的位置。</p>
+<figure><img alt="長槽的幾何範圍、端點中心與分層深度" src="assets/mill-slot.svg" /><figcaption>長槽的幾何範圍、端點中心與分層深度</figcaption></figure>
+<ol>
+<li><strong>確認可下切刀具。</strong> 本流程要求廠商標示可中心下切且教師核可的直徑 8 槽刀；不能只看兩刃或四刃就判定。若不符，停下，由教師另訂開孔／進刀方案。</li>
+<li><strong>定位到 X = 19、Y = 20 的上方。</strong> 先保持核可安全高度，核對實體工作台反向關係及讀值，固定不需進給的軸。</li>
+<li><strong>依核可每層深度下切，再沿 X 到 41。</strong> 對應槽兩端中心；到底前留有操作與限位餘地，不能把工件頂到機械極限。滿槽吃刀負荷較大，每層深度與進給單獨核可。</li>
+<li><strong>每層完成後退刀與檢查。</strong> 到 X = 41 後保持 X/Y 不變，按核可方法向上退至刀刃完全離槽，再抬到安全高度，停主軸、清屑。這是封閉槽，不能橫移超過端點來「出槽」。於安全高度回到起點重定位，下一層加工至 Z = −3；不可臨時在槽內深切反向。</li>
+<li><strong>停轉量槽。</strong> 檢查總長、寬與深度。若槽已超寬或超深，停下記錄；不能靠改零點使讀值好看。</li>
+</ol>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/groove-or-slot-milling">Sandvik：槽銑的刀具選擇、負荷與進刀</a>。座標及分層停點為原創。</p>
+<h2>6.6 鑽兩個通孔</h2>
+<ol>
+<li><strong>停轉換成核可的點鑽／鑽頭夾持系統。</strong> 鑽夾頭可供相容鑽頭鑽孔，換刀取下鑰匙。保留 X/Y 基準的前提是夾持未移動；每把刀重新建立所需高度。</li>
+<li><strong>空間確認孔位及出口。</strong> 到 (10,10) 與 (50,30) 的安全上方核對位置，確認兩孔與長槽不相交；鑽尖越底後仍有淨空。</li>
+<li><strong>點鑽，再以直徑 6 鑽頭鑽孔。</strong> 各刀具的轉速、進給及是否分段退屑依刀具與材料核可；加工前固定不需移動的軸。不得手扶工件，也不得進給時扭鬆虎鉗。</li>
+<li><strong>接近出口使用教師核可進給。</strong> 所需總鑽深包含鑽尖高度，不能把板厚 15 當作鑽尖只走 15。原創幾何例：φ6、頂角 118° 的普通鑽尖高度約為 3 ÷ tan(59°) = 1.80 mm，因此鑽尖行程約 16.80 mm 才達全徑出口；實際刀尖形狀、過鑽量及支承淨空由教師確認，不能照抄此數。計畫中記錄鑽透深度及其與支承件的距離。</li>
+<li><strong>依程序退刀、停轉、量測。</strong> 看孔徑、中心距、入口／出口毛邊。精密孔需另外規劃鏜孔或鉸孔，鑽孔本身不保證精密配合。</li>
+</ol>
+<p>來源：<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/drillpresses.html">CCOHS：鑽床夾持、退屑與安全原則</a>。在銑床上鑽孔的夾持與機台控制仍須依現場銑床手冊。</p>
+<h2>6.7 第三停點：驗收、收機與異常</h2>
+<p>停轉後取件，依核可手工具方法去毛邊，再檢驗尺寸。記錄實測值與允收範圍，不能把目測當成量測。用刷子或核可吸屑設備清理，清理／保養前依機台程序隔離動力；刀具、量具歸位，滑面擦拭及潤滑依廠商規定。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>異常</th>
+<th>立即處置與後續判斷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工件抬起、滑動，刀具鬆脫</td>
+<td>停機；有立即危險用急停。等停止並隔離動力後通知教師，重查夾持與基準</td>
+</tr>
+<tr>
+<td>台面突然自行衝向刀具</td>
+<td>立即停機／急停；檢查回隙與順銑拉入，不靠握緊手輪繼續</td>
+</tr>
+<tr>
+<td>尖叫、顫振、刀刃破損</td>
+<td>停止加工，安全停機；查刀具、伸出、夾持及負荷，不能隨意加速硬切</td>
+</tr>
+<tr>
+<td>切屑堆積、排屑不良</td>
+<td>按核可方法退出切削並停轉，再清屑；刀具停前不伸刷子進去</td>
+</tr>
+<tr>
+<td>讀值方向不合預期、尺寸失控</td>
+<td>停下核對座標、零點及是否換刀／重夾；不要試切碰運氣</td>
+</tr>
+</tbody>
+</table></div>
+<p>重新啟動必須由教師確認原因已排除，不能只復位急停。任何人身體、衣物接近旋轉危險區時，先停機，絕不伸手拉扯。</p>
+<p>來源：<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html">CCOHS 銑床安全</a>、<a href="https://cdn0.grizzly.com/manuals/g9901_m.pdf">Grizzly 官方手冊的操作與故障處理章</a>。異常表與停點是本教材原創整理。</p>
+<h2>6.8 自我檢查</h2>
+<ul>
+<li>為何刀具相對工件 X+，可能需要實體工作台向左？</li>
+<li>φ8 刀加工總長 30 的圓端槽，中心行程為何是 22？</li>
+<li>換刀後有哪些基準必須重新確認？</li>
+<li>為何 DRO 有讀值仍不能忽略順銑與回隙？</li>
+<li>通孔加工時，哪裡會被鑽尖碰到？你如何在開機前證明有淨空？</li>
+</ul></article>
+<article id="07-parameters-measurement" class="chapter"><h1>07 轉速、進給與量測：把數字變成尺寸</h1>
+<h2>三個數字，分別管三件事</h2>
+<p><strong>切削速度 vc</strong>是切削刃與材料表面接觸處的線速度，單位 m/min。<strong>主軸轉速 n</strong>是每分鐘轉幾圈，單位 r/min 或 rpm。<strong>進給</strong>是刀具或工件每圈、每齒或每分鐘前進多少。三者不能混用；面板上的 600 rpm 並不表示 600 mm/min。</p>
+<p>切削速度先由刀具製造商依材料、刀具與加工條件建議，再換算為主軸轉速。教師還須確認夾頭、刀柄、工件、護罩與機台允許值，才能採用。<strong>下列數字全是算式練習，不是這兩台機器的操作設定。</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>記號</th>
+<th>意義</th>
+<th>單位</th>
+<th>看哪個尺寸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D</td>
+<td>切削處直徑</td>
+<td>mm</td>
+<td>車削是工件；平底立銑刀例子是刀徑</td>
+</tr>
+<tr>
+<td>n</td>
+<td>主軸轉速</td>
+<td>rpm</td>
+<td>原廠允許檔位／調速範圍</td>
+</tr>
+<tr>
+<td>vc</td>
+<td>切削速度</td>
+<td>m/min</td>
+<td>材料與刀具建議資料</td>
+</tr>
+<tr>
+<td>fn</td>
+<td>每轉進給</td>
+<td>mm/rev</td>
+<td>車削常用</td>
+</tr>
+<tr>
+<td>fz</td>
+<td>每齒進給</td>
+<td>mm/tooth</td>
+<td>銑削常用</td>
+</tr>
+<tr>
+<td>z</td>
+<td>有效切削齒數</td>
+<td>齒</td>
+<td>依刀具規格</td>
+</tr>
+<tr>
+<td>vf</td>
+<td>每分鐘進給</td>
+<td>mm/min</td>
+<td>工作台／刀架移動速率</td>
+</tr>
+<tr>
+<td>ap</td>
+<td>切深</td>
+<td>mm</td>
+<td>車削是徑向切深；銑削是軸向深度</td>
+</tr>
+<tr>
+<td>ae</td>
+<td>銑削徑向吃刀寬</td>
+<td>mm</td>
+<td>全槽通常接近刀徑</td>
+</tr>
+</tbody>
+</table></div>
+<h2>算例一：車削轉速與直徑縮減</h2>
+<p>轉速公式：<strong>n = 1000 × vc / (π × D)</strong>。</p>
+<p>假設切削速度 vc = 25 m/min，切削處 D = 25 mm，算得 n ≈ 318 rpm。這個結果只說明幾何關係；實際選用哪一檔，須依現場可用檔位、刀具建議及教師確認。選定 300 rpm 的假想例子，反算 vc = π × 25 × 300 / 1000 ≈ 23.6 m/min。</p>
+<p>外圓由 20.80 mm 修到 20.00 mm，直徑減少 0.80 mm，刀具徑向切入量是 <strong>ap = (20.80 - 20.00) / 2 = 0.40 mm</strong>。若手輪刻度標半徑，讀 0.40 mm；若標直徑，讀 0.80 mm。必須以實機手冊及已知位移確認；不能憑習慣猜。</p>
+<p>若假設 fn = 0.10 mm/rev、n = 300 rpm，vf = fn × n = 30 mm/min。切削長度假設為 40 mm，理想切削時間 t = 40/30 ≈ 1.33 min。實際時間還要加裝夾、進退刀、量測與空行程，不等於整件加工工時。</p>
+<h2>算例二：銑削轉速與每齒進給</h2>
+<p>假設平底立銑刀 D = 10 mm、vc = 30 m/min，n ≈ 955 rpm。若教學計算暫取 n = 900 rpm、有效齒數 z = 4、fz = 0.02 mm/tooth，則 <strong>vf = fz × z × n = 72 mm/min</strong>。</p>
+<p>這組 fz 也是假設，不能據此指定全槽深度。全槽、側銑和面銑的受力與排屑不同，刀具伸出、工件剛性、手動進給不穩定性也會改變可用範圍。球刀與特殊刀型須使用有效切削直徑，不能一律用標稱外徑。</p>
+<p>每齒進給太小可能擦磨，太大可能過載；遇到尖銳異音不能一直降進給硬撐。先停機檢查刀刃、裝夾、旋向、切深與刀路，由教師重新決定參數。</p>
+<h2>留量與回隙</h2>
+<p>粗加工先有效去料，保留可完成精加工的餘量；精加工以穩定裝夾、刀具狀態和基準完成尺寸。餘量不是越少越好，過小可能不足以清除粗加工痕，過大又會增加受力。實習計畫記的是<strong>本次教師核准的留量</strong>，不把課本例子當固定法則。</p>
+<p>絲桿與螺帽有間隙，轉反方向後手輪先轉了一段，滑台可能還沒動，這叫回隙。接近最後位置時，盡量按核准方向消除回隙，從同一方向接近；若越過，要退到足以消除回隙的位置再接近，不能只回轉「多出的幾格」。光學尺直接量位置，可降低讀手輪的錯誤，仍不會消除機械回隙或順銑自拉。</p>
+<h2>量測要有條件，不只是看螢幕</h2>
+<figure><img alt="圖 7-1 游標卡尺與外徑分厘卡的量測接觸示意" src="assets/measurement.svg" /><figcaption>圖 7-1 游標卡尺與外徑分厘卡的量測接觸示意</figcaption></figure>
+<ol>
+<li><strong>主軸完全停止並退刀。</strong>量具不是防護裝置，不能拿到旋轉工件上。</li>
+<li><strong>清潔量具與量測面。</strong>用合適工具去毛邊、清屑，避開刀刃；工件過熱時等溫度穩定。</li>
+<li><strong>核對零位與量程。</strong>依量具程序合攏或使用標準件檢查；零位異常交教師處理，不能任意歸零掩蓋問題。</li>
+<li><strong>擺正接觸，施力一致。</strong>卡尺量爪不斜夾、不只壓在毛邊；分厘卡依製造商規定使用棘輪或定壓機構。</li>
+<li><strong>多處與多方向量測。</strong>車床外徑在前、中、後位置，並轉換兩個方向；方塊厚度量四角，檢查是否有錐度、橢圓、傾斜或毛邊影響。</li>
+<li><strong>記錄數值與量具。</strong>保留各次讀數、分辨率、零位結果和異常，不只填最接近目標的一筆。</li>
+</ol>
+<p>分辨率是最小顯示間隔；精度要看規格與校驗，螢幕顯示到 0.01 mm 不代表誤差必為 0.01 mm。卡尺適合一般外尺寸、內尺寸、階差與深度快檢；外徑分厘卡適合更細的外徑或厚度檢查。孔位、槽宽和同軸度需要合適量具及量測設計，不能只用卡尺讀數就宣稱全部合格。</p>
+<h2>公差判讀練習</h2>
+<p>若圖面指定直徑 20.00 ± 0.10 mm，容許區間為 19.90 至 20.10 mm。量得 20.06 mm 在尺寸區間內；20.14 mm 還有修正空間，但要先確認裝夾與量具；19.86 mm 已切過頭，減料加工無法把直徑補回來。</p>
+<p>這只是單一尺寸判讀，並未證明同軸、圓度和表面均合格。當數值接近界限，須依課程採用的量測不確定度與判定規則，由教師決定是否重新量測或改用更適合的量具。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>目標／容許範圍</th>
+<th>第 1 次</th>
+<th>第 2 次</th>
+<th>第 3 次</th>
+<th>量具／判定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>車床 φ20 段前／中／後</td>
+<td>由圖面填入</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+<tr>
+<td>階級長／總長</td>
+<td>由圖面填入</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+<tr>
+<td>方塊厚度四角</td>
+<td>由圖面填入</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+<tr>
+<td>槽寬／槽深</td>
+<td>由圖面填入</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+<tr>
+<td>孔徑／孔位</td>
+<td>由圖面填入</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+</tbody>
+</table></div>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/milling-formulas-definitions">Sandvik 銑削公式</a>、<a href="https://www.mitutoyo.com/literature/quick-guide-to-precision-measuring-instruments/">Mitutoyo 精密量測指南</a>。算式例子、尺寸與紀錄表為本書原創。</p></article>
+<article id="08-troubleshooting" class="chapter"><h1>08 異常與品質：先停機，再找原因</h1>
+<h2>異常不是靠猜，要沿著證據查</h2>
+<p>看到異常先停止切削並按情況正常停止或急停，等待所有運動停止。需要接近刀具、調整裝夾或維修時完成必要能源隔離。把「看到什麼、在哪一刀、改過哪些設定」記下來，才有機會找出原因。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>現象</th>
+<th>可能原因</th>
+<th>停機後可核對的證據</th>
+<th>下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>劇烈振動、週期刀痕</td>
+<td>工件／刀具伸出太長，夾持不足，刀刃鈍，切削條件不合</td>
+<td>鎖緊、接觸面、伸出、刀刃、最近設定</td>
+<td>由教師縮短伸出、加適當支撐或改條件</td>
+</tr>
+<tr>
+<td>車削直徑前後不同</td>
+<td>工件撓曲、刀具磨耗、機台幾何、量法不同</td>
+<td>前中後多位置、同方向讀數、裝夾與支撐</td>
+<td>不自行調尾座補誤差，交教師診斷</td>
+</tr>
+<tr>
+<td>換夾後偏擺或有接刀階差</td>
+<td>三爪重夾誤差、保護套偏斜、切屑夾入</td>
+<td>徑向偏擺、夾持面、接刀處尺寸</td>
+<td>重新校正；記錄兩次裝夾限制</td>
+</tr>
+<tr>
+<td>銑面一邊高一邊低</td>
+<td>工件沒坐實、虎鉗有屑、主軸垂直度或量測傾斜</td>
+<td>四角厚度、支承接觸、表面潔淨</td>
+<td>校正裝夾；機台校準由教師處理</td>
+</tr>
+<tr>
+<td>孔位差一個半徑</td>
+<td>尋邊半徑／刀徑補正漏算，基準反向</td>
+<td>原點、尋邊器直徑、座標方向紀錄</td>
+<td>重建基準，先在安全條件驗證位置</td>
+</tr>
+<tr>
+<td>槽寬大、壁有斜度</td>
+<td>刀具偏擺、撓曲、錯刀徑、重複重夾</td>
+<td>刀徑規格、刀柄、伸出、左右壁量測</td>
+<td>教師確認後換刀或重訂精修方法</td>
+</tr>
+<tr>
+<td>刀具突然崩裂／工件鬆動</td>
+<td>過載、碰夾具、錯旋向、夾持不足</td>
+<td>裝夾、刀路、碎片與設定記錄</td>
+<td>停用待查，不能只換刀重開</td>
+</tr>
+<tr>
+<td>工作台突然被拉走</td>
+<td>反向回隙與順銑自拉，進給機構問題</td>
+<td>進給方向、回隙、機台能力</td>
+<td>急停視情況採用，教師重新確認工法</td>
+</tr>
+<tr>
+<td>尺寸越修越小</td>
+<td>誤用直徑／半徑刻度、錯留量或零點</td>
+<td>每刀切入量與前後量測</td>
+<td>停止追加切削，重新算剩餘材料</td>
+</tr>
+<tr>
+<td>表面撕裂、黏刀或大量毛邊</td>
+<td>刀刃、材料、切削條件或冷卻不合</td>
+<td>刀刃與切屑、材料牌號、設定</td>
+<td>由教師確認換刀、潤滑與進給</td>
+</tr>
+</tbody>
+</table></div>
+<p>同一現象可以有多個原因。一次只改一個已確認的因素，保留前後紀錄；故障涉及電器、齒輪箱、聯鎖、主軸或導軌時，交設備管理人員處理。</p>
+<h2>工管視角：快，不等於生產力高</h2>
+<p>一件試作可能切削只花幾分鐘，卻花更多時間裝夾、找正、量測與修正。改善前先記錄時間與不良原因，不能用更高轉速掩蓋流程問題。可比較「第一次合格的件數」、「裝夾時間」、「重夾次數」與「報廢原因」，前提是安全步驟完整。</p>
+<p>本書不提供假造的實驗結果。以下是實習紀錄格式，讓同學用自己的數據討論製程改善。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>次序</th>
+<th>操作／裝夾</th>
+<th>起訖時間</th>
+<th>刀具／設定</th>
+<th>實測與判定</th>
+<th>異常與處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+<tr>
+<td>2</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+<tr>
+<td>3</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+<td>____</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>原創討論題：</strong>若縮短裝夾時間卻增加重夾偏擺，是否真的改善？若減少量測次數讓切過頭的報廢增加，總工時如何改變？請用實習紀錄回答，並提出不削減安全檢查的改善方法。</p>
+<p>來源：<a href="https://www.sandvik.coromant.com/en-gb/milling-appl-guide">Sandvik 銑削穩定性與振動指南</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/general.html">CCOHS 金屬加工機台通則</a>。表格為綜合原理編寫的診斷提示，非特定設備的故障手冊。</p></article>
+<article id="09-checklists-assessment" class="chapter"><h1>09 課前檢核、學習單與自我評量</h1>
+<h2>一張可帶到實習現場的檢核表</h2>
+<p>填表日期：<strong><em>_</em></strong>_　班級／姓名：<strong><em>_</em></strong>_　設備編號：<strong><em>_</em></strong>_　教師：<strong><em>_</em></strong>_</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>時點</th>
+<th>必須說明或完成的項目</th>
+<th>確認</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>課前</td>
+<td>能指出正常停止、急停與能源隔離的位置，說明差異</td>
+<td>□</td>
+</tr>
+<tr>
+<td>課前</td>
+<td>穿著、護目鏡、頭髮、飾物、鞋子合格，操作時無手套</td>
+<td>□</td>
+</tr>
+<tr>
+<td>計畫</td>
+<td>材料、刀具、圖面、公差、毛胚、裝夾與基準清楚</td>
+<td>□</td>
+</tr>
+<tr>
+<td>裝夾</td>
+<td>夾持／支撐足夠、刀具介面合格、各鎖緊完成</td>
+<td>□</td>
+</tr>
+<tr>
+<td>開機前</td>
+<td>夾頭扳手與桌面工具收妥，護罩與聯鎖正常</td>
+<td>□</td>
+</tr>
+<tr>
+<td>開機前</td>
+<td>全程間隙、行程終點、旋向、速度與進給經教師確認</td>
+<td>□</td>
+</tr>
+<tr>
+<td>試刀</td>
+<td>空載檢查與輕切試刀完成，停機量測已記錄</td>
+<td>□</td>
+</tr>
+<tr>
+<td>再切</td>
+<td>剩餘材料、刻度、回隙與下一刀切入量已重算</td>
+<td>□</td>
+</tr>
+<tr>
+<td>結束</td>
+<td>完全停機，按規程清屑、去毛邊、保養與歸位</td>
+<td>□</td>
+</tr>
+<tr>
+<td>交回</td>
+<td>異常與品質紀錄完整，設備由教師／管理者確認</td>
+<td>□</td>
+</tr>
+</tbody>
+</table></div>
+<p>未勾選的必要項目不能以「應該沒問題」帶過；先補確認，再開機。</p>
+<h2>加工前學習單</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>問題</th>
+<th>請填入你的計畫</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成品哪些特徵用車床，哪些用銑床？原因？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>毛胚尺寸、材料牌號、預留量？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>第一次與第二次裝夾各夾哪裡？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>尺寸從哪個基準開始量？重夾後如何重建？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>刀具規格、刀柄及原廠建議資料？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>轉速計算與現場核准檔位？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>哪些地方可能撞到夾爪、虎鉗、墊鐵？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>每一刀何時停機量測？用哪種量具？</td>
+<td>____</td>
+</tr>
+<tr>
+<td>哪個步驟一定請教師確認？</td>
+<td>____</td>
+</tr>
+</tbody>
+</table></div>
+<h2>認知測驗</h2>
+<ol>
+<li>車床與銑床各是誰旋轉？</li>
+<li>為什麼操作旋轉機台不能戴手套？</li>
+<li>急停按下後，能立即換刀嗎？</li>
+<li>外圓從 21.00 修到 20.20 mm，徑向切入量多少？</li>
+<li>vc = 30 m/min、D = 20 mm，算得主軸轉速多少？這能直接設到照片上的車床嗎？</li>
+<li>4 齒刀，n = 800 rpm、fz = 0.025 mm/tooth，vf 多少？</li>
+<li>用直徑 10 mm 尋邊器找到左側面時，主軸中心與邊緣距離多少？</li>
+<li>為什麼工作台的實際移動方向與刀具相對工件的移動方向相反？</li>
+<li>機台有光學尺就可以放心順銑嗎？</li>
+<li>三爪夾頭二次裝夾能保證前後完全同軸嗎？</li>
+<li>量具顯示到 0.01 mm，是否代表準確度一定是 0.01 mm？</li>
+<li>照片中散放工具與手柄位置是否可當成開機範例？</li>
+</ol>
+<h2>解答與理由</h2>
+<ol>
+<li>車床通常工件轉；銑床刀具轉。這是理解切削相對運動的起點。</li>
+<li>手套可能被旋轉物捲入；防割不能替代防捲入。</li>
+<li>不能。要等全停，依換刀／隔離程序確認能源狀態；急停不能取代隔離。</li>
+<li>(21.00 - 20.20)/2 = 0.40 mm。仍須確認手輪顯示半徑或直徑。</li>
+<li>1000×30/(π×20) ≈ 477 rpm。不能直接套用，須核對材料、刀具、裝夾與現場檔位。</li>
+<li>0.025×4×800 = 80 mm/min。這是算例，不是手動實習的設定指令。</li>
+<li>5 mm；原點補正需配合探測側、方向與工具手冊。</li>
+<li>刀具固定時，工件往右移，刀具相對工件就往左移。談座標時要先說是誰在動。</li>
+<li>不能。光學尺顯示位置，不會消除機械回隙或被切削力自拉的可能。</li>
+<li>不能。重夾要校正與檢查；若圖面同軸要求高，需教師選擇適合治具與工法。</li>
+<li>不是。還要看規格、校驗、量測方法、溫度與不確定度。</li>
+<li>不可以。照片是部位辨識資料；開機前須依檢核表清桌、確認護罩與設定。</li>
+</ol>
+<h2>操作評量建議</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>面向</th>
+<th>能力證據</th>
+<th>建議比重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安全與停止</td>
+<td>能辨識危險、完成檢查、正確停止與清理</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>裝夾與基準</td>
+<td>裝夾合理、找正、基準重建、間隙確認</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>切削與量測</td>
+<td>穩定操作、留量、停機量測、合理修正</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>計畫與紀錄</td>
+<td>算式、公差、步驟、異常與改善說明完整</td>
+<td>20%</td>
+</tr>
+</tbody>
+</table></div>
+<p>這是本書建議的評量方式，非朝陽校方既定評分規則。重大安全違規立即停止操作，完成再教育與教師確認後才恢復實作，不能用尺寸分數抵銷安全缺失。</p></article>
+<article id="10-site-appendix" class="chapter"><h1>10 現場核對與名詞索引</h1>
+<h2>把通用教材接到實際機台</h2>
+<p>本版已用實機照片校對可見構造。完整的特定型號手冊仍需機台銘牌、原廠文件與現場驗證。下表由教師或設備管理者填寫，完成後可附到教材，而不是把未知項目猜成操作指令。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>待確認資料</th>
+<th>為什麼需要</th>
+<th>現場紀錄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>車床完整型號、序號、原廠手冊</td>
+<td>決定檔位、進給、潤滑、額定能力</td>
+<td>____</td>
+</tr>
+<tr>
+<td>車床正轉／反轉、啟停與制動方法</td>
+<td>防止錯旋向與誤啟動</td>
+<td>____</td>
+</tr>
+<tr>
+<td>車床夾頭固定方式與允許速度</td>
+<td>影響反轉及裝夾安全</td>
+<td>____</td>
+</tr>
+<tr>
+<td>車床橫向刻度為半徑或直徑</td>
+<td>決定切入量讀法</td>
+<td>____</td>
+</tr>
+<tr>
+<td>各速度檔位的手柄組合</td>
+<td>照片不能完整確認組合與換檔順序</td>
+<td>____</td>
+</tr>
+<tr>
+<td>進給桿／半螺帽／螺紋檔位功能</td>
+<td>防止把螺紋聯動當一般進給</td>
+<td>____</td>
+</tr>
+<tr>
+<td>銑床品牌、型號、主軸錐度</td>
+<td>決定刀柄與拉桿、換刀程序</td>
+<td>____</td>
+</tr>
+<tr>
+<td>銑床轉速機構：齒輪／皮帶／無段</td>
+<td>不同機型調速條件不同</td>
+<td>____</td>
+</tr>
+<tr>
+<td>銑床手輪軸向、鎖緊、套筒與膝座用法</td>
+<td>防止混用進給與未鎖緊造成位移</td>
+<td>____</td>
+</tr>
+<tr>
+<td>銑床回隙及是否允許順銑</td>
+<td>不能只由光學尺或外觀推論</td>
+<td>____</td>
+</tr>
+<tr>
+<td>護罩、聯鎖、急停與能源隔離</td>
+<td>照片未呈現完整控制系統</td>
+<td>____</td>
+</tr>
+<tr>
+<td>核准材料、刀具、切削條件與清屑規範</td>
+<td>完成可在課程使用的版本</td>
+<td>____</td>
+</tr>
+</tbody>
+</table></div>
+<p>確認人：<strong><em>_</em></strong>_　確認日期：<strong><em>_</em></strong>_　適用設備編號：<strong><em>_</em></strong>_　教材版次：<strong><em>_</em></strong>_</p>
+<h2>常用名詞對照</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>中文</th>
+<th>英文</th>
+<th>白話解釋</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主軸</td>
+<td>Spindle</td>
+<td>帶動工件或刀具旋轉的軸</td>
+</tr>
+<tr>
+<td>夾頭</td>
+<td>Chuck</td>
+<td>夾住工件或特定工具的裝置；用途依規格</td>
+</tr>
+<tr>
+<td>三爪自定心夾頭</td>
+<td>Three-jaw self-centering chuck</td>
+<td>三爪連動，方便夾圓材，重夾仍有誤差</td>
+</tr>
+<tr>
+<td>刀架</td>
+<td>Tool post</td>
+<td>固定車刀並承受切削力</td>
+</tr>
+<tr>
+<td>溜板／鞍座</td>
+<td>Carriage / Saddle</td>
+<td>承載刀架沿床身移動</td>
+</tr>
+<tr>
+<td>橫向滑台</td>
+<td>Cross slide</td>
+<td>讓車刀作徑向移動</td>
+</tr>
+<tr>
+<td>尾座</td>
+<td>Tailstock</td>
+<td>支撐工件或進行軸向鑽孔</td>
+</tr>
+<tr>
+<td>套筒</td>
+<td>Quill</td>
+<td>主軸或尾座中可伸縮的部件</td>
+</tr>
+<tr>
+<td>虎鉗</td>
+<td>Machine vise</td>
+<td>把工件固定在工作台上的夾具</td>
+</tr>
+<tr>
+<td>平行墊鐵</td>
+<td>Parallels</td>
+<td>支承工件、保持高度與平行的精密墊塊</td>
+</tr>
+<tr>
+<td>立銑刀</td>
+<td>End mill</td>
+<td>可用端刃與側刃加工，是否能下切依刀型</td>
+</tr>
+<tr>
+<td>面銑刀</td>
+<td>Face mill</td>
+<td>主要加工平面的刀具</td>
+</tr>
+<tr>
+<td>尋邊器</td>
+<td>Edge finder</td>
+<td>找出工件邊緣位置；需補工具半徑</td>
+</tr>
+<tr>
+<td>指示表</td>
+<td>Dial indicator / Test indicator</td>
+<td>以小位移顯示偏擺或找正誤差</td>
+</tr>
+<tr>
+<td>光學尺／數位顯示器</td>
+<td>Linear scale / DRO</td>
+<td>顯示滑台實際位移</td>
+</tr>
+<tr>
+<td>回隙</td>
+<td>Backlash</td>
+<td>反向旋轉時，傳動間隙造成的空行程</td>
+</tr>
+<tr>
+<td>逆銑</td>
+<td>Conventional / Up milling</td>
+<td>接觸處切向速度與工件進給方向相反</td>
+</tr>
+<tr>
+<td>順銑</td>
+<td>Climb / Down milling</td>
+<td>接觸處切向速度與工件進給方向相同</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>Datum</td>
+<td>決定尺寸與位置的參考面、線或點</td>
+</tr>
+<tr>
+<td>公差</td>
+<td>Tolerance</td>
+<td>尺寸或幾何要求容許的變動範圍</td>
+</tr>
+<tr>
+<td>偏擺</td>
+<td>Runout</td>
+<td>旋轉時相對量測基準的讀數變動</td>
+</tr>
+<tr>
+<td>毛邊</td>
+<td>Burr</td>
+<td>加工後邊緣留下的尖薄突出物</td>
+</tr>
+<tr>
+<td>能源隔離</td>
+<td>Energy isolation</td>
+<td>防止設備意外帶能啟動的正式程序</td>
+</tr>
+</tbody>
+</table></div>
+<h2>本書圖像與使用方式</h2>
+<p>實機照片由使用者提供，原檔保存在 <code>docs/assets/site-mill.jpg</code> 與 <code>site-lathe.jpg</code>。圖中圈號是閱讀指引，不能代替機台上的正式操作標示。其餘 SVG 為本書原創技術示意，可放大閱讀；尺寸圖除注明尺寸外，外形比例與線條不作製造圖使用。</p>
+<p>每個練習的尺寸、公差與材料是教學範例，沒有宣稱朝陽現場已加工或已通過試作。使用本書帶實習之前，應先完成本章核對表，依課程器材和教師確認修訂工法。</p></article>
+<section id="sources" class="chapter"><h1>來源台帳與使用範圍</h1>
+<p>閱覽與整理日期：<strong>2026-10-11（Asia/Taipei）</strong>。下表彙整第 01–10 章引用的 <strong>34 個一手來源網址</strong>；相同網址去重，同一機構的相關文件合併列示。章號對應各章檔名前兩碼；每章仍保留就近連結，方便查回原文。</p>
+<p>本書的文字、圖解、檢核流程、工件尺寸、公差、座標與算例為原創教學整理，並非直接翻譯或重刊來源文件，也不是來源機構或朝陽核准的 SOP。外部資料用於核對安全原則、機構功能、加工原理及公式；個別機型的按鈕、轉速組合、刻度與裝卸方法不可跨機套用。<strong>Grizzly、Haas、Sherline 的文件均為通用參考，並非照片中現場機台的原廠手冊。</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>來源機構</th>
+<th>文件／連結</th>
+<th>用於哪些章</th>
+<th>使用範圍與限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>朝陽科技大學工業工程與管理系</td>
+<td><a href="https://iem.cyut.edu.tw/p/404-1032-61732.php?Lang=en">官方設施資料</a></td>
+<td>01</td>
+<td>提供實習設施背景；不據此推定照片機台的型號、現況或操作核准。</td>
+</tr>
+<tr>
+<td>CCOHS，加拿大職業健康與安全中心</td>
+<td><a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/general.html">金屬加工通則</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/lathes.html">車床</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/millingmachines.html">銑床</a>、<a href="https://www.ccohs.ca/oshanswers/safety_haz/metalworking/drillpresses.html">鑽床</a></td>
+<td>通則：02、08；車床：02–04；銑床：02、05、06；鑽床：06</td>
+<td>核對捲入、護罩、裝夾、停機量測與清屑原則。加拿大用品規格不能當成臺灣現場規程；能源隔離由校方補齊。</td>
+</tr>
+<tr>
+<td>Open Oregon；LamNgeun Virasak</td>
+<td>《Manufacturing Processes 4–5》：<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/chapter-unit-1-the-engine-lathe/">車床構造</a>、<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-3-chucks/">夾頭</a>、<a href="https://openoregon.pressbooks.pub/manufacturingprocesses45/chapter/unit-4-turning/">車削</a></td>
+<td>構造：03；夾頭、車削：03、04</td>
+<td>核對部位、夾具與工序概念；特定角度、英制切削值與程序不照搬。原書標示 CC BY 4.0，外部圖像未重刊於本書。</td>
+</tr>
+<tr>
+<td>MIT OpenCourseWare／Maker Workshop</td>
+<td><a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/resources/lathe/">Lathe 教材</a>、<a href="https://makerworkshop.mit.edu/wp-content/uploads/2015/03/LatheRefresherGuide.pdf">Lathe Refresher Guide</a></td>
+<td>Lathe：03、04；Refresher：03</td>
+<td>核對端面、試切與數位尺模式；設備、控制位置及英制數例不代表現場配置。</td>
+</tr>
+<tr>
+<td>MIT OpenCourseWare</td>
+<td><a href="https://ocw.mit.edu/courses/2-670-mechanical-engineering-tools-january-iap-2004/69ddc43986801c51a7fbfa97d6b5b63f_mill.pdf">Introduction to the Mill</a></td>
+<td>05、06</td>
+<td>核對銑床運動、回隙、尋邊與方料加工；A/B/C 基準與工件座標另行原創設計。</td>
+</tr>
+<tr>
+<td>Grizzly Industrial</td>
+<td>原廠車床手冊：<a href="https://cdn0.grizzly.com/manuals/g0600_m.pdf">G0600</a>、<a href="https://cdn0.grizzly.com/manuals/g4000_m.pdf">G4000</a></td>
+<td>G0600：03；G4000：03、04</td>
+<td>核對滑座運動及半徑刻度案例。G4000 刻度不能推定為 WINHO 刻度；每機都須核對。</td>
+</tr>
+<tr>
+<td>Grizzly Industrial</td>
+<td>原廠銑床手冊：<a href="https://cdn0.grizzly.com/manuals/g9901_m.pdf">G9901</a>、<a href="https://cdn0.grizzly.com/manuals/g9959_m.pdf">G9959</a>、<a href="https://cdn0.grizzly.com/manuals/g9902_m.pdf">G9902</a>、<a href="https://cdn0.grizzly.com/manuals/g0876_m.pdf">G0876</a>、<a href="https://cdn1.grizzly.com/manuals/g0730_m.pdf">G0730</a></td>
+<td>G9901：05、06；其餘：05</td>
+<td>核對構造、虎鉗校正、拉桿、夾持與皮帶變速案例；型號識別來源，不代表朝陽使用這些機型。</td>
+</tr>
+<tr>
+<td>Sherline Products</td>
+<td><a href="https://www.sherline.com/wp-content/uploads/2014/07/5326_instructions_v9_web.pdf">Lathe Operating Instructions</a>、<a href="https://sherline.com/wp-content/uploads/2018/05/lathe_align.pdf">Lathe Alignment and Micro-Drilling</a></td>
+<td>操作說明：03；對準／細鑽：03、04</td>
+<td>核對中心高、尾座對準與定位孔角度；小型車床的能力、突出量與數值不套用現場。</td>
+</tr>
+<tr>
+<td>Sherline Products</td>
+<td><a href="https://www.sherline.com/product/3551-milling-vise/">Milling Vise</a></td>
+<td>05</td>
+<td>核對虎鉗鉗口與支承設計；屬產品說明，不是現場虎鉗手冊。</td>
+</tr>
+<tr>
+<td>Haas Automation</td>
+<td><a href="https://haascnc.com/service/online-manuals/hml-manual-lathe-operators-service-manual/manual-lathe-operation">Manual Lathe — Operation</a></td>
+<td>03、04</td>
+<td>核對夾頭、尾座與停機裝夾概念；其主軸接頭、手柄、退錐方法與聯鎖不可當成 WINHO 配置。</td>
+</tr>
+<tr>
+<td>Haas Automation</td>
+<td><a href="https://www.haascnc.com/haas-tooling/mill_toolholding/milling_chucks_colle.html">Milling Chucks &amp; Collets</a></td>
+<td>05</td>
+<td>核對銑削刀柄與筒夾用途；裝卸依現場拉桿、錐柄與刀座規範。</td>
+</tr>
+<tr>
+<td>Sandvik Coromant</td>
+<td><a href="https://cdn.sandvik.coromant.com/files/sitecollectiondocuments/services/metal-cutting-e-learning/formulas-and-definitions/formulas-and-deinitions-for-turning-metric-enu.pdf">車削公制公式</a>、<a href="https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/milling-formulas-definitions">銑削公式與定義</a></td>
+<td>車削：03、04；銑削：05、07</td>
+<td>核對速度、轉速、每轉／每齒進給與符號；假定算例不是現場參數推薦。</td>
+</tr>
+<tr>
+<td>Sandvik Coromant</td>
+<td><a href="https://www.sandvik.coromant.com/api/publications/view?fileName=C-1020-18.pdf&amp;url=92df68b7-b8c0-494d-b290-e27f540b5885.pdf">Turning Handbook</a>、<a href="https://cdn.sandvik.coromant.com/files/sitecollectiondocuments/downloads/global/technical%20guides/en-gb/c-2920-031.pdf">Threading Application Guide</a></td>
+<td>Turning：03、04；Threading：03</td>
+<td>核對肩部、刀具與螺紋科普；商用刀具參數及高階工法不變成新手獨作指令。</td>
+</tr>
+<tr>
+<td>Sandvik Coromant</td>
+<td><a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/down-milling-vs-up-milling">順銑／逆銑</a>、<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/groove-or-slot-milling">槽銑</a>、<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/face-milling">面銑</a>、<a href="https://www.sandvik.coromant.com/en-gb/knowledge/milling/shoulder-milling">肩銑</a>、<a href="https://www.sandvik.coromant.com/en-gb/milling-appl-guide">銑削穩定性與振動指南</a></td>
+<td>順／逆：05；槽、面、肩：06；穩定性：08</td>
+<td>核對切削方向、負荷與剛性。穩定性指南主要支援振動及伸出量相關診斷，不能代替設備故障手冊。</td>
+</tr>
+<tr>
+<td>Mitutoyo</td>
+<td><a href="https://www.mitutoyo.com/products/small-tool-instruments-and-data-management/micrometers/digimatic-micrometers/coolant-proof-micrometer/">定力外徑分厘卡說明</a>、<a href="https://www.mitutoyo.com/literature/quick-guide-to-precision-measuring-instruments/">Quick Guide to Precision Measuring Instruments</a></td>
+<td>分厘卡：03、04；Quick Guide：07</td>
+<td>核對測力、量具與精度概念；產品規格與顯示位數不代表校內量具的校正狀態或量測不確定度。</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現場照片與授權</h2>
+<p>兩張照片均由使用者提供，用於現場部位辨識。來源以原始檔名與教材檔名記錄。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>來源識別</th>
+<th>教材內檔案</th>
+<th>用途與限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用者提供，原始檔名 S__92037139_0.jpg</td>
+<td><a href="assets/site-lathe.jpg">site-lathe.jpg</a>；含照片的部位標示圖</td>
+<td>可辨識 WINHO 威赫與停機換速提醒；不是已整理完畢的開機示範，不能補推型號或手柄組合。</td>
+</tr>
+<tr>
+<td>使用者提供，原始檔名 S__92037138_0.jpg</td>
+<td><a href="assets/site-mill.jpg">site-mill.jpg</a>；含照片的部位標示圖</td>
+<td>辨識可見構造；未核對的型號、錐柄、控制方向與規格不推定。</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>照片的其他再利用權利未另行授與。</strong> CC BY 4.0 不涵蓋這兩張照片，也不涵蓋照片中第三方商標或貼紙；含照片的標示 SVG 仍保留照片例外。另行轉載照片者應向相應權利人確認。</p>
+<p>本書原創教材文字與不含照片的原創技術 SVG 採 <strong><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International（CC BY 4.0）</a></strong>；建置程式採 <strong><a href="https://opensource.org/license/mit">MIT License</a></strong>。含照片的標註 SVG／PNG 均維持照片授權例外。外部手冊及其圖文保留各自權利；本書未重刊其長篇正文或原廠圖解。</p>
+<h2>連結與現場核對紀錄</h2>
+<p>日後連結失效時，依機構、文件名稱及型號查找新版，並記錄更新日期。特定機型資料更新後，須重新核對相關現場程序。</p>
+<p>尚待現場補齊：完整型號與原廠手冊、校方安全 SOP、夾具與刀具規格、量具校正、換檔及刻度確認、練習試做紀錄。補齊前，本書以通用教學與教師確認為適用界線。</p></section>
+<footer><p><a href="#sources">來源與照片使用說明</a> · <a href="index.md">章節原稿目錄</a> · 非校方核定操作規程。教材文字、尺寸例題及通用 SVG 為原創；現場照片由使用者提供。</p></footer>
+</main>
+<script>
+const chapters=[...document.querySelectorAll('article.chapter')],navLinks=[...document.querySelectorAll('nav a')];
+document.querySelector('#book-search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let count=0;chapters.forEach((c,i)=>{const match=!q||c.textContent.toLowerCase().includes(q);c.classList.toggle('hidden',!match);navLinks[i].classList.toggle('hidden',!match);if(match)count++});document.querySelector('#search-note').textContent=q?`符合「${e.target.value.trim()}」的章節：${count}`:'10 章 · 實機照片與原創圖解'});
+document.querySelector('#print-book').addEventListener('click',()=>window.print());
+const inputs=['diameter','speed','feed'].map(x=>document.getElementById(x));function calc(){const [d,v,f]=inputs.map(x=>Number(x.value));document.getElementById('calc-result').textContent=inputs.some(x=>!x.value.trim())||![d,v,f].every(Number.isFinite)||d<=0||v<=0||f<=0?'請輸入大於 0 的有限數值。':`算式結果：${(1000*v/(Math.PI*d)).toFixed(1)} rpm；${(f*1000*v/(Math.PI*d)).toFixed(1)} mm/min（非上機設定）`};inputs.forEach(x=>x.addEventListener('input',calc));calc();
+window.addEventListener('scroll',()=>{const total=document.documentElement.scrollHeight-innerHeight;document.querySelector('.progress').style.width=`${Math.max(0,Math.min(100,total>0?scrollY/total*100:0))}%`;let current=chapters.filter(c=>!c.classList.contains('hidden')).findLast(c=>c.getBoundingClientRect().top<150);navLinks.forEach(a=>a.classList.toggle('active',Boolean(current&&a.hash==='#'+current.id)))},{passive:true});
+</script>
+</body></html>

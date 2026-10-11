@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">立式膝式銑床：旋轉刀具切削工件</title><desc id="desc">一般功能構造示意；不代表實機品牌、型號或手柄配置。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">立式膝式銑床：旋轉刀具切削工件</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">一般功能構造示意；不代表實機品牌、型號或手柄配置。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="450" y="175" width="290" height="74" rx="12" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="446" y="236" width="185" height="97" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="490" y="333" width="100" height="70" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="517" y="399" width="47" height="52" rx="0" fill="#087f8c" stroke="#163249" stroke-width="3"/>
+<rect x="533" y="449" width="15" height="42" rx="0" fill="#ed8b3a" stroke="#163249" stroke-width="3"/>
+<rect x="655" y="253" width="135" height="310" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="410" y="540" width="380" height="56" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="400" y="480" width="260" height="58" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="250" y="458" width="650" height="36" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<line x1="263" y1="465" x2="885" y2="465" stroke="#61788a" stroke-width="2"/>
+<line x1="263" y1="477" x2="885" y2="477" stroke="#61788a" stroke-width="2"/>
+<line x1="263" y1="489" x2="885" y2="489" stroke="#61788a" stroke-width="2"/>
+<rect x="438" y="428" width="175" height="30" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="438" y="417" width="30" height="43" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="583" y="417" width="30" height="43" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<circle cx="945" cy="476" r="31" fill="none" stroke="#163249" stroke-width="3"/>
+<line x1="900" y1="476" x2="973" y2="476" stroke="#163249" stroke-width="3"/>
+<circle cx="500" cy="552" r="24" fill="none" stroke="#163249" stroke-width="3"/>
+<text x="820" y="183" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">銑頭</text>
+<line x1="811" y1="190" x2="739" y2="215" stroke="#61788a" stroke-width="2"/>
+<text x="81" y="228" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">主軸與套筒</text>
+<line x1="252" y1="225" x2="490" y2="368" stroke="#61788a" stroke-width="2"/>
+<text x="47" y="333" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">刀具</text>
+<line x1="115" y1="324" x2="538" y2="467" stroke="#61788a" stroke-width="2"/>
+<text x="47" y="424" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">虎鉗與工件</text>
+<line x1="214" y1="417" x2="439" y2="438" stroke="#61788a" stroke-width="2"/>
+<text x="835" y="407" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">工作台（X）</text>
+<line x1="890" y1="421" x2="841" y2="459" stroke="#61788a" stroke-width="2"/>
+<text x="930" y="549" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">手輪</text>
+<line x1="962" y1="525" x2="945" y2="507" stroke="#61788a" stroke-width="2"/>
+<text x="134" y="566" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">鞍座（Y）</text>
+<line x1="270" y1="553" x2="407" y2="511" stroke="#61788a" stroke-width="2"/>
+<text x="823" y="586" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">膝座（Z）</text>
+<line x1="818" y1="572" x2="735" y2="552" stroke="#61788a" stroke-width="2"/>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">立式銑床的刀具繞垂直主軸旋轉；以工作台、鞍座與膝座控制工件位置。</text>
+</svg>

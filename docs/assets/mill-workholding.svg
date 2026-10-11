@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">銑床裝夾：工件確實支承，刀路避開夾具</title><desc id="desc">清除接觸面切屑；以教師核准的方式敲實、夾緊並確認貼合。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">銑床裝夾：工件確實支承，刀路避開夾具</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">清除接觸面切屑；以教師核准的方式敲實、夾緊並確認貼合。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="40" y="135" width="545" height="423" rx="12" fill="white" stroke="#dbe3e9" stroke-width="3"/>
+<text x="63" y="177" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">正視：虎鉗與平行墊鐵</text>
+<rect x="85" y="445" width="455" height="47" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="85" y="300" width="88" height="144" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="452" y="300" width="88" height="144" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="173" y="280" width="279" height="132" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="183" y="412" width="38" height="32" rx="0" fill="#087f8c" stroke="#163249" stroke-width="3"/>
+<rect x="403" y="412" width="38" height="32" rx="0" fill="#087f8c" stroke="#163249" stroke-width="3"/>
+<text x="226" y="328" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">工件</text>
+<text x="125" y="235" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">兩側夾持面</text>
+<line x1="208" y1="245" x2="171" y2="350" stroke="#61788a" stroke-width="2"/>
+<text x="206" y="537" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">底面貼緊兩支墊鐵</text>
+<line x1="260" y1="510" x2="220" y2="428" stroke="#61788a" stroke-width="2"/>
+<rect x="615" y="135" width="545" height="423" rx="12" fill="white" stroke="#dbe3e9" stroke-width="3"/>
+<text x="638" y="177" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">俯視：保留刀具與夾具間隙</text>
+<rect x="670" y="290" width="425" height="140" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="670" y="242" width="425" height="48" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="670" y="430" width="425" height="48" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<circle cx="826" cy="342" r="39" fill="#fadfc9" stroke="#ed8b3a" stroke-width="3"/>
+<line x1="731" y1="342" x2="1021" y2="342" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="1021.000,342.000 985.000,360.000 985.000,324.000" fill="#087f8c" stroke="none"/>
+<text x="767" y="229" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">刀路包絡</text>
+<line x1="840" y1="240" x2="829" y2="302" stroke="#61788a" stroke-width="2"/>
+<text x="763" y="527" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">勿撞虎鉗、螺栓與墊鐵</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">正式加工前，停轉檢查全刀路與換刀後長度；孔鑽透時更要避開下方墊鐵。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">虎鉗夾得住不代表每處都有支承；長件、大懸伸或薄件另用合適夾具。</text>
+</svg>

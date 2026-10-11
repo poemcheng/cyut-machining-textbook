@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">車床鑽孔：工件旋轉，尾座鑽頭不旋轉</title><desc id="desc">尾座沿主軸中心線推進；不得手持鑽頭或夾頭。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">車床鑽孔：工件旋轉，尾座鑽頭不旋轉</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">尾座沿主軸中心線推進；不得手持鑽頭或夾頭。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="125" y="220.0" width="95" height="180" rx="8" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="212" y="230.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="212" y="353.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<line x1="100" y1="310" x2="600" y2="310" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<rect x="220" y="260" width="370" height="100" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<ellipse cx="590" cy="310" rx="17" ry="50" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="810" y="235" width="250" height="150" rx="12" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="724" y="287" width="90" height="46" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<polygon points="604,310 637,292 725,292 725,328 637,328" fill="#dbe3e9" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<line x1="648" y1="293" x2="668" y2="327" stroke="#61788a" stroke-width="2"/>
+<line x1="668" y1="293" x2="688" y2="327" stroke="#61788a" stroke-width="2"/>
+<line x1="688" y1="293" x2="708" y2="327" stroke="#61788a" stroke-width="2"/>
+<line x1="708" y1="293" x2="728" y2="327" stroke="#61788a" stroke-width="2"/>
+<line x1="110" y1="310" x2="1090" y2="310" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<path d="M149 213 C112 187 81 246 113 277" fill="none" stroke="#087f8c" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon data-role="arrowhead" points="113.000,277.000 65.024,261.850 96.335,229.529" fill="#087f8c" stroke="none"/>
+<text x="56" y="162" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">工件旋轉</text>
+<line x1="800" y1="424" x2="618" y2="424" stroke="#ed8b3a" stroke-width="5"/>
+<polygon data-role="arrowhead" points="618.000,424.000 663.000,401.500 663.000,446.500" fill="#ed8b3a" stroke="none"/>
+<text x="723" y="462" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">套筒推進</text>
+<text x="830" y="180" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">尾座固定，鑽頭不轉</text>
+<rect x="100" y="496" width="458" height="73" rx="10" fill="#e9f4f5" stroke="#dbe3e9" stroke-width="3"/>
+<text x="123" y="542" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">① 短中心鑽建立起鑽位置</text>
+<line x1="575" y1="532" x2="614" y2="532" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="614.000,532.000 580.850,548.575 580.850,515.425" fill="#087f8c" stroke="none"/>
+<rect x="633" y="496" width="467" height="73" rx="10" fill="#e9f4f5" stroke="#dbe3e9" stroke-width="3"/>
+<text x="657" y="542" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">② 適當先導孔 → 目標孔徑</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">選用適合材料與孔徑的鑽速，分段退出排屑；停止主軸後才清理與檢查。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">中心鑽避免讓粗短錐部過度埋入；先導孔尺寸與鑽孔順序依刀具資料及教師指示。</text>
+</svg>

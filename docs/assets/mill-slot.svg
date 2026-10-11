@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">端銑槽：先建立入口，再分層加工</title><desc id="desc">封閉槽不能把任意端銑刀直接壓下；刀具是否可下切須查原廠資料。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">端銑槽：先建立入口，再分層加工</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">封閉槽不能把任意端銑刀直接壓下；刀具是否可下切須查原廠資料。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="215" y="205" width="770" height="210" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="370" y="265" width="445" height="90" rx="45" fill="#c4dde1" stroke="#163249" stroke-width="3"/>
+<circle cx="415" cy="310" r="45" fill="#fadfc9" stroke="#ed8b3a" stroke-width="3"/>
+<line x1="415" y1="310" x2="770" y2="310" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="770.000,310.000 725.000,332.500 725.000,287.500" fill="#087f8c" stroke="none"/>
+<line x1="415" y1="249" x2="415" y2="372" stroke="#61788a" stroke-width="2" stroke-dasharray="8 7"/>
+<line x1="770" y1="249" x2="770" y2="372" stroke="#61788a" stroke-width="2" stroke-dasharray="8 7"/>
+<line x1="370" y1="177" x2="815" y2="177" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="815.000,177.000 797.000,186.000 797.000,168.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="370.000,177.000 388.000,168.000 388.000,186.000" fill="#61788a" stroke="none"/>
+<text x="592.5" y="165" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">槽總長 L</text>
+<line x1="370" y1="183" x2="370" y2="264" stroke="#61788a" stroke-width="1.5"/>
+<line x1="815" y1="183" x2="815" y2="264" stroke="#61788a" stroke-width="1.5"/>
+<text x="500" y="394" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">中心行程 = L - 刀具直徑</text>
+<text x="986" y="319" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">槽寬</text>
+<line x1="980" y1="325" x2="815" y2="350" stroke="#61788a" stroke-width="2"/>
+<rect x="365" y="503" width="475" height="57" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="415" y="503" width="355" height="37" rx="0" fill="white" stroke="none" stroke-width="3"/>
+<path d="M415 503 V540 H770 V503" fill="none" stroke="#163249" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="415" y1="514" x2="770" y2="514" stroke="#087f8c" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="415" y1="527" x2="770" y2="527" stroke="#087f8c" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="542" y="443" width="45" height="63" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<line x1="614" y1="448" x2="614" y2="492" stroke="#ed8b3a" stroke-width="4"/>
+<polygon data-role="arrowhead" points="614.000,492.000 596.000,456.000 632.000,456.000" fill="#ed8b3a" stroke="none"/>
+<text x="682" y="466" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">分層至目標槽深</text>
+<text x="56" y="540" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">側視</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">只有具中心刃、且原廠允許下切的刀具，才可依核准條件直接下刀；否則先鑽入口孔。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">入口孔、槽中心行程、刀徑與每層深度都要先算清楚；全槽切削負荷較大。</text>
+</svg>

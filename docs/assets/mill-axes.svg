@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">銑床座標：先分清工作台與刀具的相對運動</title><desc id="desc">本圖採操作員面向機台：工作台右移為 +X、遠離操作員為 +Y、上升為 +Z。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">銑床座標：先分清工作台與刀具的相對運動</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">本圖採操作員面向機台：工作台右移為 +X、遠離操作員為 +Y、上升為 +Z。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="553" y="180" width="95" height="85" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="582" y="265" width="36" height="112" rx="0" fill="#087f8c" stroke="#163249" stroke-width="3"/>
+<polygon points="280,382 900,382 820,462 200,462" fill="#e9f4f5" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="200,462 820,462 820,499 200,499" fill="#dbe3e9" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="820,462 900,382 900,419 820,499" fill="#dbe3e9" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="440,371 660,371 614,414 394,414" fill="#ed8b3a" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<rect x="394" y="414" width="220" height="30" rx="0" fill="#fadfc9" stroke="#163249" stroke-width="3"/>
+<line x1="530" y1="534" x2="850" y2="534" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="850.000,534.000 805.000,556.500 805.000,511.500" fill="#087f8c" stroke="none"/>
+<text x="888" y="542" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">+X 右移</text>
+<line x1="282" y1="491" x2="376" y2="392" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="376.000,392.000 361.332,440.126 328.698,409.141" fill="#087f8c" stroke="none"/>
+<text x="45" y="306" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">+Y 遠離操作員</text>
+<text x="45" y="341" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">（工作台向後）</text>
+<line x1="250" y1="344" x2="355" y2="413" stroke="#61788a" stroke-width="2"/>
+<line x1="982" y1="493" x2="982" y2="281" stroke="#ed8b3a" stroke-width="5"/>
+<polygon data-role="arrowhead" points="982.000,281.000 1004.500,326.000 959.500,326.000" fill="#ed8b3a" stroke="none"/>
+<text x="1040" y="353" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">+Z</text>
+<text x="1008" y="393" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">上升</text>
+<text x="475" y="178" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">刀具位置</text>
+<line x1="560" y1="192" x2="583" y2="278" stroke="#61788a" stroke-width="2"/>
+<text x="265" y="582" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">操作員站位</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">工作台往 +X 移動，固定刀具相對工件往 -X 移動；Y、Z 同理。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">DRO 的正負號可能另有設定；先空行程確認各軸與數字變化，再定零點。</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">銑床練習：平面、封閉槽與兩個通孔</title><desc id="desc">毛胚 65 × 45 × 18 mm → 成品 60 × 40 × 15 mm；全部尺寸為 mm。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">銑床練習：平面、封閉槽與兩個通孔</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">毛胚 65 × 45 × 18 mm → 成品 60 × 40 × 15 mm；全部尺寸為 mm。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="260" y="191" width="540" height="360" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="395" y="335" width="270" height="72" rx="36" fill="#c4dde1" stroke="#163249" stroke-width="3"/>
+<circle cx="350" cy="461" r="27" fill="white" stroke="#163249" stroke-width="3"/>
+<line x1="315" y1="461" x2="385" y2="461" stroke="#61788a" stroke-width="1.5" stroke-dasharray="5 5"/>
+<line x1="350" y1="426" x2="350" y2="496" stroke="#61788a" stroke-width="1.5" stroke-dasharray="5 5"/>
+<circle cx="710" cy="281" r="27" fill="white" stroke="#163249" stroke-width="3"/>
+<line x1="675" y1="281" x2="745" y2="281" stroke="#61788a" stroke-width="1.5" stroke-dasharray="5 5"/>
+<line x1="710" y1="246" x2="710" y2="316" stroke="#61788a" stroke-width="1.5" stroke-dasharray="5 5"/>
+<line x1="431" y1="371" x2="629" y2="371" stroke="#087f8c" stroke-width="3"/>
+<polygon data-role="arrowhead" points="629.000,371.000 602.000,384.500 602.000,357.500" fill="#087f8c" stroke="none"/>
+<polygon data-role="arrowhead" points="431.000,371.000 458.000,357.500 458.000,384.500" fill="#087f8c" stroke="none"/>
+<line x1="260" y1="161" x2="800" y2="161" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="800.000,161.000 782.000,170.000 782.000,152.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="260.000,161.000 278.000,152.000 278.000,170.000" fill="#61788a" stroke="none"/>
+<text x="530.0" y="149" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">60</text>
+<line x1="260" y1="167" x2="260" y2="191" stroke="#61788a" stroke-width="1.5"/>
+<line x1="800" y1="167" x2="800" y2="191" stroke="#61788a" stroke-width="1.5"/>
+<line x1="217" y1="191" x2="217" y2="551" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="217.000,551.000 208.000,533.000 226.000,533.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="217.000,191.000 226.000,209.000 208.000,209.000" fill="#61788a" stroke="none"/>
+<text x="205" y="371.0" font-size="24" fill="#163249" text-anchor="end" font-weight="normal">40</text>
+<line x1="223" y1="191" x2="260" y2="191" stroke="#61788a" stroke-width="1.5"/>
+<line x1="223" y1="551" x2="260" y2="551" stroke="#61788a" stroke-width="1.5"/>
+<text x="867" y="227" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">2 × φ6 通孔</text>
+<line x1="858" y1="242" x2="710" y2="282" stroke="#61788a" stroke-width="2"/>
+<text x="867" y="310" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">孔中心 (10,10)</text>
+<text x="867" y="345" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">孔中心 (50,30)</text>
+<text x="854" y="410" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">槽長 30、寬 8、深 3</text>
+<text x="854" y="445" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">兩端 R4</text>
+<text x="854" y="480" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">φ8 刀具中心：</text>
+<text x="854" y="515" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">X=19..41，Y=20</text>
+<line x1="845" y1="413" x2="665" y2="370" stroke="#61788a" stroke-width="2"/>
+<line x1="260" y1="551" x2="380" y2="551" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="380.000,551.000 344.000,569.000 344.000,533.000" fill="#087f8c" stroke="none"/>
+<line x1="260" y1="551" x2="260" y2="461" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="260.000,461.000 278.000,497.000 242.000,497.000" fill="#087f8c" stroke="none"/>
+<text x="389" y="560" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">+X</text>
+<text x="244" y="454" font-size="24" fill="#163249" text-anchor="end" font-weight="normal">+Y</text>
+<text x="63" y="585" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">左前角 (0,0)</text>
+<line x1="223" y1="571" x2="260" y2="551" stroke="#61788a" stroke-width="2"/>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">上表面 Z=0，槽底 Z=-3；成品厚度 15。俯視圖比例一致。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">鑽透時下方必須留出鑽尖空間；孔的位置不得落在平行墊鐵或虎鉗上。</text>
+</svg>

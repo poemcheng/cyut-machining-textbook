@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">車床裝夾：短伸出、夾牢、刀尖對中心</title><desc id="desc">裝夾與校正都在停機狀態完成；三爪自定心不代表沒有偏心。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">車床裝夾：短伸出、夾牢、刀尖對中心</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">裝夾與校正都在停機狀態完成；三爪自定心不代表沒有偏心。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="50" y="130" width="520" height="420" rx="12" fill="white" stroke="#dbe3e9" stroke-width="3"/>
+<text x="75" y="172" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">側視：工件縮短伸出</text>
+<rect x="160" y="230.0" width="110" height="210" rx="8" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="262" y="240.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="262" y="393.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<line x1="135" y1="335" x2="650" y2="335" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<rect x="270" y="292" width="200" height="86" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="155" y="292" width="115" height="86" rx="0" fill="#bed9dd" stroke="#163249" stroke-width="3"/>
+<line x1="270" y1="250" x2="470" y2="250" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="470.000,250.000 452.000,259.000 452.000,241.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="270.000,250.000 288.000,241.000 288.000,259.000" fill="#61788a" stroke="none"/>
+<text x="370.0" y="238" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">伸出長度</text>
+<line x1="270" y1="256" x2="270" y2="291" stroke="#61788a" stroke-width="1.5"/>
+<line x1="470" y1="256" x2="470" y2="291" stroke="#61788a" stroke-width="1.5"/>
+<text x="92" y="465" font-size="26" fill="#163249" text-anchor="start" font-weight="normal">三爪均勻夾持</text>
+<line x1="220" y1="442" x2="270" y2="365" stroke="#61788a" stroke-width="2"/>
+<text x="306" y="500" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">必要時加頂尖支撐</text>
+<rect x="610" y="130" width="540" height="420" rx="12" fill="white" stroke="#dbe3e9" stroke-width="3"/>
+<text x="635" y="172" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">端視：刀尖位於軸線高度</text>
+<circle cx="803" cy="338" r="116" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<circle cx="803" cy="338" r="63" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<g transform="rotate(30 803 338)">
+<rect x="866" y="319" width="53" height="38" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+</g>
+<g transform="rotate(150 803 338)">
+<rect x="866" y="319" width="53" height="38" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+</g>
+<g transform="rotate(270 803 338)">
+<rect x="866" y="319" width="53" height="38" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+</g>
+<line x1="648" y1="338" x2="1110" y2="338" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<line x1="803" y1="205" x2="803" y2="474" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<polygon points="866,338 1000,306 1040,306 1040,362 1000,362" fill="#ed8b3a" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<text x="954" y="277" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">刀尖</text>
+<line x1="968" y1="286" x2="866" y2="338" stroke="#61788a" stroke-width="2"/>
+<text x="729" y="501" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">停機以頂尖／量規校正</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">工件與刀具接觸面先清潔；夾頭鑰匙使用完立即取下。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">伸出與夾持長度由工件、夾具和切削負荷決定，不把示意比例當作安全極限。</text>
+</svg>

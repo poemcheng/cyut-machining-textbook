@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">順銑與逆銑：比較接觸處切向速度與工作台進給</title><desc id="desc">俯視示意：兩圖刀具皆順時針旋轉；橘點是用來比較方向的接觸位置。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">順銑與逆銑：比較接觸處切向速度與工作台進給</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">俯視示意：兩圖刀具皆順時針旋轉；橘點是用來比較方向的接觸位置。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<text x="315" y="162" font-size="32" fill="#163249" text-anchor="middle" font-weight="bold">逆銑</text>
+<circle cx="315" cy="322" r="107" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<line x1="406.0" y1="322.0" x2="421.0" y2="322.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="379.34671708797583" y1="386.34671708797583" x2="389.9533188057741" y2="396.9533188057741" stroke="#087f8c" stroke-width="7"/>
+<line x1="315.0" y1="413.0" x2="315.0" y2="428.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="250.65328291202417" y1="386.34671708797583" x2="240.04668119422598" y2="396.9533188057741" stroke="#087f8c" stroke-width="7"/>
+<line x1="224.0" y1="322.0" x2="209.0" y2="322.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="250.65328291202417" y1="257.65328291202417" x2="240.04668119422593" y2="247.04668119422598" stroke="#087f8c" stroke-width="7"/>
+<line x1="315.0" y1="231.0" x2="315.0" y2="216.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="379.3467170879758" y1="257.65328291202417" x2="389.953318805774" y2="247.04668119422593" stroke="#087f8c" stroke-width="7"/>
+<path d="M259 227 A110 110 0 0 1 424 322" fill="none" stroke="#087f8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon data-role="arrowhead" points="424.000,322.000 406.000,286.000 442.000,286.000" fill="#087f8c" stroke="none"/>
+<rect x="125" y="429" width="380" height="74" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<circle cx="315" cy="429" r="7" fill="#ed8b3a" stroke="#ed8b3a" stroke-width="3"/>
+<line x1="402" y1="413" x2="232" y2="413" stroke="#ed8b3a" stroke-width="4"/>
+<polygon data-role="arrowhead" points="232.000,413.000 268.000,395.000 268.000,431.000" fill="#ed8b3a" stroke="none"/>
+<text x="315" y="380" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">接觸處刀刃速度 ←</text>
+<line x1="180" y1="548" x2="450" y2="548" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="450.000,548.000 405.000,570.500 405.000,525.500" fill="#087f8c" stroke="none"/>
+<text x="315" y="584" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">工作台進給 →（相反）</text>
+<text x="315" y="206" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">切屑厚度：薄 → 厚</text>
+<text x="870" y="162" font-size="32" fill="#163249" text-anchor="middle" font-weight="bold">順銑</text>
+<circle cx="870" cy="322" r="107" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<line x1="961.0" y1="322.0" x2="976.0" y2="322.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="934.3467170879758" y1="386.34671708797583" x2="944.9533188057741" y2="396.9533188057741" stroke="#087f8c" stroke-width="7"/>
+<line x1="870.0" y1="413.0" x2="870.0" y2="428.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="805.6532829120242" y1="386.34671708797583" x2="795.0466811942259" y2="396.9533188057741" stroke="#087f8c" stroke-width="7"/>
+<line x1="779.0" y1="322.0" x2="764.0" y2="322.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="805.6532829120242" y1="257.65328291202417" x2="795.0466811942259" y2="247.04668119422598" stroke="#087f8c" stroke-width="7"/>
+<line x1="870.0" y1="231.0" x2="870.0" y2="216.0" stroke="#087f8c" stroke-width="7"/>
+<line x1="934.3467170879758" y1="257.65328291202417" x2="944.953318805774" y2="247.04668119422593" stroke="#087f8c" stroke-width="7"/>
+<path d="M814 227 A110 110 0 0 1 979 322" fill="none" stroke="#087f8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon data-role="arrowhead" points="979.000,322.000 961.000,286.000 997.000,286.000" fill="#087f8c" stroke="none"/>
+<rect x="680" y="429" width="380" height="74" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<circle cx="870" cy="429" r="7" fill="#ed8b3a" stroke="#ed8b3a" stroke-width="3"/>
+<line x1="957" y1="413" x2="787" y2="413" stroke="#ed8b3a" stroke-width="4"/>
+<polygon data-role="arrowhead" points="787.000,413.000 823.000,395.000 823.000,431.000" fill="#ed8b3a" stroke="none"/>
+<text x="870" y="380" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">接觸處刀刃速度 ←</text>
+<line x1="1005" y1="548" x2="735" y2="548" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="735.000,548.000 780.000,525.500 780.000,570.500" fill="#087f8c" stroke="none"/>
+<text x="870" y="584" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">工作台進給 ←（相同）</text>
+<text x="870" y="206" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">切屑厚度：厚 → 薄</text>
+<line x1="590" y1="140" x2="590" y2="590" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">有背隙的傳統手動銑床，順銑可能拉動工作台突然前衝；初學依教師指定採逆銑。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">旋轉反向或改在刀具另一側切削時，必須重新比較接觸點方向，不能只看左右箭頭。</text>
+</svg>

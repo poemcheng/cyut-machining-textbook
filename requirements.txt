@@ -1,0 +1,6 @@
+reportlab>=4.4,<5
+svglib>=2.3,<3
+markdown>=3.8,<4
+lxml>=6,<7
+Pillow>=11,<13
+pypdf>=5,<7

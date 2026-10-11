@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">停機量測：外卡接觸面與分厘卡測砧</title><desc id="desc">量測前先停機、去毛邊、清潔並等工件冷卻；尺寸公差決定量具選擇。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">停機量測：外卡接觸面與分厘卡測砧</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">量測前先停機、去毛邊、清潔並等工件冷卻；尺寸公差決定量具選擇。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<text x="72" y="169" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">游標卡尺：一般外徑／長度</text>
+<circle cx="326" cy="376" r="90" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="146" y="236" width="420" height="29" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="210" y="214" width="49" height="81" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="391" y="214" width="67" height="81" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<line x1="280" y1="237" x2="280" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="295" y1="237" x2="295" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="310" y1="237" x2="310" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="325" y1="237" x2="325" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="340" y1="237" x2="340" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="355" y1="237" x2="355" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="370" y1="237" x2="370" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="385" y1="237" x2="385" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="400" y1="237" x2="400" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="415" y1="237" x2="415" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="430" y1="237" x2="430" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="445" y1="237" x2="445" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="460" y1="237" x2="460" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="475" y1="237" x2="475" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="490" y1="237" x2="490" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="505" y1="237" x2="505" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="520" y1="237" x2="520" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="535" y1="237" x2="535" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<line x1="550" y1="237" x2="550" y2="250" stroke="#61788a" stroke-width="1.5"/>
+<rect x="219" y="265" width="17" height="127" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="416" y="265" width="17" height="127" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<line x1="236" y1="376" x2="249" y2="376" stroke="#ed8b3a" stroke-width="5"/>
+<line x1="404" y1="376" x2="417" y2="376" stroke="#ed8b3a" stroke-width="5"/>
+<line x1="235" y1="490" x2="416" y2="490" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="416.000,490.000 398.000,499.000 398.000,481.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="235.000,490.000 253.000,481.000 253.000,499.000" fill="#61788a" stroke="none"/>
+<text x="326" y="530" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">外測量爪輕貼兩側</text>
+<text x="139" y="576" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">保持垂直，避免斜量</text>
+<text x="674" y="169" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">外徑分厘卡：更細的直徑判讀</text>
+<circle cx="865" cy="376" r="61" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<path d="M804 376 H770 C682 376 682 521 781 521 H970 V398" fill="none" stroke="#163249" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="765" y="363" width="39" height="26" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="926" y="363" width="98" height="26" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="1005" y="344" width="83" height="65" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="1088" y="354" width="39" height="45" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<line x1="804" y1="376" x2="811" y2="376" stroke="#ed8b3a" stroke-width="5"/>
+<line x1="919" y1="376" x2="926" y2="376" stroke="#ed8b3a" stroke-width="5"/>
+<text x="750" y="280" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">固定測砧</text>
+<line x1="815" y1="292" x2="790" y2="363" stroke="#61788a" stroke-width="2"/>
+<text x="1030" y="474" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">棘輪控測力</text>
+<line x1="1080" y1="447" x2="1107" y2="401" stroke="#61788a" stroke-width="2"/>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">測量面避開毛邊與夾持傷痕；分厘卡用棘輪／摩擦套控制測力，勿用力旋緊。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">接觸面對齊並多點量測；圖是接觸概念，不表示卡尺可以代替精密公差檢驗。</text>
+</svg>

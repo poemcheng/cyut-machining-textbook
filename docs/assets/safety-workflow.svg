@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">每一道加工都走一次安全循環</title><desc id="desc">裝夾、量測、清屑和換刀在完全停轉後執行；緊急時先停機再求助。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">每一道加工都走一次安全循環</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">裝夾、量測、清屑和換刀在完全停轉後執行；緊急時先停機再求助。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="40" y="272" width="200" height="222" rx="14" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<circle cx="140" cy="257" r="27" fill="#087f8c" stroke="#087f8c" stroke-width="3"/>
+<text x="140" y="267" font-size="28" fill="white" text-anchor="middle" font-weight="bold">1</text>
+<text x="140" y="335" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">裝夾檢查</text>
+<text x="140" y="398" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">鑰匙取下</text>
+<text x="140" y="434" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">刀具／工件鎖妥</text>
+<line x1="242" y1="380" x2="264" y2="380" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="264.000,380.000 245.300,389.350 245.300,370.650" fill="#087f8c" stroke="none"/>
+<rect x="269" y="272" width="200" height="222" rx="14" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<circle cx="369" cy="257" r="27" fill="#087f8c" stroke="#087f8c" stroke-width="3"/>
+<text x="369" y="267" font-size="28" fill="white" text-anchor="middle" font-weight="bold">2</text>
+<text x="369" y="335" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">空載試轉</text>
+<text x="369" y="398" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">人員避開</text>
+<text x="369" y="434" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">確認轉向與干涉</text>
+<line x1="471" y1="380" x2="493" y2="380" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="493.000,380.000 474.300,389.350 474.300,370.650" fill="#087f8c" stroke="none"/>
+<rect x="498" y="272" width="200" height="222" rx="14" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<circle cx="598" cy="257" r="27" fill="#087f8c" stroke="#087f8c" stroke-width="3"/>
+<text x="598" y="267" font-size="28" fill="white" text-anchor="middle" font-weight="bold">3</text>
+<text x="598" y="335" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">小量切削</text>
+<text x="598" y="398" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">穩定進給</text>
+<text x="598" y="434" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">觀察聲音與切屑</text>
+<line x1="700" y1="380" x2="722" y2="380" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="722.000,380.000 703.300,389.350 703.300,370.650" fill="#087f8c" stroke="none"/>
+<rect x="727" y="272" width="200" height="222" rx="14" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<circle cx="827" cy="257" r="27" fill="#087f8c" stroke="#087f8c" stroke-width="3"/>
+<text x="827" y="267" font-size="28" fill="white" text-anchor="middle" font-weight="bold">4</text>
+<text x="827" y="335" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">停機待停</text>
+<text x="827" y="398" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">主軸完全停止</text>
+<text x="827" y="434" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">清屑使用刷／鉤</text>
+<line x1="929" y1="380" x2="951" y2="380" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="951.000,380.000 932.300,389.350 932.300,370.650" fill="#087f8c" stroke="none"/>
+<rect x="956" y="272" width="200" height="222" rx="14" fill="#e9f4f5" stroke="#087f8c" stroke-width="3"/>
+<circle cx="1056" cy="257" r="27" fill="#087f8c" stroke="#087f8c" stroke-width="3"/>
+<text x="1056" y="267" font-size="28" fill="white" text-anchor="middle" font-weight="bold">5</text>
+<text x="1056" y="335" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">量測紀錄</text>
+<text x="1056" y="398" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">去毛邊與清潔</text>
+<text x="1056" y="434" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">尺寸→修正量</text>
+<path d="M1060 512 V565 H140 V514" fill="none" stroke="#ed8b3a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon data-role="arrowhead" points="140.000,514.000 158.000,550.000 122.000,550.000" fill="#ed8b3a" stroke="none"/>
+<text x="591" y="550" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">需要修正 → 回到檢查，再試切</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">異音、鬆動、振動、刀具卡住：立即停機，等完全停止後請教師檢查。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">急停是危急時的動作；日常停機、復歸與重新啟動流程依實機規定。</text>
+</svg>

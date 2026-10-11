@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">車床練習：階梯軸與二次裝夾</title><desc id="desc">毛胚 φ25 × 75 mm；成品總長 60 mm：φ20 × 40 + φ16 × 20。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">車床練習：階梯軸與二次裝夾</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">毛胚 φ25 × 75 mm；成品總長 60 mm：φ20 × 40 + φ16 × 20。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<text x="60" y="149" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">① 第一次裝夾：夾原料左端 25 mm</text>
+<rect x="100" y="185" width="600" height="74" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<rect x="100" y="185" width="200" height="74" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="100" y="176" width="200" height="17" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="100" y="251" width="200" height="17" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<line x1="300" y1="179" x2="700" y2="179" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="700.000,179.000 682.000,188.000 682.000,170.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="300.000,179.000 318.000,170.000 318.000,188.000" fill="#61788a" stroke="none"/>
+<text x="500.0" y="167" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">外露 50</text>
+<line x1="300" y1="185" x2="300" y2="185" stroke="#61788a" stroke-width="1.5"/>
+<line x1="700" y1="185" x2="700" y2="185" stroke="#61788a" stroke-width="1.5"/>
+<text x="752" y="215" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">右端 A</text>
+<text x="752" y="249" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">由 A 起 44 mm 車 φ20</text>
+<text x="752" y="280" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">再由 A 起 20 mm 車 φ16</text>
+<text x="60" y="314" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">② 反夾：保護已車 φ20 段，停機校正</text>
+<path d="M100 369 H260 V364 H452 V358 H692 V422 H452 V416 H260 V411 H100 Z" fill="#e9f4f5" stroke="#163249" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="260" y="364" width="160" height="52" rx="0" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="260" y="347" width="160" height="17" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="260" y="416" width="160" height="17" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<line x1="580" y1="354" x2="580" y2="426" stroke="#ed8b3a" stroke-width="4" stroke-dasharray="6 5"/>
+<text x="442" y="345" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">B 端外露約 34 mm</text>
+<text x="760" y="378" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">夾 A 起 20–40 mm 段</text>
+<text x="760" y="409" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">B 端車至總長 60 mm</text>
+<text x="760" y="440" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">補車 B 起 16 mm 為 φ20</text>
+<text x="60" y="484" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">③ 成品：取下後量總長與兩段直徑</text>
+<path d="M290 523 H690 V531 H890 V595 H690 V603 H290 Z" fill="#e9f4f5" stroke="#163249" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="290" y1="520" x2="690" y2="520" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="690.000,520.000 672.000,529.000 672.000,511.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="290.000,520.000 308.000,511.000 308.000,529.000" fill="#61788a" stroke="none"/>
+<text x="490.0" y="508" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">40</text>
+<line x1="290" y1="526" x2="290" y2="523" stroke="#61788a" stroke-width="1.5"/>
+<line x1="690" y1="526" x2="690" y2="523" stroke="#61788a" stroke-width="1.5"/>
+<line x1="690" y1="520" x2="890" y2="520" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="890.000,520.000 872.000,529.000 872.000,511.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="690.000,520.000 708.000,511.000 708.000,529.000" fill="#61788a" stroke="none"/>
+<text x="790.0" y="508" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">20</text>
+<line x1="690" y1="526" x2="690" y2="531" stroke="#61788a" stroke-width="1.5"/>
+<line x1="890" y1="526" x2="890" y2="531" stroke="#61788a" stroke-width="1.5"/>
+<text x="450" y="571" font-size="26" fill="#163249" text-anchor="middle" font-weight="normal">φ20</text>
+<text x="787" y="571" font-size="26" fill="#163249" text-anchor="middle" font-weight="normal">φ16</text>
+<rect x="40" y="617" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="644" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">反夾接觸面使用教師核准的軟爪／夾套保護；圖中灰色為夾持區。</text>
+<text x="60" y="675" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">二次裝夾有同軸度限制；先確認校正結果，再進行端面與接續外徑加工。</text>
+</svg>

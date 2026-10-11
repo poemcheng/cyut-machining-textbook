@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">車端面：從外緣向中心進給</title><desc id="desc">先定位端面，再用小軸向切深；接近中心時注意切削速度下降。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">車端面：從外緣向中心進給</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">先定位端面，再用小軸向切深；接近中心時注意切削速度下降。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="200" y="250.0" width="90" height="220" rx="8" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="282" y="260.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="282" y="423.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<line x1="175" y1="360" x2="670" y2="360" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<rect x="290" y="290" width="410" height="140" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<ellipse cx="700" cy="360" rx="18" ry="70" fill="#bed9dd" stroke="#163249" stroke-width="3"/>
+<line x1="155" y1="360" x2="815" y2="360" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<polygon points="706,425 736,468 826,468 826,443" fill="#ed8b3a" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<line x1="759" y1="424" x2="759" y2="363" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="759.000,363.000 781.500,408.000 736.500,408.000" fill="#087f8c" stroke="none"/>
+<text x="845" y="364" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">徑向進給</text>
+<line x1="834" y1="369" x2="772" y2="390" stroke="#61788a" stroke-width="2"/>
+<text x="790" y="490" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">刀尖由外緣接近中心</text>
+<path d="M218 250 C167 215 137 291 175 311" fill="none" stroke="#087f8c" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon data-role="arrowhead" points="175.000,311.000 124.699,309.952 145.658,270.131" fill="#087f8c" stroke="none"/>
+<text x="71" y="181" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">工件旋轉</text>
+<text x="471" y="225" font-size="26" fill="#163249" text-anchor="start" font-weight="bold">端面</text>
+<line x1="530" y1="235" x2="703" y2="312" stroke="#61788a" stroke-width="2"/>
+<line x1="787" y1="277" x2="735" y2="277" stroke="#ed8b3a" stroke-width="4"/>
+<polygon data-role="arrowhead" points="735.000,277.000 771.000,259.000 771.000,295.000" fill="#ed8b3a" stroke="none"/>
+<text x="785" y="244" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">小量軸向切深</text>
+<text x="382" y="520" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">端面與主軸軸線垂直</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">1  停機設定刀尖中心高 → 2  在外緣留安全間隙 → 3  試轉 → 4  薄削端面。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">完成一刀後先退離端面再返回；停機後才去毛邊與量測。</text>
+</svg>

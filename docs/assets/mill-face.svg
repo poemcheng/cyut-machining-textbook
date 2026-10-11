@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">平面銑削：薄切、多道、保持合理重疊</title><desc id="desc">俯視與側視示意；走刀路徑、旋轉方向及順逆銑由教師確認。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">平面銑削：薄切、多道、保持合理重疊</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">俯視與側視示意；走刀路徑、旋轉方向及順逆銑由教師確認。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="245" y="218" width="650" height="230" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<circle cx="213" cy="268" r="68" fill="#fadfc9" stroke="#ed8b3a" stroke-width="3"/>
+<line x1="153" y1="268" x2="1000" y2="268" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="1000.000,268.000 964.000,286.000 964.000,250.000" fill="#087f8c" stroke="none"/>
+<line x1="1000" y1="348" x2="150" y2="348" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="150.000,348.000 186.000,330.000 186.000,366.000" fill="#087f8c" stroke="none"/>
+<line x1="153" y1="428" x2="1000" y2="428" stroke="#087f8c" stroke-width="4"/>
+<polygon data-role="arrowhead" points="1000.000,428.000 964.000,446.000 964.000,410.000" fill="#087f8c" stroke="none"/>
+<text x="141" y="172" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">刀具從工件外側接近</text>
+<text x="630" y="187" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">相鄰刀道部分重疊</text>
+<line x1="733" y1="195" x2="708" y2="310" stroke="#61788a" stroke-width="2"/>
+<text x="983" y="466" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">離開邊界</text>
+<line x1="976" y1="439" x2="983" y2="428" stroke="#61788a" stroke-width="2"/>
+<text x="251" y="486" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">俯視：整個上表面都被刀具掃過</text>
+<rect x="306" y="538" width="539" height="38" rx="0" fill="#e9f4f5" stroke="#163249" stroke-width="3"/>
+<line x1="306" y1="530" x2="845" y2="530" stroke="#ed8b3a" stroke-width="3" stroke-dasharray="7 6"/>
+<line x1="300" y1="530" x2="300" y2="539" stroke="#ed8b3a" stroke-width="3"/>
+<text x="41" y="562" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">側視：小切深</text>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">先確認夾具高度與刀具下緣間隙，再選小切深試切；停機量厚度與表面平整度。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">圖中箭頭僅表示覆蓋次序；不可把示意折返當作順逆銑或自動進給的固定設定。</text>
+</svg>

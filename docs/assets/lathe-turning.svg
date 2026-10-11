@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">車外徑：徑向設定切深，軸向完成長度</title><desc id="desc">箭頭表示本圖的切削方向；刀具型式與進刀方向須由教師確認。</desc>
+<rect width="1200" height="700" fill="white"/>
+<style>text{font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif}</style>
+<text x="40" y="49" font-size="34" fill="#163249" text-anchor="start" font-weight="bold">車外徑：徑向設定切深，軸向完成長度</text>
+<text x="40" y="86" font-size="24" fill="#61788a" text-anchor="start" font-weight="normal">箭頭表示本圖的切削方向；刀具型式與進刀方向須由教師確認。</text>
+<line x1="40" y1="108" x2="1160" y2="108" stroke="#dbe3e9" stroke-width="2"/>
+<rect x="170" y="250.0" width="100" height="200" rx="8" fill="#dbe3e9" stroke="#163249" stroke-width="3"/>
+<rect x="262" y="260.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<rect x="262" y="403.0" width="20" height="37" rx="0" fill="#61788a" stroke="#163249" stroke-width="3"/>
+<line x1="145" y1="350" x2="650" y2="350" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<path d="M270 280 H605 V305 H920 V395 H605 V420 H270 Z" fill="#e9f4f5" stroke="#163249" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="135" y1="350" x2="1005" y2="350" stroke="#61788a" stroke-width="2" stroke-dasharray="10 8"/>
+<polygon points="605,305 635,262 725,262 725,287" fill="#ed8b3a" stroke="#163249" stroke-width="3" stroke-linejoin="round"/>
+<line x1="853" y1="218" x2="621" y2="218" stroke="#087f8c" stroke-width="5"/>
+<polygon data-role="arrowhead" points="621.000,218.000 666.000,195.500 666.000,240.500" fill="#087f8c" stroke="none"/>
+<text x="680" y="178" font-size="26" fill="#163249" text-anchor="middle" font-weight="bold">軸向進給至肩部</text>
+<line x1="1000" y1="276" x2="1000" y2="306" stroke="#ed8b3a" stroke-width="5"/>
+<polygon data-role="arrowhead" points="1000.000,306.000 987.250,280.500 1012.750,280.500" fill="#ed8b3a" stroke="none"/>
+<text x="890" y="244" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">徑向切深 ap</text>
+<text x="300" y="480" font-size="26" fill="#163249" text-anchor="start" font-weight="normal">未車削區</text>
+<line x1="416" y1="452" x2="443" y2="418" stroke="#61788a" stroke-width="2"/>
+<text x="749" y="480" font-size="26" fill="#163249" text-anchor="start" font-weight="normal">已車削外徑</text>
+<line x1="831" y1="452" x2="835" y2="396" stroke="#61788a" stroke-width="2"/>
+<text x="533" y="542" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">肩部位置</text>
+<line x1="592" y1="514" x2="605" y2="414" stroke="#61788a" stroke-width="2"/>
+<line x1="607" y1="520" x2="920" y2="520" stroke="#61788a" stroke-width="2"/>
+<polygon data-role="arrowhead" points="920.000,520.000 902.000,529.000 902.000,511.000" fill="#61788a" stroke="none"/>
+<polygon data-role="arrowhead" points="607.000,520.000 625.000,511.000 625.000,529.000" fill="#61788a" stroke="none"/>
+<text x="763.5" y="508" font-size="24" fill="#163249" text-anchor="middle" font-weight="normal">車削長度</text>
+<line x1="607" y1="526" x2="607" y2="396" stroke="#61788a" stroke-width="1.5"/>
+<line x1="920" y1="526" x2="920" y2="396" stroke="#61788a" stroke-width="1.5"/>
+<rect x="40" y="595" width="1120" height="68" rx="12" fill="#e9f4f5" stroke="none" stroke-width="3"/>
+<text x="60" y="622" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">先粗車並保留精車餘量；停機量測後，小量修正切深再精車。</text>
+<text x="60" y="653" font-size="24" fill="#163249" text-anchor="start" font-weight="normal">外徑目標 D：徑向修正量 = (目前外徑 - D) / 2；勿在旋轉中用游標尺。</text>
+</svg>
