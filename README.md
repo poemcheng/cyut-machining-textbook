@@ -6,6 +6,7 @@
 
 ## 開始閱讀
 
+- [線上圖解閱讀器](https://poemcheng.github.io/cyut-machining-textbook/)：手機與電腦可閱讀，含搜尋、圖說與算式練習。
 - [完整教科書（GitHub 可直接閱讀）](docs/textbook.md)
 - [PDF 列印版](docs/textbook.pdf)
 - [章節目錄與原稿](docs/index.md)
