@@ -1,0 +1,140 @@
+name: Manufacturing30 real-world integration
+on:
+  workflow_dispatch:
+  push:
+    branches: [manufacturing30-realworld-v4]
+    paths:
+      - '.github/mfg4-source/**'
+      - '.github/workflows/manufacturing30-realworld.yml'
+      - 'docs/manufacturing30/**'
+permissions:
+  contents: write
+concurrency:
+  group: manufacturing30-realworld-v4
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Restore checksum-verified readable source
+        run: |
+          python - <<'PY'
+          import base64,hashlib,json,lzma
+          from pathlib import Path
+          folder=Path('.github/mfg4-source')
+          if folder.exists():
+              raw=base64.b64decode(''.join((folder/f'part{i}.b64').read_text() for i in range(5)),validate=True)
+              assert hashlib.sha256(raw).hexdigest()=='002c525ce279b221095cd3cbfeaf096c411eb6bda38debeb005157d8532160a5'
+              data=json.loads(lzma.decompress(raw));root=Path('docs/manufacturing30').resolve()
+              def target(name):
+                  p=(root/name).resolve();assert p.is_relative_to(root);return p
+              for name,item in data['patches'].items():
+                  p=target(name);text=p.read_text(encoding='utf-8')
+                  assert hashlib.sha256(text.encode()).hexdigest()==item['baseSha256'],name
+                  for edit in sorted(item['edits'],key=lambda x:x['start'],reverse=True):
+                      text=text[:edit['start']]+edit['text']+text[edit['end']:]
+                  assert hashlib.sha256(text.encode()).hexdigest()==item['resultSha256'],name
+                  p.write_text(text,encoding='utf-8')
+              for name,text in data['newFiles'].items():
+                  p=target(name);assert not p.exists(),name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text,encoding='utf-8')
+              print('Verified and restored',len(data['patches'])+len(data['newFiles']),'source files')
+          PY
+      - name: Obtain pinned official visual meshes and runtime
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/mfg-intake /tmp/mfg-deps
+          git clone -q https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git /tmp/mfg-intake/ur
+          git -C /tmp/mfg-intake/ur checkout -q 81f7c9fe003c2f0e02eec5a7253f1b262ad38b61
+          git clone -q https://github.com/TechmanRobotInc/TM_Cobots_ROS2_Description.git /tmp/mfg-intake/tm
+          git -C /tmp/mfg-intake/tm checkout -q 377e2aacd95318903bc293bf694a044801e78128
+          python -m pip install numpy==2.3.5 PyYAML==6.0.3
+          cd /tmp/mfg-deps
+          npm init -y
+          npm install --save-exact three@0.164.1 playwright@1.56.1
+          /tmp/mfg-deps/node_modules/.bin/playwright install --with-deps chromium
+      - name: Build licensed manufacturer meshes and registers
+        run: |
+          set -euo pipefail
+          cd docs/manufacturing30
+          python scripts/prepare-manufacturer-assets.py --intake /tmp/mfg-intake --output assets/oem
+          node scripts/build-realworld-register.mjs
+          node scripts/local-imports.mjs
+          node scripts/build-register.mjs
+          ln -s /tmp/mfg-deps/node_modules node_modules
+          find src tests scripts -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          mkdir -p test-results
+          node --test tests/models.test.mjs tests/realworld.test.mjs | tee test-results/models-test.txt
+      - name: Preserve readable source on isolated feature branch
+        run: |
+          set -euo pipefail
+          git add docs/manufacturing30
+          if test -d .github/mfg4-source; then git rm -r .github/mfg4-source; fi
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat: add official UR5e and TM5-900 visuals, 15 fields and 27 traceable equipment cases'
+            git push origin HEAD:manufacturing30-realworld-v4
+          fi
+          git rev-parse HEAD > /tmp/mfg4-tested-source
+      - name: Verify thirty chapters and two official robot workflows
+        run: |
+          set -euo pipefail
+          cd docs/manufacturing30
+          python -m http.server 8020 --bind 127.0.0.1 >/tmp/mfg4-server.log 2>&1 &
+          for attempt in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8020/ >/dev/null && break; sleep 1; done
+          node tests/browser.mjs
+          node tests/realworld-browser.mjs
+      - name: Record actual validation evidence
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          root=Path('docs/manufacturing30');reports={}
+          for name in ['browser-report.json','realworld-browser.json']:
+              reports[name]=json.loads((root/'test-results'/name).read_text())
+              assert reports[name]['status']=='passed',name
+          source=Path('/tmp/mfg4-tested-source').read_text().strip()
+          run='https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']
+          out={'version':'4.0','testedSourceCommit':source,'run':run,'reports':reports,'limits':['Original representative field layouts, not surveyed real sites','Two official visual meshes and nominal six-axis chains, not serial-number calibration','Other manufacturer entries are cited equipment cases, not imported CAD','Chapter 29 planar two-link model is distinct from the six-axis visual/FK model']}
+          (root/'docs/V4_VERIFICATION.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
+          (root/'docs/V4_VERIFICATION.md').write_text('# Manufacturing30 4.0 verification\n\nTested readable source: `'+source+'`.\n\nRun: '+run+'\n\nBoth thirty-chapter and real-world browser reports passed. See [machine-readable evidence](V4_VERIFICATION.json). Node tests and screenshots are retained in the workflow artifact.\n\nOfficial assets retain BSD-3-Clause licenses, upstream revisions and SHA256 provenance. Layouts are original representative teaching environments, not scans of a real factory.\n',encoding='utf-8')
+          p=Path('.github/workflows/manufacturing30-check.yml');s=p.read_text()
+          s=s.replace('timeout-minutes: 15','timeout-minutes: 25')
+          s=s.replace('node --test tests/models.test.mjs | tee','node --test tests/models.test.mjs tests/realworld.test.mjs | tee')
+          s=s.replace('          node tests/browser.mjs\n','          node tests/browser.mjs\n          node tests/realworld-browser.mjs\n')
+          s=s.replace("('browser-report.json','models-test.txt')","('browser-report.json','realworld-browser.json','models-test.txt')")
+          p.write_text(s)
+          PY
+          git add docs/manufacturing30/docs/V4_VERIFICATION.* .github/workflows/manufacturing30-check.yml
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'test: preserve successful real-world browser and nominal kinematics verification'
+            git push origin HEAD:manufacturing30-realworld-v4
+          fi
+      - name: Package tested offline course
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          root=Path('docs/manufacturing30')
+          with zipfile.ZipFile('Manufacturing30_RealWorld_v4.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in root.rglob('*'):
+                  if p.is_file() and 'node_modules' not in p.parts and 'test-results' not in p.parts:
+                      z.write(p,Path('manufacturing30')/p.relative_to(root))
+              for name in ['browser-report.json','realworld-browser.json','models-test.txt']:
+                  z.write(root/'test-results'/name,Path('manufacturing30/test-results')/name)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manufacturing30-realworld-v4
+          path: |
+            Manufacturing30_RealWorld_v4.zip
+            docs/manufacturing30/test-results/
+          retention-days: 30
+          if-no-files-found: error
