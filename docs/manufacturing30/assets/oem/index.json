@@ -1,0 +1,23 @@
+{
+  "generatedBy": "scripts/prepare-manufacturer-assets.py",
+  "models": [
+    {
+      "key": "ur5e",
+      "name": "Universal Robots UR5e",
+      "triangles": 121789,
+      "bytes": 10195188,
+      "revision": "81f7c9fe003c2f0e02eec5a7253f1b262ad38b61",
+      "manifestSha256": "6c5bdbcaaf3383603f7ffcc6f7e2f066b883f7063aedd200c68739b216f5c989",
+      "visualSha256": "87d4503d38f539cc9e0258c2209ec37e0b98a9952949e1ee015e1313147832aa"
+    },
+    {
+      "key": "tm5-900",
+      "name": "Techman Robot TM5-900",
+      "triangles": 209670,
+      "bytes": 6517056,
+      "revision": "377e2aacd95318903bc293bf694a044801e78128",
+      "manifestSha256": "76827137dc89b3dda33c1c75722c753fe06e3a10451bcb8e978debec45e07d78",
+      "visualSha256": "138bcd162cf61374bf398fe5131ee39757e67bedbb30ed378e1f5703cbc61882"
+    }
+  ]
+}

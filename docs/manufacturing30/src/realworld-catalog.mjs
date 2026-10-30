@@ -1,0 +1,871 @@
+/* Audited manufacturer references, 2026-10-31. */
+export const CATALOG = {
+  "version": "4.0",
+  "scope": "Real manufacturer references and licensed official robot visual models. Layouts are authored representative workcells, not surveyed sites.",
+  "fields": {
+    "machining": {
+      "id": "machining",
+      "name": "精密零件加工廠",
+      "en": "PRECISION MACHINING",
+      "flow": [
+        "毛胚與派工",
+        "裝夾與加工",
+        "清洗與量測",
+        "成品流轉"
+      ],
+      "props": [
+        "rack",
+        "toolcart",
+        "chipbin",
+        "coolant"
+      ],
+      "note": "場域配置為原創教學布局；排屑、維修與人行空間須在真實工廠另行設計。"
+    },
+    "materials": {
+      "id": "materials",
+      "name": "材料試驗實驗室",
+      "en": "MATERIALS LABORATORY",
+      "flow": [
+        "試片標識",
+        "尺寸量測",
+        "夾持與試驗",
+        "數據與斷口"
+      ],
+      "props": [
+        "bench",
+        "samples",
+        "computer",
+        "cabinet"
+      ],
+      "note": "拉伸試片與設備僅用來說明量測流程，不代表材料已有實測結果。"
+    },
+    "metrology": {
+      "id": "metrology",
+      "name": "恆溫品管量測室",
+      "en": "METROLOGY LABORATORY",
+      "flow": [
+        "待測件恆溫",
+        "基準與校驗",
+        "探點與擬合",
+        "品質報告"
+      ],
+      "props": [
+        "bench",
+        "computer",
+        "standards",
+        "cabinet"
+      ],
+      "note": "空調與隔振為場域線索，不表示本模型已達任何溫控或量測精度。"
+    },
+    "foundry": {
+      "id": "foundry",
+      "name": "鑄造與壓鑄工作區",
+      "en": "FOUNDRY & DIE CASTING",
+      "flow": [
+        "備料與模具",
+        "熔湯與充填",
+        "冷卻與取件",
+        "清理與檢查"
+      ],
+      "props": [
+        "ladle",
+        "exhaust",
+        "sandbin",
+        "guard"
+      ],
+      "note": "以隔離熱源、取件與物流辨認工作區；不是熔湯作業安全規程。"
+    },
+    "glass": {
+      "id": "glass",
+      "name": "玻璃容器成形線",
+      "en": "GLASS CONTAINER FORMING",
+      "flow": [
+        "料滴準備",
+        "初步成形",
+        "吹製定形",
+        "退火與檢查"
+      ],
+      "props": [
+        "bottles",
+        "exhaust",
+        "conveyor",
+        "guard"
+      ],
+      "note": "玻璃成形工站與退火區為示意，不預測玻璃黏度或退火應力。"
+    },
+    "polymer": {
+      "id": "polymer",
+      "name": "塑膠射出加工廠",
+      "en": "POLYMER MOLDING CELL",
+      "flow": [
+        "樹脂與乾燥",
+        "塑化與射出",
+        "冷卻與頂出",
+        "修邊與檢驗"
+      ],
+      "props": [
+        "dryer",
+        "chiller",
+        "resin",
+        "toolcart"
+      ],
+      "note": "乾燥機、冷卻機和料箱為代表性周邊，不宣稱是特定射出機標配。"
+    },
+    "composite": {
+      "id": "composite",
+      "name": "複合材料成形工坊",
+      "en": "COMPOSITES WORKSHOP",
+      "flow": [
+        "材料與鋪層",
+        "裝模與加壓",
+        "加熱與固化",
+        "脫模與檢查"
+      ],
+      "props": [
+        "rolls",
+        "bench",
+        "cabinet",
+        "guard"
+      ],
+      "note": "纖維布、壓模和操作區為教學配置，未建置實際固化反應模型。"
+    },
+    "powder": {
+      "id": "powder",
+      "name": "粉末冶金工作區",
+      "en": "POWDER METALLURGY",
+      "flow": [
+        "混粉與批號",
+        "壓坯與脫模",
+        "燒結與冷卻",
+        "密度與尺寸"
+      ],
+      "props": [
+        "powder",
+        "exhaust",
+        "trays",
+        "guard"
+      ],
+      "note": "原料桶僅標示流程，不指示可燃粉末操作；依原廠與場域規範管理。"
+    },
+    "thermal": {
+      "id": "thermal",
+      "name": "熱處理與燒結區",
+      "en": "THERMAL PROCESSING",
+      "flow": [
+        "裝爐與批號",
+        "升溫與保溫",
+        "冷卻與出爐",
+        "硬度與尺寸"
+      ],
+      "props": [
+        "trays",
+        "exhaust",
+        "guard",
+        "cabinet"
+      ],
+      "note": "爐溫、材料溫度與組織變化不同；通道配置非安全距離設計。"
+    },
+    "forming": {
+      "id": "forming",
+      "name": "沖壓與金屬成形廠",
+      "en": "METAL FORMING",
+      "flow": [
+        "材料供應",
+        "模具與定位",
+        "成形與出料",
+        "尺寸與外觀"
+      ],
+      "props": [
+        "coil",
+        "diecart",
+        "guard",
+        "rack"
+      ],
+      "note": "護欄為視覺辨識，不構成光柵、互鎖或功能安全驗證。"
+    },
+    "plating": {
+      "id": "plating",
+      "name": "表面處理產線",
+      "en": "SURFACE FINISHING",
+      "flow": [
+        "前處理",
+        "鍍覆或表改",
+        "水洗與乾燥",
+        "膜厚與檢驗"
+      ],
+      "props": [
+        "tank",
+        "exhaust",
+        "rectifier",
+        "guard"
+      ],
+      "note": "管槽與抽氣僅示意，無藥液配方，也未進行環安法規符合性驗證。"
+    },
+    "welding": {
+      "id": "welding",
+      "name": "焊接與接合工作站",
+      "en": "WELDING WORKCELL",
+      "flow": [
+        "清潔與備料",
+        "治具定位",
+        "接合與冷卻",
+        "焊道與接頭檢驗"
+      ],
+      "props": [
+        "weldscreen",
+        "gas",
+        "exhaust",
+        "fixture"
+      ],
+      "note": "實作須依焊接資格、通風及遮光規範；場景不是合格作業認證。"
+    },
+    "assembly": {
+      "id": "assembly",
+      "name": "裝配與機器人工作站",
+      "en": "ASSEMBLY & AUTOMATION",
+      "flow": [
+        "料盤與工單",
+        "定位與裝配",
+        "鎖付或點膠",
+        "檢測與下料"
+      ],
+      "props": [
+        "bins",
+        "bench",
+        "conveyor",
+        "guard"
+      ],
+      "note": "協作手臂不代表所有情境可無護欄；安全需按工具、工件與應用評估。"
+    },
+    "additive": {
+      "id": "additive",
+      "name": "積層製造實作室",
+      "en": "ADDITIVE MANUFACTURING",
+      "flow": [
+        "切片與備料",
+        "逐層成形",
+        "支撐與後處理",
+        "量測與紀錄"
+      ],
+      "props": [
+        "spools",
+        "bench",
+        "computer",
+        "cabinet"
+      ],
+      "note": "以材料擠出代表快速成型；不同積層技術的品質與風險不同。"
+    },
+    "cleanroom": {
+      "id": "cleanroom",
+      "name": "微製造無塵室單元",
+      "en": "MICROFABRICATION",
+      "flow": [
+        "晶圓與光罩",
+        "對準與曝光",
+        "顯影與後製程",
+        "顯微檢查"
+      ],
+      "props": [
+        "wafer",
+        "ffu",
+        "computer",
+        "cabinet"
+      ],
+      "note": "無塵室布局為概念；未重建曝光機內部，也未宣稱潔淨室等級。"
+    }
+  },
+  "cases": {
+    "tongtai": {
+      "id": "tongtai",
+      "brand": "東台 Tongtai",
+      "model": "TMT2000-T2Y1",
+      "kind": "複合車削中心",
+      "url": "https://www.tongtai.com.tw/en/product-detail.php?id=70",
+      "observation": "比較主軸、刀塔、棒材進料與工件移交。選配與年度規格須回到原廠頁核對。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "haas-vf2": {
+      "id": "haas-vf2",
+      "brand": "Haas",
+      "model": "VF-2",
+      "kind": "立式加工中心",
+      "url": "https://www.haascnc.com/machines/vertical-mills/vf-series/models/small/vf-2.html",
+      "observation": "觀察 X/Y 工作台、Z 主軸與刀庫；區分刀具進給與主軸轉速。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "haas-st20": {
+      "id": "haas-st20",
+      "brand": "Haas",
+      "model": "ST-20",
+      "kind": "CNC 車削中心",
+      "url": "https://www.haascnc.com/machines/lathes/st/models/standard/st-20.html",
+      "observation": "辨認主軸夾持、X/Z 進給、刀塔與排屑位置。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "instron": {
+      "id": "instron",
+      "brand": "Instron",
+      "model": "6800 系列",
+      "kind": "萬能材料試驗機",
+      "url": "https://www.instron.com/en/products/testing-systems/universal-testing-systems/6800-series/",
+      "observation": "觀察夾具、荷重元與伸長量量測；量測剛性和設備剛性不可混為一談。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "mitutoyo": {
+      "id": "mitutoyo",
+      "brand": "Mitutoyo 三豐",
+      "model": "CRYSTA-Apex V",
+      "kind": "三次元座標量測機",
+      "url": "https://www.mitutoyo.com/products/coordinate-measuring-machines/standard-coordinate-measuring-machines/crysta-apex/",
+      "observation": "由基準建立、探點、座標擬合到報告；量測前要考慮溫度與探針校驗。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "disa": {
+      "id": "disa",
+      "brand": "DISA",
+      "model": "DISAMATIC D3",
+      "kind": "垂直綠砂造模線",
+      "url": "https://www.disagroup.com/d3/",
+      "observation": "比較垂直無砂箱造模與課堂砂箱示意；不可把相同澆道公式當作相同機構。",
+      "distinction": "DISAMATIC 是垂直造模案例；此章仍以通用砂箱展示鑄造基本原理，非 D3 機構複製。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "buhler": {
+      "id": "buhler",
+      "brand": "Bühler",
+      "model": "Carat",
+      "kind": "雙模板壓鑄機",
+      "url": "https://www.buhlergroup.com/global/en/products/carat_die-castingmachine.html",
+      "observation": "辨認合模、射出與取件順序，並比較壓鑄與重力砂模充填。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "emhart": {
+      "id": "emhart",
+      "brand": "Bucher Emhart Glass",
+      "model": "AIS",
+      "kind": "玻璃容器成形設備",
+      "url": "https://www.emhartglass.com/Products/Equipment/FormingEquipment/ContainerForming/AIS",
+      "observation": "從料滴、初模到成形模，分清玻璃容器加工各工站。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "fcs": {
+      "id": "fcs",
+      "brand": "富強鑫 FCS",
+      "model": "FA 系列",
+      "kind": "伺服節能射出成形機",
+      "url": "https://zh-tw.fcs.com.tw/products_i_hydraulic-injection-molding-machine",
+      "observation": "辨認料斗、塑化料筒、合模機構；場域加入乾燥與冷卻周邊，但不當作標準配備承諾。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "schuler-frp": {
+      "id": "schuler-frp",
+      "brand": "Schuler",
+      "model": "Hydraulic Press Technology",
+      "kind": "複材液壓成形設備",
+      "url": "https://www.schulergroup.com/major/us/technologien/hydraulic_press_technology/index.html",
+      "observation": "比較纖維鋪層、加熱、加壓與固化；單一混合法則不代表完整製程模型。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "dorst": {
+      "id": "dorst",
+      "brand": "DORST Technologies",
+      "model": "TPA120 HS",
+      "kind": "粉末壓製機",
+      "url": "https://www.dorst-technologies.com/en/products/axial-powder-presses/product/tpa120-hs",
+      "observation": "觀察送粉、上下沖頭、模穴與脫模；壓坯仍需後續燒結。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "nabertherm": {
+      "id": "nabertherm",
+      "brand": "Nabertherm",
+      "model": "Chamber Furnaces",
+      "kind": "箱型熱處理／燒結爐",
+      "url": "https://nabertherm.com/en/products/industrie/additive-fertigung/binderfrei/furnaces-protective-gas-boxes/chamber-furnaces-1",
+      "observation": "區分批次爐與連續爐；材料、氣氛、升降溫歷程須依實際工藝驗證。",
+      "distinction": "本案例為箱型爐；第 11 章連續式燒結爐只作機構比較，不能視為同一設備。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "schuler-mh": {
+      "id": "schuler-mh",
+      "brand": "Schuler",
+      "model": "MH 系列",
+      "kind": "液壓鍛造壓機",
+      "url": "https://www.schulergroup.com/major/us/technologien/produkte/anlagen_warmumformung_schmiedepressen_hydraulisch/index.html",
+      "observation": "比較主缸、滑塊、砧座及模具；理想鍛壓力不等於機台額定能力驗證。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "sms": {
+      "id": "sms",
+      "brand": "SMS group",
+      "model": "Tandem Cold Mills",
+      "kind": "串列冷軋設備",
+      "url": "https://www.sms-group.com/plants/all-plants/tandem-cold-mills-steel/",
+      "observation": "比較工作輥、支撐輥、張力與多機架；教材雙輥算例只呈現局部變形原理。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "chinfong": {
+      "id": "chinfong",
+      "brand": "金豐 Chin Fong",
+      "model": "OCP-EW 系列",
+      "kind": "C 型單曲軸沖床",
+      "url": "https://zh-tw.chinfong.com/c-frame-single-crank-power-presses-ocp-ew-series1",
+      "observation": "沿飛輪／曲軸／連桿／滑塊辨認力的傳遞；本章折彎算例不代表沖床操作設定。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "chevalier": {
+      "id": "chevalier",
+      "brand": "福裕 Chevalier",
+      "model": "FSG-1216ADIV",
+      "kind": "精密平面磨床",
+      "url": "https://www.chevaliertw.com/en/products/FSG-1216ADIV-Series",
+      "observation": "觀察砂輪護罩、磁性工作台、冷卻及修整；周速與主軸轉速的單位不同。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "chmer": {
+      "id": "chmer",
+      "brand": "慶鴻 CHMER",
+      "model": "CM434C",
+      "kind": "成形放電加工機",
+      "url": "https://www.chmer.com/en/products/die-sinker-edm/die-sinker-cnc-series",
+      "observation": "觀察電極、介電液槽與間隙控制；這是成形放電，不是線切割。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": [
+        [
+          "X/Y/Z 行程",
+          "400 × 300 × 350 mm"
+        ],
+        [
+          "原廠外形 W/D/H",
+          "1240 × 1380 × 2230 mm"
+        ]
+      ]
+    },
+    "atotech": {
+      "id": "atotech",
+      "brand": "Atotech",
+      "model": "GMF Plating Equipment",
+      "kind": "掛鍍與滾鍍產線",
+      "url": "https://www.atotech.com/products/general-metal-finishing/equipment/",
+      "observation": "辨認前處理、水洗、鍍槽、排氣與廢液處理；教材銅沉積公式不指定商用藥水。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "fronius": {
+      "id": "fronius",
+      "brand": "Fronius",
+      "model": "TPS/i",
+      "kind": "MIG/MAG 焊接系統",
+      "url": "https://www.fronius.com/en-gb/uk/welding-technology/product-information/tpsi-mig-mag-welding-system",
+      "observation": "沿電源、送絲、保護氣、焊槍觀察；淨熱輸入不等於焊接品質判定。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "tecna": {
+      "id": "tecna",
+      "brand": "TECNA",
+      "model": "Spot Welding Stations",
+      "kind": "電阻點焊工作站",
+      "url": "https://www.tecna.net/industrial-resistance-welding-systems/spot-welding-stations/",
+      "observation": "觀察電極加壓、通電、維持及釋放；I²Rt 是簡化熱量而非焊核模型。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "nordson": {
+      "id": "nordson",
+      "brand": "Nordson EFD",
+      "model": "EV 系列",
+      "kind": "三軸點膠機",
+      "url": "https://www.nordson.com/en/products/efd-products/3-axis-ev-series-automated-fluid-dispensing-robot",
+      "observation": "觀察膠筒、針頭、治具與路徑；接合面積公式不取代黏著劑固化試驗。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "atlas": {
+      "id": "atlas",
+      "brand": "Atlas Copco",
+      "model": "Tensor IxB",
+      "kind": "電動鎖付工具",
+      "url": "https://www.atlascopcogroup.com/en/media/press-releases/2021/20210428-red-dot-awards",
+      "observation": "比較扭矩、轉角與預緊力；扭矩係數要由材料、潤滑與實驗確認。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "ultimaker": {
+      "id": "ultimaker",
+      "brand": "UltiMaker",
+      "model": "S5",
+      "kind": "材料擠出式 3D 列印機",
+      "url": "https://ultimaker.com/3d-printers/s-series/ultimaker-s5/",
+      "observation": "辨認熱床、噴頭、耗材及層高；教學時間估算未含切片加減速與換料。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "asml": {
+      "id": "asml",
+      "brand": "ASML",
+      "model": "TWINSCAN NXT:1980Di",
+      "kind": "浸潤式 DUV 投影曝光設備",
+      "url": "https://www.asml.com/en/en/products/duv-lithography-systems/twinscan-nxt1980di",
+      "observation": "以投影曝光討論波長、數值孔徑與解析尺度；本場景沒有重建商用光學系統。",
+      "distinction": "網站機台為通用教學重建，非此品牌型號的原廠 CAD。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "suss": {
+      "id": "suss",
+      "brand": "SUSS",
+      "model": "MA/BA Gen4",
+      "kind": "掩模／鍵合對準機",
+      "url": "https://www.suss.com/tw/products-solutions/imaging-solutions/mask-alignment/maba-gen4-series",
+      "observation": "比較接觸式／接近式對準與投影曝光；不要直接將投影 NA 算式套用此案例。",
+      "distinction": "只作曝光方式比較；章內投影解析算式不是 MA/BA Gen4 的性能預測。",
+      "evidence": "manufacturer-reference",
+      "verified": "2026-10-31",
+      "spec": []
+    },
+    "ur5e": {
+      "id": "ur5e",
+      "brand": "Universal Robots",
+      "model": "UR5e",
+      "kind": "協作機械手臂",
+      "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Description",
+      "observation": "原廠七個視覺連桿、六旋轉關節與名義正運動學，可獨立調整角度。",
+      "distinction": "已導入官方視覺網格及名義運動學；未經單機校正、碰撞或實機安全驗證。",
+      "evidence": "official-visual",
+      "verified": "2026-10-31",
+      "spec": [],
+      "asset": "ur5e",
+      "revision": "81f7c9fe003c2f0e02eec5a7253f1b262ad38b61",
+      "license": "BSD-3-Clause"
+    },
+    "tm5-900": {
+      "id": "tm5-900",
+      "brand": "達明 Techman Robot",
+      "model": "TM5-900",
+      "kind": "協作機械手臂",
+      "url": "https://github.com/TechmanRobotInc/TM_Cobots_ROS2_Description",
+      "observation": "原廠七個視覺連桿與名義 URDF 關節，可與 UR5e 比較構形。",
+      "distinction": "已導入官方視覺網格及名義 URDF；未校正到實驗室的特定機台。",
+      "evidence": "official-visual",
+      "verified": "2026-10-31",
+      "spec": [],
+      "asset": "tm5-900",
+      "revision": "377e2aacd95318903bc293bf694a044801e78128",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "field": "machining",
+      "cases": [
+        "tongtai",
+        "haas-vf2",
+        "ur5e"
+      ],
+      "robot": true
+    },
+    {
+      "chapter": 2,
+      "field": "materials",
+      "cases": [
+        "instron"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 3,
+      "field": "materials",
+      "cases": [
+        "instron"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 4,
+      "field": "metrology",
+      "cases": [
+        "mitutoyo"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 5,
+      "field": "foundry",
+      "cases": [
+        "disa"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 6,
+      "field": "foundry",
+      "cases": [
+        "buhler"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 7,
+      "field": "glass",
+      "cases": [
+        "emhart"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 8,
+      "field": "polymer",
+      "cases": [
+        "fcs"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 9,
+      "field": "composite",
+      "cases": [
+        "schuler-frp"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 10,
+      "field": "powder",
+      "cases": [
+        "dorst"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 11,
+      "field": "thermal",
+      "cases": [
+        "nabertherm",
+        "dorst"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 12,
+      "field": "forming",
+      "cases": [
+        "schuler-mh"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 13,
+      "field": "forming",
+      "cases": [
+        "sms"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 14,
+      "field": "forming",
+      "cases": [
+        "chinfong"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 15,
+      "field": "machining",
+      "cases": [
+        "haas-st20"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 16,
+      "field": "machining",
+      "cases": [
+        "tongtai",
+        "haas-st20"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 17,
+      "field": "machining",
+      "cases": [
+        "haas-vf2"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 18,
+      "field": "machining",
+      "cases": [
+        "chevalier"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 19,
+      "field": "machining",
+      "cases": [
+        "chmer"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 20,
+      "field": "thermal",
+      "cases": [
+        "nabertherm"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 21,
+      "field": "plating",
+      "cases": [
+        "atotech"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 22,
+      "field": "welding",
+      "cases": [
+        "fronius"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 23,
+      "field": "welding",
+      "cases": [
+        "tecna"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 24,
+      "field": "assembly",
+      "cases": [
+        "nordson"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 25,
+      "field": "assembly",
+      "cases": [
+        "atlas",
+        "ur5e",
+        "tm5-900"
+      ],
+      "robot": true
+    },
+    {
+      "chapter": 26,
+      "field": "additive",
+      "cases": [
+        "ultimaker"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 27,
+      "field": "cleanroom",
+      "cases": [
+        "asml",
+        "suss"
+      ],
+      "robot": false
+    },
+    {
+      "chapter": 28,
+      "field": "assembly",
+      "cases": [
+        "tongtai",
+        "ur5e",
+        "tm5-900"
+      ],
+      "robot": true
+    },
+    {
+      "chapter": 29,
+      "field": "assembly",
+      "cases": [
+        "ur5e",
+        "tm5-900"
+      ],
+      "robot": true
+    },
+    {
+      "chapter": 30,
+      "field": "metrology",
+      "cases": [
+        "mitutoyo"
+      ],
+      "robot": false
+    }
+  ]
+};
+export const profileFor = id => CATALOG.chapters[id-1];

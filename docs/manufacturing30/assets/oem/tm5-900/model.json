@@ -1,0 +1,960 @@
+{
+  "schema": "mfg30/oem-visual-v1",
+  "key": "tm5-900",
+  "name": "Techman Robot TM5-900",
+  "sourceRepository": "TechmanRobotInc/TM_Cobots_ROS2_Description",
+  "sourceRevision": "377e2aacd95318903bc293bf694a044801e78128",
+  "license": "BSD-3-Clause",
+  "coordinateSystem": "URDF right-handed Z-up, metre; display rotation/scaling excluded from FK",
+  "conversion": "Original VISUAL triangles, baked COLLADA node transforms, indexed float32 position+normal; no simplification. No collision meshes used.",
+  "binary": "visuals.bin",
+  "binarySha256": "138bcd162cf61374bf398fe5131ee39757e67bedbb30ed378e1f5703cbc61882",
+  "triangles": 209670,
+  "parts": [
+    {
+      "link": "base_link",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tm5-base.obj",
+      "sha256": "eaa452a0a64c11ddb86f18087fdc4bea53b60b550d707408bfaa7baead1a7b74",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            0.72,
+            0.74,
+            0.77
+          ],
+          "vertexOffset": 0,
+          "vertexCount": 6986,
+          "indexOffset": 167664,
+          "indexCount": 28740,
+          "bounds": [
+            [
+              -0.0885,
+              -0.0885,
+              0.0
+            ],
+            [
+              0.0885,
+              0.0885,
+              0.066
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "link": "link_1",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tmr_400w_01.obj",
+      "sha256": "bb32c2855069abd31326bceaef89de10792164d3a0eaea33461788b9ea384f21",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            0.31,
+            0.3,
+            0.32
+          ],
+          "vertexOffset": 282624,
+          "vertexCount": 20398,
+          "indexOffset": 772176,
+          "indexCount": 81846,
+          "bounds": [
+            [
+              -0.060643,
+              -0.0668,
+              -0.0705
+            ],
+            [
+              0.060643,
+              0.060586,
+              0.078501
+            ]
+          ]
+        },
+        {
+          "material": "MTL1",
+          "color": [
+            1.0,
+            1.0,
+            0.949
+          ],
+          "vertexOffset": 1099560,
+          "vertexCount": 3660,
+          "indexOffset": 1187400,
+          "indexCount": 11706,
+          "bounds": [
+            [
+              -0.060625,
+              -0.061175,
+              -0.0815
+            ],
+            [
+              0.060629,
+              0.060586,
+              0.065439
+            ]
+          ]
+        },
+        {
+          "material": "MTL2",
+          "color": [
+            0.188,
+            0.188,
+            0.188
+          ],
+          "vertexOffset": 1234224,
+          "vertexCount": 1012,
+          "indexOffset": 1258512,
+          "indexCount": 3084,
+          "bounds": [
+            [
+              -0.03813,
+              -0.038129,
+              0.0705
+            ],
+            [
+              0.038155,
+              0.038132,
+              0.0735
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "link": "link_2",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tm5-900_arm1.obj",
+      "sha256": "590d5b723fb20f3e7a9d73136f28de50cdec037f370047ed6a915b6658a47dd0",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            0.31,
+            0.3,
+            0.32
+          ],
+          "vertexOffset": 1270848,
+          "vertexCount": 27096,
+          "indexOffset": 1921152,
+          "indexCount": 104226,
+          "bounds": [
+            [
+              -0.060586,
+              -0.060643,
+              -0.224501
+            ],
+            [
+              0.489586,
+              0.060643,
+              -0.0755
+            ]
+          ]
+        },
+        {
+          "material": "MTL1",
+          "color": [
+            0.188,
+            0.188,
+            0.188
+          ],
+          "vertexOffset": 2338056,
+          "vertexCount": 1152,
+          "indexOffset": 2365704,
+          "indexCount": 3120,
+          "bounds": [
+            [
+              -0.038132,
+              -0.038155,
+              -0.2195
+            ],
+            [
+              0.467132,
+              0.038155,
+              -0.2165
+            ]
+          ]
+        },
+        {
+          "material": "MTL2",
+          "color": [
+            1.0,
+            1.0,
+            0.949
+          ],
+          "vertexOffset": 2378184,
+          "vertexCount": 6282,
+          "indexOffset": 2528952,
+          "indexCount": 19464,
+          "bounds": [
+            [
+              -0.060586,
+              -0.060629,
+              -0.22425
+            ],
+            [
+              0.489586,
+              0.060627,
+              -0.0645
+            ]
+          ]
+        },
+        {
+          "material": "DEFAULT_MTL",
+          "color": [
+            0.695,
+            0.743,
+            0.79
+          ],
+          "vertexOffset": 2606808,
+          "vertexCount": 580,
+          "indexOffset": 2620728,
+          "indexCount": 1716,
+          "bounds": [
+            [
+              -0.05895,
+              -0.04772,
+              -0.162634
+            ],
+            [
+              0.48795,
+              0.04772,
+              -0.14751
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "link": "link_3",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tm5-900_arm2.obj",
+      "sha256": "ebefb50d5f18005365220b95a73737debca76ffa055b06e1e392e707afd7cede",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            0.31,
+            0.3,
+            0.32
+          ],
+          "vertexOffset": 2627592,
+          "vertexCount": 14018,
+          "indexOffset": 2964024,
+          "indexCount": 54117,
+          "bounds": [
+            [
+              0.066,
+              -0.045293,
+              -0.0698
+            ],
+            [
+              0.456294,
+              0.045293,
+              0.0428
+            ]
+          ]
+        },
+        {
+          "material": "MTL1",
+          "color": [
+            0.72,
+            0.74,
+            0.77
+          ],
+          "vertexOffset": 3180492,
+          "vertexCount": 2669,
+          "indexOffset": 3244548,
+          "indexCount": 13833,
+          "bounds": [
+            [
+              -0.0585,
+              -0.058499,
+              -0.0668
+            ],
+            [
+              0.412498,
+              0.058499,
+              0.0267
+            ]
+          ]
+        },
+        {
+          "material": "DEFAULT_MTL",
+          "color": [
+            0.695,
+            0.743,
+            0.79
+          ],
+          "vertexOffset": 3299880,
+          "vertexCount": 341,
+          "indexOffset": 3308064,
+          "indexCount": 1002,
+          "bounds": [
+            [
+              -0.055123,
+              -0.035,
+              -0.0668
+            ],
+            [
+              0.445,
+              0.051083,
+              0.042449
+            ]
+          ]
+        },
+        {
+          "material": "MTL2",
+          "color": [
+            1.0,
+            1.0,
+            0.949
+          ],
+          "vertexOffset": 3312072,
+          "vertexCount": 2826,
+          "indexOffset": 3379896,
+          "indexCount": 8442,
+          "bounds": [
+            [
+              0.366076,
+              -0.045079,
+              -0.0748
+            ],
+            [
+              0.456215,
+              0.045079,
+              0.042599
+            ]
+          ]
+        },
+        {
+          "material": "MTL3",
+          "color": [
+            0.22,
+            0.23,
+            0.28
+          ],
+          "vertexOffset": 3413664,
+          "vertexCount": 432,
+          "indexOffset": 3424032,
+          "indexCount": 1170,
+          "bounds": [
+            [
+              0.39075,
+              -0.033927,
+              0.0351
+            ],
+            [
+              0.44935,
+              0.033884,
+              0.0381
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "link": "link_4",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tmr_100w_01.obj",
+      "sha256": "0ec5322ed12b22a206506b8684fadaa9175ebaeca31749f3c0a952670d09f3a0",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            0.31,
+            0.3,
+            0.32
+          ],
+          "vertexOffset": 3428712,
+          "vertexCount": 19592,
+          "indexOffset": 3898920,
+          "indexCount": 78861,
+          "bounds": [
+            [
+              -0.045293,
+              -0.0535,
+              -0.044795
+            ],
+            [
+              0.045293,
+              0.0591,
+              0.0497
+            ]
+          ]
+        },
+        {
+          "material": "MTL1",
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertexOffset": 4214364,
+          "vertexCount": 4338,
+          "indexOffset": 4318476,
+          "indexCount": 13389,
+          "bounds": [
+            [
+              -0.045079,
+              -0.0585,
+              -0.044715
+            ],
+            [
+              0.045079,
+              0.047593,
+              0.045424
+            ]
+          ]
+        },
+        {
+          "material": "MTL2",
+          "color": [
+            0.22,
+            0.23,
+            0.28
+          ],
+          "vertexOffset": 4372032,
+          "vertexCount": 558,
+          "indexOffset": 4385424,
+          "indexCount": 1602,
+          "bounds": [
+            [
+              -0.033884,
+              0.0514,
+              -0.03785
+            ],
+            [
+              0.033927,
+              0.0544,
+              0.02075
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "link": "link_5",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tmr_100w_02.obj",
+      "sha256": "6c51703aa86da2cb216642b5230fad5babd81f37528ad90f7206951628f90b20",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            0.31,
+            0.3,
+            0.32
+          ],
+          "vertexOffset": 4391832,
+          "vertexCount": 19600,
+          "indexOffset": 4862232,
+          "indexCount": 78885,
+          "bounds": [
+            [
+              -0.045293,
+              -0.0535,
+              -0.0497
+            ],
+            [
+              0.045293,
+              0.0591,
+              0.044795
+            ]
+          ]
+        },
+        {
+          "material": "MTL1",
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertexOffset": 5177772,
+          "vertexCount": 3960,
+          "indexOffset": 5272812,
+          "indexCount": 12261,
+          "bounds": [
+            [
+              -0.045079,
+              -0.0585,
+              -0.045424
+            ],
+            [
+              0.045079,
+              0.047593,
+              0.044715
+            ]
+          ]
+        },
+        {
+          "material": "MTL2",
+          "color": [
+            0.22,
+            0.23,
+            0.28
+          ],
+          "vertexOffset": 5321856,
+          "vertexCount": 558,
+          "indexOffset": 5335248,
+          "indexCount": 1602,
+          "bounds": [
+            [
+              -0.033927,
+              0.0514,
+              -0.02075
+            ],
+            [
+              0.033884,
+              0.0544,
+              0.03785
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "link": "link_6",
+      "source": "tm_description/cobot/tm5_900_description/meshes/tm5-900/visual/tmr_ee.obj",
+      "sha256": "529364c35eea3ebc390ce9543fdcef61bb06a43d11d55790bd6ce90bf9d66e7c",
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "groups": [
+        {
+          "material": "MTL0",
+          "color": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertexOffset": 5341656,
+          "vertexCount": 29914,
+          "indexOffset": 6059592,
+          "indexCount": 107811,
+          "bounds": [
+            [
+              -0.043339,
+              -0.043332,
+              -0.06438
+            ],
+            [
+              0.043339,
+              0.104857,
+              0.05225
+            ]
+          ]
+        },
+        {
+          "material": "MTL1",
+          "color": [
+            0.011,
+            0.012,
+            1.0
+          ],
+          "vertexOffset": 6490836,
+          "vertexCount": 191,
+          "indexOffset": 6495420,
+          "indexCount": 555,
+          "bounds": [
+            [
+              -0.043339,
+              -0.043332,
+              -0.01795
+            ],
+            [
+              0.043339,
+              0.037134,
+              -0.01395
+            ]
+          ]
+        },
+        {
+          "material": "DEFAULT_MTL",
+          "color": [
+            0.695,
+            0.743,
+            0.79
+          ],
+          "vertexOffset": 6497640,
+          "vertexCount": 496,
+          "indexOffset": 6509544,
+          "indexCount": 1434,
+          "bounds": [
+            [
+              -0.0429,
+              -0.033623,
+              -0.0479
+            ],
+            [
+              -0.019959,
+              0.004998,
+              -0.0379
+            ]
+          ]
+        },
+        {
+          "material": "MTL2",
+          "color": [
+            0.31,
+            0.3,
+            0.32
+          ],
+          "vertexOffset": 6515280,
+          "vertexCount": 50,
+          "indexOffset": 6516480,
+          "indexCount": 144,
+          "bounds": [
+            [
+              -0.008734,
+              0.06625,
+              0.05225
+            ],
+            [
+              0.008734,
+              0.08375,
+              0.05225
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "baseRPY": [
+    0,
+    0,
+    0
+  ],
+  "baseLink": "base_link",
+  "joints": [
+    {
+      "name": "joint_1",
+      "parent": "base_link",
+      "child": "link_1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.1452
+      ],
+      "rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limitsDegrees": [
+        -270,
+        270
+      ]
+    },
+    {
+      "name": "joint_2",
+      "parent": "link_1",
+      "child": "link_2",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        -1.570796,
+        -1.570796,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limitsDegrees": [
+        -180,
+        180
+      ]
+    },
+    {
+      "name": "joint_3",
+      "parent": "link_2",
+      "child": "link_3",
+      "xyz": [
+        0.429,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limitsDegrees": [
+        -155,
+        155
+      ]
+    },
+    {
+      "name": "joint_4",
+      "parent": "link_3",
+      "child": "link_4",
+      "xyz": [
+        0.4115,
+        0.0,
+        -0.1223
+      ],
+      "rpy": [
+        0.0,
+        -0.0,
+        1.570796
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limitsDegrees": [
+        -180,
+        180
+      ]
+    },
+    {
+      "name": "joint_5",
+      "parent": "link_4",
+      "child": "link_5",
+      "xyz": [
+        0.0,
+        -0.106,
+        0.0
+      ],
+      "rpy": [
+        1.570796,
+        -0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limitsDegrees": [
+        -180,
+        180
+      ]
+    },
+    {
+      "name": "joint_6",
+      "parent": "link_5",
+      "child": "link_6",
+      "xyz": [
+        0.0,
+        -0.11315,
+        0.0
+      ],
+      "rpy": [
+        1.570796,
+        -0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limitsDegrees": [
+        -270,
+        270
+      ]
+    }
+  ],
+  "tool": {
+    "xyz": [
+      0,
+      0,
+      0
+    ],
+    "rpy": [
+      0,
+      0,
+      0
+    ]
+  },
+  "homeDegrees": [
+    0,
+    -20,
+    70,
+    30,
+    90,
+    0
+  ],
+  "calibration": "Nominal TM5-900 URDF, not a measured laboratory robot.",
+  "fkFixtures": [
+    {
+      "degrees": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrixRowMajor": [
+        0.9999999999999466,
+        -2.135897913739528e-13,
+        3.2679489653805105e-07,
+        3.5161496893020574e-07,
+        3.267948965381209e-07,
+        6.535896862813025e-07,
+        -0.999999999999733,
+        -0.23544999999999272,
+        1.745141200824431e-20,
+        0.9999999999997864,
+        6.535896862813374e-07,
+        1.0917000369767726,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "positionMetres": [
+        3.5161496893020574e-07,
+        -0.23544999999999272,
+        1.0917000369767726
+      ]
+    },
+    {
+      "degrees": [
+        0,
+        -20,
+        70,
+        30,
+        90,
+        0
+      ],
+      "matrixRowMajor": [
+        -6.486250442830344e-07,
+        0.9848076962646052,
+        0.17364849949705968,
+        0.2925388181258339,
+        0.9999999999997881,
+        6.486250072041175e-07,
+        5.674765533326049e-08,
+        -0.1222999043998751,
+        -5.6747231520098515e-08,
+        0.17364849949705977,
+        -0.984807696264817,
+        0.7198108902173288,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "positionMetres": [
+        0.2925388181258339,
+        -0.1222999043998751,
+        0.7198108902173288
+      ]
+    },
+    {
+      "degrees": [
+        15,
+        -35,
+        65,
+        -20,
+        45,
+        10
+      ],
+      "matrixRowMajor": [
+        0.5113108669257256,
+        0.0801604984345524,
+        0.8556491640002852,
+        0.10730942827124068,
+        0.8579349872761493,
+        -0.10563976214877312,
+        -0.5027800694743418,
+        -0.18069233184918948,
+        0.050087473195764544,
+        0.9911682678253347,
+        -0.12278725457061423,
+        0.9434819013812747,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "positionMetres": [
+        0.10730942827124068,
+        -0.18069233184918948,
+        0.9434819013812747
+      ]
+    }
+  ]
+}
