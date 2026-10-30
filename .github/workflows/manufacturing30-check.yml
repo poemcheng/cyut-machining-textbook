@@ -7,7 +7,10 @@ on:
       - 'docs/manufacturing30/**'
       - '.github/workflows/manufacturing30-check.yml'
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: manufacturing30-verification
+  cancel-in-progress: false
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -17,33 +20,57 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Obtain pinned Three.js dependencies
+      - name: Obtain pinned browser and Three.js dependencies
         run: |
           mkdir -p /tmp/mfg-deps
           cd /tmp/mfg-deps
           npm init -y
           npm install --save-exact three@0.164.1 playwright@1.56.1
-          mkdir -p "$GITHUB_WORKSPACE/mfg-vendor/controls"
-          cp node_modules/three/build/three.module.js "$GITHUB_WORKSPACE/mfg-vendor/three.module.js"
-          cp node_modules/three/examples/jsm/controls/OrbitControls.js "$GITHUB_WORKSPACE/mfg-vendor/controls/OrbitControls.js"
-          cp node_modules/three/LICENSE "$GITHUB_WORKSPACE/mfg-vendor/LICENSE-THREE.txt"
-      - name: Check complete course when present
-        if: ${{ hashFiles('docs/manufacturing30/tests/models.test.mjs') != '' }}
+          mkdir -p "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/controls"
+          cp node_modules/three/build/three.module.js "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/three.module.js"
+          cp node_modules/three/examples/jsm/controls/OrbitControls.js "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/controls/OrbitControls.js"
+          cp node_modules/three/LICENSE "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/LICENSE-THREE.txt"
+      - name: Test all chapter models and assemble local resources
         run: |
           cd docs/manufacturing30
-          node --test tests/models.test.mjs
-          cp -r "$GITHUB_WORKSPACE/mfg-vendor/." vendor/
-          ln -s /tmp/mfg-deps/node_modules node_modules
+          mkdir -p test-results
+          node --test tests/models.test.mjs | tee test-results/models-test.txt
           node scripts/local-imports.mjs
+          node scripts/build-register.mjs
+          ln -s /tmp/mfg-deps/node_modules node_modules
           /tmp/mfg-deps/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify all thirty WebGL chapters and learning flows
+        run: |
+          cd docs/manufacturing30
           python -m http.server 8020 --bind 127.0.0.1 >/tmp/mfg-server.log 2>&1 &
+          for attempt in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8020/ >/dev/null && break; sleep 1; done
           node tests/browser.mjs
+      - name: Preserve self-contained tested runtime and model register
+        run: |
+          git add docs/manufacturing30/vendor docs/manufacturing30/index.html docs/manufacturing30/docs/MODEL_REGISTER.md docs/manufacturing30/docs/curriculum.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'build: vendor tested Three.js runtime and generate 30 chapter model register'
+            git push origin HEAD:main
+          fi
+      - name: Package tested course
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          root=Path('docs/manufacturing30')
+          with zipfile.ZipFile('manufacturing30-complete.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for p in root.rglob('*'):
+              if p.is_file() and 'node_modules' not in p.parts and 'test-results' not in p.parts:
+                z.write(p,Path('manufacturing30')/p.relative_to(root))
+            for name in ('browser-report.json','models-test.txt'):
+              z.write(root/'test-results'/name,Path('manufacturing30/test-results')/name)
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: manufacturing30-verification
           path: |
-            mfg-vendor/
+            manufacturing30-complete.zip
             docs/manufacturing30/test-results/
           if-no-files-found: error
           retention-days: 30
