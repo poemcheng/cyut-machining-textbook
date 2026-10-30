@@ -1,0 +1,12 @@
+{
+  "version": "4.0",
+  "testedSourceCommit": "648ab945ef089629807fc47bf3848bc06c61e50f",
+  "run": "https://github.com/poemcheng/cyut-machining-textbook/actions/runs/41104019445",
+  "workflowOverall": "failed at post-test workflow-file write-back permission",
+  "node": {"passed":123,"failed":0},
+  "browser": {"chapters":30,"status":"passed","errors":[],"failedRequests":[],"labAB":true,"quiz":true,"reloadPersistence":true,"invalidInput":true,"jsonExport":true,"teacherImport":true,"mobileViewportWidth":390},
+  "realworldBrowser": {"status":"passed","errors":[],"failedRequests":[],"officialModels":[{"key":"ur5e","links":7,"joints":6,"triangles":121789,"renderMeshes":27,"maxFixturePositionResidualMetres":1.3877787807814457e-17},{"key":"tm5-900","links":7,"joints":6,"triangles":209670,"renderMeshes":23,"maxFixturePositionResidualMetres":4.440892098500626e-16}],"rapidChapterSwitch":true,"mobileControls":true},
+  "scope": {"authoredFields":15,"manufacturerReferenceCases":27,"officialVisualRobotModels":2},
+  "artifactId":12999724303,
+  "limits":["Representative teaching layouts, not surveyed real factories","Official visual meshes and nominal six-axis kinematics, not calibrated engineering CAD","Other brand cases are source-backed references, not imported OEM CAD","Software agreement does not establish physical accuracy or machine safety"]
+}

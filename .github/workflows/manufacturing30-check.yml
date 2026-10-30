@@ -7,70 +7,66 @@ on:
       - 'docs/manufacturing30/**'
       - '.github/workflows/manufacturing30-check.yml'
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: manufacturing30-verification
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Obtain pinned browser and Three.js dependencies
+      - name: Obtain pinned test dependencies
         run: |
           mkdir -p /tmp/mfg-deps
           cd /tmp/mfg-deps
           npm init -y
           npm install --save-exact three@0.164.1 playwright@1.56.1
-          mkdir -p "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/controls"
-          cp node_modules/three/build/three.module.js "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/three.module.js"
-          cp node_modules/three/examples/jsm/controls/OrbitControls.js "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/controls/OrbitControls.js"
-          cp node_modules/three/LICENSE "$GITHUB_WORKSPACE/docs/manufacturing30/vendor/LICENSE-THREE.txt"
-      - name: Test all chapter models and assemble local resources
+          /tmp/mfg-deps/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify source, models and official-asset provenance
         run: |
           cd docs/manufacturing30
-          mkdir -p test-results
-          node --test tests/models.test.mjs | tee test-results/models-test.txt
-          node scripts/local-imports.mjs
-          node scripts/build-register.mjs
           ln -s /tmp/mfg-deps/node_modules node_modules
-          /tmp/mfg-deps/node_modules/.bin/playwright install --with-deps chromium
-      - name: Verify all thirty WebGL chapters and learning flows
+          mkdir -p test-results
+          find src tests scripts -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node --test tests/models.test.mjs tests/realworld.test.mjs | tee test-results/models-test.txt
+      - name: Verify thirty chapters and two official robot workflows
         run: |
           cd docs/manufacturing30
           python -m http.server 8020 --bind 127.0.0.1 >/tmp/mfg-server.log 2>&1 &
           for attempt in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8020/ >/dev/null && break; sleep 1; done
           node tests/browser.mjs
-      - name: Preserve self-contained tested runtime and model register
-        run: |
-          git add docs/manufacturing30/vendor docs/manufacturing30/index.html docs/manufacturing30/docs/MODEL_REGISTER.md docs/manufacturing30/docs/curriculum.json
-          if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'build: vendor tested Three.js runtime and generate 30 chapter model register'
-            git push origin HEAD:main
-          fi
-      - name: Package tested course
+          node tests/realworld-browser.mjs
+      - name: Package the exact tested offline course and release evidence
         run: |
           python - <<'PY'
+          import json,os,zipfile
           from pathlib import Path
-          import zipfile
           root=Path('docs/manufacturing30')
-          with zipfile.ZipFile('manufacturing30-complete.zip','w',zipfile.ZIP_DEFLATED) as z:
-            for p in root.rglob('*'):
-              if p.is_file() and 'node_modules' not in p.parts and 'test-results' not in p.parts:
-                z.write(p,Path('manufacturing30')/p.relative_to(root))
-            for name in ('browser-report.json','models-test.txt'):
-              z.write(root/'test-results'/name,Path('manufacturing30/test-results')/name)
+          reports={name:json.loads((root/'test-results'/name).read_text()) for name in ['browser-report.json','realworld-browser.json']}
+          assert all(r.get('status')=='passed' for r in reports.values())
+          release={'sourceCommit':os.environ['GITHUB_SHA'],'run':'https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID'],'reports':reports}
+          (root/'test-results/RELEASE.json').write_text(json.dumps(release,ensure_ascii=False,indent=2),encoding='utf-8')
+          with zipfile.ZipFile('Manufacturing30_RealWorld_v4.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in root.rglob('*'):
+                  if p.is_file() and 'node_modules' not in p.parts and 'test-results' not in p.parts:
+                      z.write(p,Path('manufacturing30')/p.relative_to(root))
+              for name in ['browser-report.json','realworld-browser.json','models-test.txt','RELEASE.json']:
+                  z.write(root/'test-results'/name,Path('manufacturing30/test-results')/name)
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: manufacturing30-verification
           path: |
-            manufacturing30-complete.zip
+            Manufacturing30_RealWorld_v4.zip
             docs/manufacturing30/test-results/
           if-no-files-found: error
           retention-days: 30
