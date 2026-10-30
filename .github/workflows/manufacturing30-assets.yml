@@ -1,0 +1,45 @@
+name: Manufacturing30 manufacturer asset intake
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/manufacturing30-assets.yml']
+permissions:
+  contents: read
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Obtain pinned manufacturer descriptions and licensed renderers
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/mfg-intake intake
+          cd /tmp/mfg-intake
+          git clone -q https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git ur
+          git -C ur checkout -q 81f7c9fe003c2f0e02eec5a7253f1b262ad38b61
+          git clone -q https://github.com/TechmanRobotInc/TM_Cobots_ROS2_Description.git tm
+          git -C tm checkout -q 377e2aacd95318903bc293bf694a044801e78128
+          npm install --save-exact three@0.164.1
+          mkdir -p "$GITHUB_WORKSPACE/intake/ur/config" "$GITHUB_WORKSPACE/intake/ur/meshes" "$GITHUB_WORKSPACE/intake/tm" "$GITHUB_WORKSPACE/intake/vendor/loaders"
+          cp -r ur/config/ur5e "$GITHUB_WORKSPACE/intake/ur/config/"
+          cp -r ur/meshes/ur5e "$GITHUB_WORKSPACE/intake/ur/meshes/"
+          cp -r ur/urdf "$GITHUB_WORKSPACE/intake/ur/"
+          cp ur/LICENSE ur/README.md "$GITHUB_WORKSPACE/intake/ur/"
+          cp -r tm/tm_description "$GITHUB_WORKSPACE/intake/tm/"
+          cp tm/LICENSE tm/README.md "$GITHUB_WORKSPACE/intake/tm/"
+          cp node_modules/three/examples/jsm/loaders/{ColladaLoader,STLLoader,TGALoader}.js "$GITHUB_WORKSPACE/intake/vendor/loaders/"
+          printf '%s\n' 'UR 81f7c9fe003c2f0e02eec5a7253f1b262ad38b61' 'TM 377e2aacd95318903bc293bf694a044801e78128' 'Three.js 0.164.1' > "$GITHUB_WORKSPACE/intake/UPSTREAM.txt"
+          cd "$GITHUB_WORKSPACE"
+          find intake -type f -print0 | sort -z | xargs -0 sha256sum > intake-sha256.txt
+          cp intake-sha256.txt intake/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manufacturer-model-sources
+          path: intake/
+          retention-days: 30
+          if-no-files-found: error
