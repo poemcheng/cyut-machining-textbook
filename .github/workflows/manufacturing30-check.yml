@@ -1,0 +1,49 @@
+name: Manufacturing30 verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/manufacturing30/**'
+      - '.github/workflows/manufacturing30-check.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Obtain pinned Three.js dependencies
+        run: |
+          mkdir -p /tmp/mfg-deps
+          cd /tmp/mfg-deps
+          npm init -y
+          npm install --save-exact three@0.164.1 playwright@1.56.1
+          mkdir -p "$GITHUB_WORKSPACE/mfg-vendor/controls"
+          cp node_modules/three/build/three.module.js "$GITHUB_WORKSPACE/mfg-vendor/three.module.js"
+          cp node_modules/three/examples/jsm/controls/OrbitControls.js "$GITHUB_WORKSPACE/mfg-vendor/controls/OrbitControls.js"
+          cp node_modules/three/LICENSE "$GITHUB_WORKSPACE/mfg-vendor/LICENSE-THREE.txt"
+      - name: Check complete course when present
+        if: ${{ hashFiles('docs/manufacturing30/tests/models.test.mjs') != '' }}
+        run: |
+          cd docs/manufacturing30
+          node --test tests/models.test.mjs
+          cp -r "$GITHUB_WORKSPACE/mfg-vendor/." vendor/
+          ln -s /tmp/mfg-deps/node_modules node_modules
+          node scripts/local-imports.mjs
+          /tmp/mfg-deps/node_modules/.bin/playwright install --with-deps chromium
+          python -m http.server 8020 --bind 127.0.0.1 >/tmp/mfg-server.log 2>&1 &
+          node tests/browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manufacturing30-verification
+          path: |
+            mfg-vendor/
+            docs/manufacturing30/test-results/
+          if-no-files-found: error
+          retention-days: 30
