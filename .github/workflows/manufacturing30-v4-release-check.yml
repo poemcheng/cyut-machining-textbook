@@ -1,0 +1,45 @@
+name: Manufacturing30 v4 release candidate verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/manufacturing30-v4-release-check.yml']
+permissions:
+  contents: write
+jobs:
+  verify-candidate:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 2a14aaf38a50c796c8d48e08f96f152c35539eb6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run the fixed candidate's reviewed build and verification commands
+        shell: bash
+        run: |
+          python -m pip install PyYAML==6.0.3
+          python - <<'PY'
+          import subprocess,yaml
+          from pathlib import Path
+          doc=yaml.safe_load(Path('.github/workflows/manufacturing30-realworld.yml').read_text())
+          for step in doc['jobs']['verify']['steps']:
+              if 'run' not in step: continue
+              print('::group::'+step.get('name','candidate verification'),flush=True)
+              subprocess.run(['bash','-e','-o','pipefail','-c',step['run']],check=True)
+              print('::endgroup::',flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manufacturing30-realworld-v4
+          path: |
+            Manufacturing30_RealWorld_v4.zip
+            docs/manufacturing30/test-results/
+          retention-days: 30
+          if-no-files-found: error
