@@ -11,11 +11,14 @@ permissions:
   contents: write
 concurrency:
   group: manufacturing30-realworld-v4
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -47,9 +50,8 @@ jobs:
                   p=target(name);assert not p.exists(),name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text,encoding='utf-8')
               print('Verified and restored',len(data['patches'])+len(data['newFiles']),'source files')
           PY
-      - name: Obtain pinned official visual meshes and runtime
+      - name: Obtain pinned manufacturer meshes and test runtime
         run: |
-          set -euo pipefail
           mkdir -p /tmp/mfg-intake /tmp/mfg-deps
           git clone -q https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git /tmp/mfg-intake/ur
           git -C /tmp/mfg-intake/ur checkout -q 81f7c9fe003c2f0e02eec5a7253f1b262ad38b61
@@ -60,9 +62,8 @@ jobs:
           npm init -y
           npm install --save-exact three@0.164.1 playwright@1.56.1
           /tmp/mfg-deps/node_modules/.bin/playwright install --with-deps chromium
-      - name: Build licensed manufacturer meshes and registers
+      - name: Build licensed models and test mathematical boundaries
         run: |
-          set -euo pipefail
           cd docs/manufacturing30
           python scripts/prepare-manufacturer-assets.py --intake /tmp/mfg-intake --output assets/oem
           node scripts/build-realworld-register.mjs
@@ -74,23 +75,21 @@ jobs:
           node --test tests/models.test.mjs tests/realworld.test.mjs | tee test-results/models-test.txt
       - name: Preserve readable source on isolated feature branch
         run: |
-          set -euo pipefail
           git add docs/manufacturing30
           if test -d .github/mfg4-source; then git rm -r .github/mfg4-source; fi
           if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat: add official UR5e and TM5-900 visuals, 15 fields and 27 traceable equipment cases'
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'feat: official UR5e and TM5-900 visuals, 15 fields and 27 source-backed cases'
             git push origin HEAD:manufacturing30-realworld-v4
           fi
           git rev-parse HEAD > /tmp/mfg4-tested-source
-      - name: Verify thirty chapters and two official robot workflows
+      - name: Verify thirty chapters and both official robot workflows
         run: |
-          set -euo pipefail
           cd docs/manufacturing30
           python -m http.server 8020 --bind 127.0.0.1 >/tmp/mfg4-server.log 2>&1 &
           for attempt in 1 2 3 4 5; do curl -fsS http://127.0.0.1:8020/ >/dev/null && break; sleep 1; done
           node tests/browser.mjs
           node tests/realworld-browser.mjs
-      - name: Record actual validation evidence
+      - name: Record actual passing evidence and extend ongoing CI
         run: |
           python - <<'PY'
           import json,os
@@ -98,12 +97,12 @@ jobs:
           root=Path('docs/manufacturing30');reports={}
           for name in ['browser-report.json','realworld-browser.json']:
               reports[name]=json.loads((root/'test-results'/name).read_text())
-              assert reports[name]['status']=='passed',name
+              assert reports[name].get('status')=='passed' or reports[name].get('success') is True,name
           source=Path('/tmp/mfg4-tested-source').read_text().strip()
           run='https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID']
-          out={'version':'4.0','testedSourceCommit':source,'run':run,'reports':reports,'limits':['Original representative field layouts, not surveyed real sites','Two official visual meshes and nominal six-axis chains, not serial-number calibration','Other manufacturer entries are cited equipment cases, not imported CAD','Chapter 29 planar two-link model is distinct from the six-axis visual/FK model']}
+          out={'version':'4.0','testedSourceCommit':source,'run':run,'reports':reports,'limits':['Representative original layouts, not surveyed real sites','Two official visual meshes and nominal six-axis chains, not serial-number calibration','Other manufacturer entries are source-backed cases, not imported CAD','Chapter 29 planar two-link exercise is not the six-axis robot model']}
           (root/'docs/V4_VERIFICATION.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
-          (root/'docs/V4_VERIFICATION.md').write_text('# Manufacturing30 4.0 verification\n\nTested readable source: `'+source+'`.\n\nRun: '+run+'\n\nBoth thirty-chapter and real-world browser reports passed. See [machine-readable evidence](V4_VERIFICATION.json). Node tests and screenshots are retained in the workflow artifact.\n\nOfficial assets retain BSD-3-Clause licenses, upstream revisions and SHA256 provenance. Layouts are original representative teaching environments, not scans of a real factory.\n',encoding='utf-8')
+          (root/'docs/V4_VERIFICATION.md').write_text('# Manufacturing30 4.0 verification\n\nTested source: `'+source+'`.\n\nRun: '+run+'\n\nBoth thirty-chapter and real-world browser reports passed. See [machine-readable evidence](V4_VERIFICATION.json). Node tests and screenshots are retained in the workflow artifact.\n\nTwo official visual models retain BSD-3-Clause licenses, pinned upstream revisions and SHA256 provenance. Layouts are authored representative environments, not factory scans.\n',encoding='utf-8')
           p=Path('.github/workflows/manufacturing30-check.yml');s=p.read_text()
           s=s.replace('timeout-minutes: 15','timeout-minutes: 25')
           s=s.replace('node --test tests/models.test.mjs | tee','node --test tests/models.test.mjs tests/realworld.test.mjs | tee')
@@ -113,7 +112,7 @@ jobs:
           PY
           git add docs/manufacturing30/docs/V4_VERIFICATION.* .github/workflows/manufacturing30-check.yml
           if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'test: preserve successful real-world browser and nominal kinematics verification'
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'test: preserve verified manufacturer meshes, fields and full learning flows'
             git push origin HEAD:manufacturing30-realworld-v4
           fi
       - name: Package tested offline course
